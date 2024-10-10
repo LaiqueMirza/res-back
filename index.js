@@ -2,13 +2,17 @@
 const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
+dotenv.config({
+	path: process.env.NODE_ENV ? `.env.${process.env.NODE_ENV}` : ".env.dev",
+});
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const rateLimit = require("express-rate-limit");
-
+const initDb = require("./db/models/index");
 const path = require("path");
+const googleAuthFun = require("./src/services/googleAuth.js");
 // const connectDB = require("./config/db");
 
 const limiter = rateLimit({
@@ -66,22 +70,27 @@ app.use((err, req, res, next) => {
     next();
 });
 
-dotenv.config({
-	path: process.env.NODE_ENV ? `.env.${process.env.NODE_ENV}` : ".env.dev",
-});
-
+googleAuthFun(app);
 app.use("/v1", require("./src/routes/index"));
+app.use('*', (req, res, next) => {
+    return res.status(400).json({
+			success: false,
+			error: false,
+			message: `Route not found`,
+		});
+})
+
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, async () => {
-    console.log(`Server is running on port ${PORT}`);
-
-    try {
-        // await connectDB();
-        console.log("Database connected successfully");
-    } catch (error) {
-        console.log(error);
-        process.exit(1);
-    }
+	console.log(`Server is running on port ${PORT}`);
+	try {
+		await initDb().sequelize.sync({ alter: true });
+		console.log("Database synced and connected successfully");
+	} catch (error) {
+		console.log("Database not connected XXX", error);
+		process.exit(1);
+	}
 });
 
