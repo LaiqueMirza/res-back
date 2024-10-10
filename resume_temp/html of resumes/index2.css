@@ -1,0 +1,462 @@
+/*! CSS Used from: Embedded */
+.d-none{display:none;}
+/*! CSS Used from: https://assets.zety.com/resume/build/rwzv2/stylesheets/zty-jt/main-1.0.0.1122.css */
+.page-choose-template .skn-srz1 .left-box .common-lngg-skli .heading{width:auto;}
+.d-none{display:none!important;}
+*,*::before,*::after{box-sizing:border-box;}
+*{-webkit-transition:color 0.2s, background-color 0.25s, border-color 0.25s, opacity 0.25s;-moz-transition:color 0.2s, background-color 0.25s, border-color 0.25s, opacity 0.25s;transition:color 0.2s, background-color 0.25s, border-color 0.5s, opacity 0.25s;}
+.placeholder-text,.placeholder-text *{color:#07142b;}
+ul{list-style:none;}
+ul{margin-top:0;margin-bottom:1rem;}
+button{border-radius:0;}
+button:focus{outline:1px dotted;}
+button{margin:0;font-family:inherit;font-size:inherit;line-height:inherit;}
+button{overflow:visible;}
+button{text-transform:none;}
+button,html [type="button"]{-webkit-appearance:button;}
+.document{background-color:#fff;cursor:default;}
+.document .placeholder-text,.document .placeholder-text *{color:#66778f!important;}
+.document{box-sizing:content-box;color:initial;margin-left:auto;margin-right:auto;user-select:none;}
+.document{min-height:795px;}
+html.page-choose-template .card-wrap .document-ctnr .document:not(.skn-mld5):not(.skn-mlb3){transform:scale(0.5, 0.5);transform-origin:0 0;min-height:0;}
+html.page-choose-template .document-ctnr .document .section,html.page-choose-template .document-ctnr .document .paragraph{line-height:2rem;}
+html.page-choose-template .skn-srz1.document .paragraph{line-height:2rem;}
+.btn-icon-tertiary:focus{outline:2px dashed transparent;outline-offset:4px;text-decoration:none;}
+.btn-icon-tertiary:focus{outline:2px dashed #0070d6;}
+.btn-icon-tertiary:focus{outline:2px dashed #0070d6;outline-offset:2px;text-decoration:none;}
+.btn-icon-tertiary{border-radius:0;}
+html.e-renderer-ct .document{overflow:hidden;}
+html.e-renderer-ct .document-ctnr .document{transform-origin:0 0;}
+*{margin:0;padding:0;}
+.f-educ-placeholder-template .placeholder-text *{color:#7a7a7a!important;}
+/*! CSS Used from: Embedded */
+[data-react-beautiful-dnd-drag-handle="1"]{-webkit-touch-callout:none;-webkit-tap-highlight-color:rgba(0,0,0,0);touch-action:manipulation;}
+/*! CSS Used from: Embedded */
+[data-react-beautiful-dnd-drag-handle="1"]{cursor:-webkit-grab;cursor:grab;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+.skn-srz1 ul{list-style:none;}
+.skn-srz1 ul,.skn-srz1 li{margin:0;padding:0;list-style-type:disc;}
+.skn-srz1 ul li{margin:0 0 0 16px;padding:0;}
+.skn-srz1 .txt-bold{font-weight:700;}
+.skn-srz1 .paddedline{display:block;}
+.skn-srz1 .mt5{margin-top:5px;}
+.skn-srz1 .txtRight{text-align:right;}
+.skn-srz1{color:#343434;font-variant-ligatures:none;line-height:16px;min-height:792px;box-sizing:border-box;}
+.skn-srz1 .name{font-weight:700;padding:0;position:relative;text-align:left;word-wrap:break-word;}
+.skn-srz1 .address .singlecolumn{margin-left:0!important;}
+.skn-srz1 .heading{font-weight:700;line-height:15px;margin-bottom:10px;}
+.skn-srz1 .sectiontitle{word-break:break-word;}
+.skn-srz1 .degreeGap{margin-bottom:4px;}
+.skn-srz1 .locationGap{margin-top:4px;}
+.skn-srz1 .firstsection,.skn-srz1 .SECTION_NAME{padding-top:0!important;}
+.skn-srz1 .section:empty{display:none;}
+.skn-srz1 .left-box{background:#003D73;display:table-cell;padding:15px;box-sizing:initial;}
+.skn-srz1 .left-box .section{position:relative;color:#fff;}
+.skn-srz1 .left-box .heading{line-height:1.5;margin-left:-15px;margin-right:-15px;padding:0 15px;position:relative;}
+.skn-srz1 .left-box .heading:before{content:'';position:absolute;left:0;top:0;background:#003D73;height:100%;width:100%;filter:brightness(0.8);}
+.skn-srz1 .left-box .sectiontitle{padding:3px 0;text-align:left;position:relative;}
+.skn-srz1 .left-box .SECTION_CNTC{padding-top:20px!important;}
+.skn-srz1 .parentContainer{border-collapse:collapse;display:table;min-height:inherit;table-layout:fixed;width:100%;}
+.skn-srz1 .right-box{display:table-cell;letter-spacing:.2px;padding:15px;vertical-align:top;}
+.skn-srz1 .right-box .heading{border-bottom:1px solid #d5d6d6;border-top:1px solid #d5d6d6;letter-spacing:0;padding:5px 0;}
+.skn-srz1 .right-box .sectiontitle{color:#002e58;}
+.skn-srz1 .right-box .paddedline.date-content{position:absolute;margin-left:0;width:65px;}
+.skn-srz1 .paragraph .singlecolumn{position:relative;}
+.skn-srz1 .right-box .summary .paragraph .singlecolumn{margin-left:0;}
+.skn-srz1 .education .joblocation,.txtItl{font-style:italic;}
+.skn-srz1 > div{min-height:inherit;}
+.skn-srz1 .word-break{word-wrap:break-word;}
+.skn-srz1 .right-box .hidedates{visibility:hidden;position:static!important;display:block;float:left;}
+.skn-srz1 .paragraph.datespara:after{content:'';display:table;clear:both;}
+.skn-srz1 .prflPic,.skn-srz1 .prflPic > div{width:154px;height:154px;}
+.skn-srz1 .txt-bold{font-weight:700;}
+.skn-srz1 .beforecolonspace{display:none!important;}
+.skn-srz1 .common-lngg-skli .singlecolumn{display:none;margin:0!important;}
+.skn-srz1 .common-lngg-skli.infobarsec .infobarpara{display:block;}
+.skn-srz1 .common-lngg-skli .rating-heading{flex:1;}
+.skn-srz1 .common-lngg-skli .rating-level{width:15%;text-align:right;}
+.skn-srz1 .common-lngg-skli .rating-level:empty{display:none;}
+.skn-srz1 .common-lngg-skli .lang-space{display:flex;flex-wrap:wrap;justify-content:space-between;word-break:break-word;align-items:flex-end;}
+.skn-srz1 .common-lngg-skli .nativeLangPara.paragraph{width:100%;max-width:100%;}
+.skn-srz1 .common-lngg-skli.infobarsec .field .colon{display:none;}
+.skn-srz1 .common-lngg-skli .nativeLangPara .field,.skn-srz1 .common-lngg-skli .nativeLangPara .rating-heading .colon{display:inline;}
+.skn-srz1 .common-lngg-skli .inner-rating{height:7px;}
+.skn-srz1 .common-lngg-skli .fielditem-ratt{text-align:right;}
+.skn-srz1 .common-lngg-skli .inner-rating{background:#002e58;}
+.skn-srz1 .nativeLangPara .rating-heading span,.skn-srz1 .nativeLangPara .rating-heading .colon{font-weight:bold;}
+.skn-srz1 .left-box .common-lngg-skli{padding-left:0;display:block;}
+.skn-srz1 .left-box .common-lngg-skli .paragraph{width:100%;}
+.skn-srz1 .left-box .common-lngg-skli .rating-bar{position:relative;}
+.skn-srz1 .left-box .common-lngg-skli .rating-bar:before{background:#003D73;content:'';position:absolute;width:100%;height:7px;filter:brightness(.8);}
+.skn-srz1 .left-box .common-lngg-skli .inner-rating{background:#fff;position:relative;}
+.skn-srz1 .left-box .common-lngg-skli .heading{width:100%;}
+.skn-srz1 .left-box .data-LNGG .common-lngg-skli .heading{width:auto;}
+.skn-srz1 .displayNoneThisField{display:none;}
+.skn-srz1 .common-lngg-skli .sortableInner .sortable-item{width:100%;}
+.skn-srz1 .common-lngg-skli .sortableInner .sortable-item .nativeLangPara .rating-heading{font-weight:bold;}
+.skn-srz1.pict-pcpf-none .photo{display:none;}
+/*! CSS Used from: Embedded */
+.skn-srz1{line-height:18px;}
+.skn-srz1.pagesize{width:612px;}
+.skn-srz1.fontface{font-family:Century Gothic;}
+.skn-srz1.fontsize{font-size:11px;}
+.skn-srz1 .section{padding-top:20px;}
+.skn-srz1 .firstparagraph{margin-top:0!important;}
+.skn-srz1 .paragraph{margin-top:10px;}
+.skn-srz1 .singlecolumn,.skn-srz1 .maincolumn{word-wrap:break-word;}
+.skn-srz1 .right-box .singlecolumn{margin-left:0px;}
+.skn-srz1 .jobtitle,.skn-srz1 .degree,.skn-srz1 .programline{font-size:14px;}
+.skn-srz1 .name{font-size:28px;line-height:34px;}
+.skn-srz1 .heading{line-height:22px;}
+.skn-srz1 .sectiontitle{font-size:16px;}
+.skn-srz1 .resumeTitle{font-size:14px;padding-top:3px;}
+.skn-srz1 .left-box{background:#003D73;width:154px;}
+.skn-srz1 .left-box .section{padding-top:20px;}
+.skn-srz1 .left-box .heading{line-height:22px;}
+.skn-srz1 .left-box .heading:before,.skn-srz1 .left-box .common-lngg-skli .rating-bar:before{background:#003D73;}
+.skn-srz1 .right-box .paragraph .singlecolumn{margin-left:91px;}
+.skn-srz1 .right-box .paddedline.date-content{left:-91px;}
+.skn-srz1 .right-box .sectiontitle{color:#003D73;}
+.skn-srz1 .sortable-item .sectiontitle{position:relative;}
+@media screen and (min-width:0\0){
+.skn-srz1 .left-box{box-sizing:content-box;}
+.skn-srz1 .parentContainer{display:flex;}
+.skn-srz1 .right-box{width:calc(100% - 154px);}
+.skn-srz1 .left-box,.skn-srz1 .right-box{background:none;display:inline;position:relative;}
+.skn-srz1 .left-box:before{content:'';background:#003D73;position:absolute;left:0;top:0;height:100%;width:100%;opacity:.9;}
+}
+.skn-srz1 .common-lngg-skli{padding-left:91px;}
+.skn-srz1 .common-lngg-skli .inner-rating{background:#003D73;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+span.degree,span.programline{font-size:14px;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+.skn-srz1 .common-lngg-skli .paragraph{width:100%;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+span.degree,span.programline{font-size:14px;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+span.degree,span.programline{font-size:14px;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+span.degree,span.programline{font-size:14px;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+span.degree,span.programline{font-size:14px;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+span.degree,span.programline{font-weight:bold;}
+/*! CSS Used from: Embedded */
+span.degree,span.programline{font-size:14px;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+span.degree,span.programline{font-size:14px;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+span.degree,span.programline{font-size:14px;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+.skn-srz1 ul{list-style:none;}
+.skn-srz1 ul,.skn-srz1 li{margin:0;padding:0;list-style-type:disc;}
+.skn-srz1 ul li{margin:0 0 0 16px;padding:0;}
+.skn-srz1 .txt-bold{font-weight:700;}
+.skn-srz1 .paddedline{display:block;}
+.skn-srz1 .mt5{margin-top:5px;}
+.skn-srz1 .txtRight{text-align:right;}
+.skn-srz1{color:#343434;font-variant-ligatures:none;line-height:16px;min-height:792px;box-sizing:border-box;}
+.skn-srz1 .name{font-weight:700;padding:0;position:relative;text-align:left;word-wrap:break-word;}
+.skn-srz1 .address .singlecolumn{margin-left:0!important;}
+.skn-srz1 .heading{font-weight:700;line-height:15px;margin-bottom:10px;}
+.skn-srz1 .sectiontitle{word-break:break-word;}
+.skn-srz1 .degreeGap{margin-bottom:4px;}
+.skn-srz1 .locationGap{margin-top:4px;}
+.skn-srz1 .firstsection,.skn-srz1 .SECTION_NAME{padding-top:0!important;}
+.skn-srz1 .section:empty{display:none;}
+.skn-srz1 .left-box{background:#003D73;display:table-cell;padding:15px;box-sizing:initial;}
+.skn-srz1 .left-box .section{position:relative;color:#fff;}
+.skn-srz1 .left-box .heading{line-height:1.5;margin-left:-15px;margin-right:-15px;padding:0 15px;position:relative;}
+.skn-srz1 .left-box .heading:before{content:'';position:absolute;left:0;top:0;background:#003D73;height:100%;width:100%;filter:brightness(0.8);}
+.skn-srz1 .left-box .sectiontitle{padding:3px 0;text-align:left;position:relative;}
+.skn-srz1 .left-box .SECTION_CNTC{padding-top:20px!important;}
+.skn-srz1 .parentContainer{border-collapse:collapse;display:table;min-height:inherit;table-layout:fixed;width:100%;}
+.skn-srz1 .right-box{display:table-cell;letter-spacing:.2px;padding:15px;vertical-align:top;}
+.skn-srz1 .right-box .heading{border-bottom:1px solid #d5d6d6;border-top:1px solid #d5d6d6;letter-spacing:0;padding:5px 0;}
+.skn-srz1 .right-box .sectiontitle{color:#002e58;}
+.skn-srz1 .right-box .paddedline.date-content{position:absolute;margin-left:0;width:65px;}
+.skn-srz1 .paragraph .singlecolumn{position:relative;}
+.skn-srz1 .right-box .summary .paragraph .singlecolumn{margin-left:0;}
+.skn-srz1 .education .joblocation,.txtItl{font-style:italic;}
+.skn-srz1 > div{min-height:inherit;}
+.skn-srz1 .word-break{word-wrap:break-word;}
+.skn-srz1 .right-box .hidedates{visibility:hidden;position:static!important;display:block;float:left;}
+.skn-srz1 .paragraph.datespara:after{content:'';display:table;clear:both;}
+.skn-srz1 .prflPic,.skn-srz1 .prflPic > div{width:154px;height:154px;}
+.skn-srz1 .txt-bold{font-weight:700;}
+.skn-srz1 .beforecolonspace{display:none!important;}
+.skn-srz1 .common-lngg-skli .singlecolumn{display:none;margin:0!important;}
+.skn-srz1 .common-lngg-skli.infobarsec .infobarpara{display:block;}
+.skn-srz1 .common-lngg-skli .rating-heading{flex:1;}
+.skn-srz1 .common-lngg-skli .rating-level{width:15%;text-align:right;}
+.skn-srz1 .common-lngg-skli .rating-level:empty{display:none;}
+.skn-srz1 .common-lngg-skli .lang-space{display:flex;flex-wrap:wrap;justify-content:space-between;word-break:break-word;align-items:flex-end;}
+.skn-srz1 .common-lngg-skli .nativeLangPara.paragraph{width:100%;max-width:100%;}
+.skn-srz1 .common-lngg-skli.infobarsec .field .colon{display:none;}
+.skn-srz1 .common-lngg-skli .nativeLangPara .field,.skn-srz1 .common-lngg-skli .nativeLangPara .rating-heading .colon{display:inline;}
+.skn-srz1 .common-lngg-skli .inner-rating{height:7px;}
+.skn-srz1 .common-lngg-skli .fielditem-ratt{text-align:right;}
+.skn-srz1 .common-lngg-skli .inner-rating{background:#002e58;}
+.skn-srz1 .nativeLangPara .rating-heading span,.skn-srz1 .nativeLangPara .rating-heading .colon{font-weight:bold;}
+.skn-srz1 .left-box .common-lngg-skli{padding-left:0;display:block;}
+.skn-srz1 .left-box .common-lngg-skli .paragraph{width:100%;}
+.skn-srz1 .left-box .common-lngg-skli .rating-bar{position:relative;}
+.skn-srz1 .left-box .common-lngg-skli .rating-bar:before{background:#003D73;content:'';position:absolute;width:100%;height:7px;filter:brightness(.8);}
+.skn-srz1 .left-box .common-lngg-skli .inner-rating{background:#fff;position:relative;}
+.skn-srz1 .left-box .common-lngg-skli .heading{width:100%;}
+.skn-srz1 .left-box .data-LNGG .common-lngg-skli .heading{width:auto;}
+.skn-srz1 .displayNoneThisField{display:none;}
+.skn-srz1 .common-lngg-skli .sortableInner .sortable-item{width:100%;}
+.skn-srz1 .common-lngg-skli .sortableInner .sortable-item .nativeLangPara .rating-heading{font-weight:bold;}
+.skn-srz1.pict-pcpf-none .photo{display:none;}
+/*! CSS Used from: Embedded */
+.skn-srz1{line-height:18px;}
+.skn-srz1.pagesize{width:612px;}
+.skn-srz1.fontface{font-family:Century Gothic;}
+.skn-srz1.fontsize{font-size:11px;}
+.skn-srz1 .section{padding-top:20px;}
+.skn-srz1 .firstparagraph{margin-top:0!important;}
+.skn-srz1 .paragraph{margin-top:10px;}
+.skn-srz1 .singlecolumn,.skn-srz1 .maincolumn{word-wrap:break-word;}
+.skn-srz1 .right-box .singlecolumn{margin-left:0px;}
+.skn-srz1 .jobtitle,.skn-srz1 .degree,.skn-srz1 .programline{font-size:14px;}
+.skn-srz1 .name{font-size:28px;line-height:34px;}
+.skn-srz1 .heading{line-height:22px;}
+.skn-srz1 .sectiontitle{font-size:16px;}
+.skn-srz1 .resumeTitle{font-size:14px;padding-top:3px;}
+.skn-srz1 .left-box{background:#003D73;width:154px;}
+.skn-srz1 .left-box .section{padding-top:20px;}
+.skn-srz1 .left-box .heading{line-height:22px;}
+.skn-srz1 .left-box .heading:before,.skn-srz1 .left-box .common-lngg-skli .rating-bar:before{background:#003D73;}
+.skn-srz1 .right-box .paragraph .singlecolumn{margin-left:91px;}
+.skn-srz1 .right-box .paddedline.date-content{left:-91px;}
+.skn-srz1 .right-box .sectiontitle{color:#003D73;}
+.skn-srz1 .sortable-item .sectiontitle{position:relative;}
+@media screen and (min-width:0\0){
+.skn-srz1 .left-box{box-sizing:content-box;}
+.skn-srz1 .parentContainer{display:flex;}
+.skn-srz1 .right-box{width:calc(100% - 154px);}
+.skn-srz1 .left-box,.skn-srz1 .right-box{background:none;display:inline;position:relative;}
+.skn-srz1 .left-box:before{content:'';background:#003D73;position:absolute;left:0;top:0;height:100%;width:100%;opacity:.9;}
+}
+.skn-srz1 .common-lngg-skli{padding-left:91px;}
+.skn-srz1 .common-lngg-skli .inner-rating{background:#003D73;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+span.degree,span.programline{font-size:14px;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+.skn-srz1 .common-lngg-skli .paragraph{width:100%;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+span.degree,span.programline{font-size:14px;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+span.degree,span.programline{font-size:14px;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+span.degree,span.programline{font-size:14px;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+span.degree,span.programline{font-size:14px;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+span.degree,span.programline{font-weight:bold;}
+/*! CSS Used from: Embedded */
+span.degree,span.programline{font-size:14px;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+span.degree,span.programline{font-size:14px;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+div,span,ul,li{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;}
+/*! CSS Used from: Embedded */
+span.degree,span.programline{font-size:14px;}
+/*! CSS Used from: Embedded */
+.small-srz1 .document.skn-srz1 .left-box{background:#075700;}
+.small-srz1 .document.skn-srz1 .left-box .heading:before{background:#075700;}
+.small-srz1 .document.skn-srz1 .right-box .sectiontitle{color:#075700;}
+.small-srz1 .document.skn-srz1 .common-lngg-skli .inner-rating{background:#075700;}
+@media screen and (min-width:0�){
+.small-srz1 .document.skn-srz1 .left-box:before{background:#075700;}
+}
+/*! CSS Used fontfaces */
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:normal;src:local('Century Gothic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:normal;src:local('Century Gothic Bold'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:bold;font-style:italic;src:local('Century Gothic Bold Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf') format('truetype');}
+@font-face{font-family:'Century Gothic';font-weight:normal;font-style:italic;src:local('Century Gothic Italic'),url('https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf') format('truetype');}
