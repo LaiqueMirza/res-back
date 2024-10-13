@@ -1,7 +1,9 @@
+const sendToken = require("../utils/jwtToken.js");
+
 module.exports = googleAuthFun = (app) => {
 	const session = require("express-session");
-    const passport = require("passport");
-    const commonService = require("../services/common.js");
+	const passport = require("passport");
+	const commonService = require("../services/common.js");
 	const OAuth2Strategy = require("passport-google-oauth2").Strategy;
 
 	// setup session
@@ -13,7 +15,7 @@ module.exports = googleAuthFun = (app) => {
 		})
 	);
 
-	// setuppassport
+	// set up passport
 	app.use(passport.initialize());
 	app.use(passport.session());
 
@@ -32,11 +34,15 @@ module.exports = googleAuthFun = (app) => {
 						"profile",
 						profile.email,
 						profile.given_name,
-						profile.picture
+						profile.picture, 
+						profile.id,
+						profile.provider
 					);
 					let user = await commonService.findOne("user", {
 						email: profile.email,
 					});
+					let statusCode = 200;
+					let message = "Successfully Logged In";
 					console.log(user);
 					if (!user) {
 						user = await commonService.create("user", {
@@ -48,9 +54,12 @@ module.exports = googleAuthFun = (app) => {
 								provider_id: profile.id,
 							},
 						});
+						statusCode = 201;
+						message = "Successfully Signed Up";
 					}
 
-					return done(null, user);
+					// Pass the user and statusCode to the next middleware
+					return done(null, { user, statusCode, message });
 				} catch (error) {
 					return done(error, null);
 				}
@@ -58,24 +67,41 @@ module.exports = googleAuthFun = (app) => {
 		)
 	);
 
-	passport.serializeUser((user, done) => {
-		done(null, user);
+	passport.serializeUser((data, done) => {
+		done(null, data);
 	});
 
-	passport.deserializeUser((user, done) => {
-		done(null, user);
+	passport.deserializeUser((data, done) => {
+		done(null, data);
 	});
 
+	// Route for Google authentication
 	app.get(
 		"/auth/google",
 		passport.authenticate("google", { scope: ["profile", "email"] })
 	);
 
+	// Middleware for Google OAuth callback
 	app.get(
 		"/auth/google/callback",
 		passport.authenticate("google", {
-			successRedirect: "http://localhost:3000/create-resume",
+			session: false,
 			failureRedirect: "http://localhost:3000/login",
-		})
+		}),
+		(req, res) => {
+			// Access the user, statusCode, and message from req.user
+			const { user, statusCode, message } = req.user;
+
+			// Call sendToken to set the cookie and send the response
+			return sendToken(
+				{
+					id: user.user_id,
+				},
+				statusCode,
+				res,
+				message, 
+				true
+			);
+		}
 	);
 };

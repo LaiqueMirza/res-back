@@ -23,7 +23,13 @@ module.exports = user = (sequelize, DataTypes) => {
 				type: DataTypes.STRING,
 			},
 			auth_through: {
-                type: DataTypes.JSON,
+				type: DataTypes.JSON,
+			},
+			is_anonymous: {
+				type: DataTypes.BOOLEAN,
+			},
+			is_email_verified: {
+				type: DataTypes.BOOLEAN,
 			},
 			created_at: {
 				type: DataTypes.DATE,
