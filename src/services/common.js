@@ -46,6 +46,17 @@ const update = async (model, data, condition) => {
 	return result;
 };
 
+
+const upsert = async (model, data, condition) => {
+	const result = await db[model].upsert({
+		...data,
+		...condition,
+	}, {
+		where: condition,
+	});
+	return result;
+};
+
 const destroy = async (model, condition) => {
 	const result = await db[model].destroy({
 		where: condition,
@@ -61,6 +72,7 @@ module.exports = {
 	create,
 	bulkCreate,
 	update,
+	upsert,
 	destroy,
 	findByPk,
 };

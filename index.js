@@ -52,20 +52,20 @@ app.use((req, res, next) => {
 });
 app.use(helmet());
 
-app.use((req, res, next) => {
-	if (req.body) {
-		const originalBody = JSON.stringify(req.body);
-		const htmlScriptRegex = /<[^>]*>|[<>]/;
-		if (htmlScriptRegex.test(originalBody)) {
-			return res.status(400).json({
-				success: false,
-				error: true,
-				message: "Invalid request: Unsanitized data",
-			});
-		}
-	}
-	next();
-});
+// app.use((req, res, next) => {
+// 	if (req.body) {
+// 		const originalBody = JSON.stringify(req.body);
+// 		const htmlScriptRegex = /<[^>]*>|[<>]/;
+// 		if (htmlScriptRegex.test(originalBody)) {
+// 			return res.status(400).json({
+// 				success: false,
+// 				error: true,
+// 				message: "Invalid request: Unsanitized data",
+// 			});
+// 		}
+// 	}
+// 	next();
+// });
 
 app.use((err, req, res, next) => {
 	if (err instanceof SyntaxError && err.status === 400 && "body" in err) {

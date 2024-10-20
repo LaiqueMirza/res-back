@@ -10,6 +10,7 @@ module.exports = resume = (sequelize, DataTypes) => {
             },
             user_id: {
                 type: DataTypes.INTEGER,
+                unique: true,
                 references: {
                     model: "user",
                     key: "user_id",
@@ -18,7 +19,6 @@ module.exports = resume = (sequelize, DataTypes) => {
             },
             title: {
                 type: DataTypes.STRING,
-                allowNull: false,
             },
             resume_data: {
                 type: DataTypes.JSONB,

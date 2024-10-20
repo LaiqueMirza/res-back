@@ -24,7 +24,7 @@ module.exports = googleAuthFun = (app) => {
 			{
 				clientID: process.env.GOOGLE_CLIENT_ID,
 				clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-				callbackURL: "/auth/google/callback",
+				callbackURL: "/v1/auth/google/callback",
 				scope: ["profile", "email"],
 			},
 			async (accessToken, refreshToken, profile, done) => {
@@ -77,13 +77,13 @@ module.exports = googleAuthFun = (app) => {
 
 	// Route for Google authentication
 	app.get(
-		"/auth/google",
+		"/v1/auth/google",
 		passport.authenticate("google", { scope: ["profile", "email"] })
 	);
 
 	// Middleware for Google OAuth callback
 	app.get(
-		"/auth/google/callback",
+		"/v1/auth/google/callback",
 		passport.authenticate("google", {
 			session: false,
 			failureRedirect: "http://localhost:3000/login",
