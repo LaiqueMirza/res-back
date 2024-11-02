@@ -1361,11 +1361,11 @@
 																class="paddedline date-content hidedates"
 																dependency="JSTD|EDDT">
 																<span class="jobdates" dependency="JSTD"
-																	>${job.startDate}</span
+																	>${job.startDate ? moment(job.startDate).format("MM-YYYY") : ""}</span
 																><span dependency="JSTD+EDDT"> - </span>
 																<span class="jobdates" dependency="EDDT"
 																	>${job.isPresent ? "Present" :
-																	job.endDate}</span
+																	job.endDate ? moment(job.endDate).format("MM-YYYY") : ""}</span
 																><br dependency="JTIT|COMP|JSTA|JCIT|JLOC" />
 															</div>
 															<div class="singlecolumn">
@@ -1376,14 +1376,14 @@
 																		class="jobdates"
 																		id="FIELD_JSTD"
 																		format="%Y-%m"
-																		>${job.startDate}</span
+																		>${job.startDate ? moment(job.startDate).format("MM-YYYY") : ""}</span
 																	><span dependency="JSTD+EDDT"> - </span>
 																	<span
 																		class="jobdates"
 																		id="FIELD_EDDT"
 																		format="%Y-%m"
 																		>${job.isPresent ? "Present" :
-																		job.endDate}</span
+																		job.endDate ? moment(job.endDate).format("MM-YYYY") : ""}</span
 																	><br dependency="JTIT|COMP|JSTA|JCIT|JLOC" />
 																</div>
 																<span class="paddedline" dependency="JTIT">
@@ -1460,7 +1460,16 @@
 																		id="FIELD_GRYR"
 																		format="%Y-%m"
 																		dependency="GRYR"
-																		>${edu.startDate}</span
+																		>${edu.startDate ? moment(edu.startDate).format("MM-YYYY") : ""}</span
+																	><span
+																		class="xslt_static_change displayNoneThisField"
+																		> - </span
+																	><span
+																		class="jobdates"
+																		id="FIELD_GRYR"
+																		format="%Y-%m"
+																		dependency="GRYR"
+																		>${edu.isPresent ? "Present" : edu.endDate ? moment(edu.endDate).format("MM-YYYY") : ""}</span
 																	>
 																	<span
 																		class="jobdates"
