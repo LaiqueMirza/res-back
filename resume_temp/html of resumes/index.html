@@ -19,680 +19,684 @@
 				<div class="" tabindex="">
 					<div>
 						<style type="text/css" id="static">
-							/*Font support for MAC*/
-							@font-face {
-								font-family: ${additional.fontFamily || "Century Gothic"};
-								font-weight: normal;
-								font-style: normal;
-								src: local(${additional.fontFamily || "Century Gothic"}),
-									url("/blobcontent/zty/fonts/CenturyGothic.ttf")
-										format("truetype");
-							}
-							@font-face {
-								font-family: ${additional.fontFamily || "Century Gothic"};
-								font-weight: bold;
-								font-style: normal;
-								src: local(${additional.fontFamily ?  additional.fontFamily +" "+ "Bold" : "Century Gothic Bold" }),
-									url("/blobcontent/zty/fonts/CenturyGothicBold.ttf")
-										format("truetype");
-							}
-							@font-face {
-								font-family: ${additional.fontFamily || "Century Gothic"};
-								font-weight: bold;
-								font-style: italic;
-								src: local(${additional.fontFamily ?  additional.fontFamily +" "+ "Bold Italic" : "Century Gothic Bold Italic" }),
-									url("/blobcontent/zty/fonts/CenturyGothicBoldItalic.ttf")
-										format("truetype");
-							}
-							@font-face {
-								font-family: ${additional.fontFamily || "Century Gothic"};
-								font-weight: normal;
-								font-style: italic;
-								src: local(${additional.fontFamily ?  additional.fontFamily +" "+ "Italic" : "Century Gothic Italic" }),
-									url("/blobcontent/zty/fonts/CenturyGothicItalic.ttf")
-										format("truetype");
-							}
+														html,
+														body,
+														div,
+														span,
+														applet,
+														object,
+														iframe,
+														h1,
+														h2,
+														h3,
+														h4,
+														h5,
+														h6,
+														p,
+														blockquote,
+														pre,
+														a,
+														abbr,
+														acronym,
+														address,
+														big,
+														cite,
+														code,
+														del,
+														dfn,
+														em,
+														font,
+														img,
+														ins,
+														kbd,
+														q,
+														s,
+														samp,
+														small,
+														strike,
+														strong,
+														sub,
+														sup,
+														tt,
+														var,
+														b,
+														u,
+														i,
+														center,
+														dl,
+														dt,
+														dd,
+														ol,
+														ul,
+														li,
+														fieldset,
+														form,
+														label,
+														legend,
+														table,
+														caption,
+														tbody,
+														tfoot,
+														thead,
+														tr,
+														th,
+														td {
+															margin: 0;
+															padding: 0;
+															border: 0;
+															outline: 0;
+															vertical-align: baseline;
+															background: transparent;
+														}
+														h1,
+														h2,
+														h3,
+														h4,
+														h5,
+														h6,
+														p,
+														blockquote,
+														pre,
+														a,
+														abbr,
+														acronym,
+														address,
+														q,
+														s,
+														samp,
+														small,
+														strike,
+														strong,
+														sub,
+														span,
+														var,
+														b,
+														u,
+														i,
+														dl,
+														dt,
+														dd,
+														ol,
+														ul,
+														li,
+														label,
+														th,
+														td {
+														page-break-inside: avoid;
+														}
+														.avoid-break {
+															page-break-inside: avoid;
+														}
+														body {
+															text-align: left;
+															font-feature-settings: "liga" 0;
+															-moz-font-feature-settings: "liga" off;
+														}
+														.skn-srz1 ol,
+														.skn-srz1 ul {
+															list-style: none;
+														}
+														.skn-srz1 table {
+															border-collapse: collapse;
+															border-spacing: 0;
+															font-size: inherit;
+															color: inherit;
+															width: 100%;
+														}
 
-							html,
-							body,
-							div,
-							span,
-							applet,
-							object,
-							iframe,
-							h1,
-							h2,
-							h3,
-							h4,
-							h5,
-							h6,
-							p,
-							blockquote,
-							pre,
-							a,
-							abbr,
-							acronym,
-							address,
-							big,
-							cite,
-							code,
-							del,
-							dfn,
-							em,
-							font,
-							img,
-							ins,
-							kbd,
-							q,
-							s,
-							samp,
-							small,
-							strike,
-							strong,
-							sub,
-							sup,
-							tt,
-							var,
-							b,
-							u,
-							i,
-							center,
-							dl,
-							dt,
-							dd,
-							ol,
-							ul,
-							li,
-							fieldset,
-							form,
-							label,
-							legend,
-							table,
-							caption,
-							tbody,
-							tfoot,
-							thead,
-							tr,
-							th,
-							td {
-								margin: 0;
-								padding: 0;
-								border: 0;
-								outline: 0;
-								vertical-align: baseline;
-								background: transparent;
-								letter-spacing: ${additional.letterSpacing || 0}px;
-							}
-							body {
-								text-align: left;
-								font-feature-settings: "liga" 0;
-								-moz-font-feature-settings: "liga" off;
-							}
-							.skn-srz1 ol,
-							.skn-srz1 ul {
-								list-style: none;
-							}
-							.skn-srz1 table {
-								border-collapse: collapse;
-								border-spacing: 0;
-								font-size: inherit;
-								color: inherit;
-								width: 100%;
-							}
+														/*START content disc style for LI*/
+														.skn-srz1 ul,
+														.skn-srz1 li {
+															margin: 0;
+															padding: 0;
+															list-style-type: disc;
+														}
+														.skn-srz1 ul li {
+															margin: 0 0 0 16px;
+															padding: 0;
+														}
+														@-moz-document url-prefix() {
+															.skn-srz1 ul li {
+																margin: 0 0 0 12px;
+																padding: 0 0 0 3px;
+															}
+														}
+														/*END content disc style for LI*/
 
-							/*START content disc style for LI*/
-							.skn-srz1 ul,
-							.skn-srz1 li {
-								margin: 0;
-								padding: 0;
-								list-style-type: disc;
-							}
-							.skn-srz1 ul li {
-								margin: 0 0 0 16px;
-								padding: 0;
-							}
-							@-moz-document url-prefix() {
-								.skn-srz1 ul li {
-									margin: 0 0 0 12px;
-									padding: 0 0 0 3px;
-								}
-							}
-							/*END content disc style for LI*/
+														/*common css*/
+														.skn-srz1 .txt-bold {
+															font-weight: 700;
+														}
+														.skn-srz1 .paddedline {
+															display: block;
+														}
+														.skn-srz1 .mt5 {
+															margin-top: 5px;
+														}
+														.skn-srz1 .txtRight {
+															text-align: right;
+														}
 
-							/*common css*/
-							.skn-srz1 .txt-bold {
-								font-weight: 700;
-							}
-							.skn-srz1 .paddedline {
-								display: block;
-							}
-							.skn-srz1 .mt5 {
-								margin-top: 5px;
-							}
-							.skn-srz1 .txtRight {
-								text-align: right;
-							}
+														.skn-srz1 table.skills,
+														.skn-srz1 .table_wrapper {
+															margin-top: 0;
+															width: 100%;
+															word-break: break-all;
+														}
+														.skn-srz1 table.skills th,
+														.skn-srz1 table.skills td {
+															text-align: center;
+															width: 20%;
+														}
+														.skn-srz1 table.skills .skillname,
+														.skn-srz1 table.skills .skillrating {
+															text-align: left;
+															width: 35%;
+														}
+														.skn-srz1 table.skills .skillrating {
+															width: 20%;
+														}
+														.skn-srz1 table.skills .skillyears,
+														.skn-srz1 table.skills .skilllast {
+															width: 19%;
+														}
+														.skn-srz1 table.skills .pad1 {
+															width: 5%;
+														}
+														.skn-srz1 table.skills .pad2,
+														.skn-srz1 table.skills .pad3 {
+															width: 1%;
+														}
+														.skn-srz1 {
+															color: ${appearanceSettings?.primaryColor || "#343434"};
+															font-variant-ligatures: none;
+															line-height: 16px;
+															min-height: 792px;
+															box-sizing: border-box;
+														}
+														.skn-srz1 .name {
+															font-weight: 700;
+															padding: 0;
+															position: relative;
+															text-align: left;
+															word-wrap: break-word;
+														}
+														.skn-srz1 .address .singlecolumn {
+															margin-left: 0 !important;
+														}
+														.skn-srz1 .heading {
+															font-weight: 700;
+															line-height: 15px;
+															margin-bottom: 10px;
+														}
+														.skn-srz1 .sectiontitle {
+															word-break: break-word;
+														}
+														.skn-srz1 .degreeGap {
+															margin-bottom: 4px;
+														}
+														.skn-srz1 .locationGap {
+															margin-top: 4px;
+														}
+														.skn-srz1 .firstsection,
+														.skn-srz1 .SECTION_NAME {
+															padding-top: 0 !important;
+														}
+														.skn-srz1 .section:empty,
+														.skn-srz1 .hide-bar .outer-square,
+														.skn-srz1 .hide-bar .field-ratt,
+														.skn-srz1 .hide-bar .txtRight {
+															display: none;
+														}
 
-							.skn-srz1 table.skills,
-							.skn-srz1 .table_wrapper {
-								margin-top: 0;
-								width: 100%;
-								word-break: break-all;
-							}
-							.skn-srz1 table.skills th,
-							.skn-srz1 table.skills td {
-								text-align: center;
-								width: 20%;
-							}
-							.skn-srz1 table.skills .skillname,
-							.skn-srz1 table.skills .skillrating {
-								text-align: left;
-								width: 35%;
-							}
-							.skn-srz1 table.skills .skillrating {
-								width: 20%;
-							}
-							.skn-srz1 table.skills .skillyears,
-							.skn-srz1 table.skills .skilllast {
-								width: 19%;
-							}
-							.skn-srz1 table.skills .pad1 {
-								width: 5%;
-							}
-							.skn-srz1 table.skills .pad2,
-							.skn-srz1 table.skills .pad3 {
-								width: 1%;
-							}
-							.skn-srz1 {
-								color: #343434;
-								font-variant-ligatures: none;
-								line-height: 16px;
-								min-height: 792px;
-								box-sizing: border-box;
-							}
-							.skn-srz1 .name {
-								font-weight: 700;
-								padding: 0;
-								position: relative;
-								text-align: left;
-								word-wrap: break-word;
-							}
-							.skn-srz1 .address .singlecolumn {
-								margin-left: 0 !important;
-							}
-							.skn-srz1 .heading {
-								font-weight: 700;
-								line-height: 15px;
-								margin-bottom: 10px;
-							}
-							.skn-srz1 .sectiontitle {
-								word-break: break-word;
-							}
-							.skn-srz1 .degreeGap {
-								margin-bottom: 4px;
-							}
-							.skn-srz1 .locationGap {
-								margin-top: 4px;
-							}
-							.skn-srz1 .firstsection,
-							.skn-srz1 .SECTION_NAME {
-								padding-top: 0 !important;
-							}
-							.skn-srz1 .section:empty,
-							.skn-srz1 .hide-bar .outer-square,
-							.skn-srz1 .hide-bar .field-ratt,
-							.skn-srz1 .hide-bar .txtRight {
-								display: none;
-							}
+														/*Left Box */
+														.skn-srz1 .left-box {
+															background: #003d73;
+															display: table-cell;
+															padding: 15px;
+															box-sizing: initial;
+														}
+														.skn-srz1 .left-box .section {
+															position: relative;
+															color: #fff;
+														}
+														.skn-srz1 .left-box .heading {
+															line-height: 1.5;
+															margin-left: -15px;
+															margin-right: -15px;
+															padding: 0 15px;
+															position: relative;
+														}
+														.skn-srz1 .left-box .heading:before {
+															content: "";
+															position: absolute;
+															left: 0;
+															top: 0;
+															background: #003d73;
+															height: 100%;
+															width: 100%;
+															filter: brightness(0.8);
+														}
+														.skn-srz1 .left-box .sectiontitle {
+															padding: 3px 0;
+															text-align: left;
+															position: relative;
+														}
+														.skn-srz1 .left-box .SECTION_CNTC {
+															padding-top: 20px !important;
+														}
+														.skn-srz1 .parentContainer {
+															border-collapse: collapse;
+															display: table;
+															min-height: inherit;
+															table-layout: fixed;
+															width: 100%;
+														}
 
-							/*Left Box */
-							.skn-srz1 .left-box {
-								background: #003d73;
-								display: table-cell;
-								padding: 15px;
-								box-sizing: initial;
-							}
-							.skn-srz1 .left-box .section {
-								position: relative;
-								color: #fff;
-							}
-							.skn-srz1 .left-box .heading {
-								line-height: 1.5;
-								margin-left: -15px;
-								margin-right: -15px;
-								padding: 0 15px;
-								position: relative;
-							}
-							.skn-srz1 .left-box .heading:before {
-								content: "";
-								position: absolute;
-								left: 0;
-								top: 0;
-								background: #003d73;
-								height: 100%;
-								width: 100%;
-								filter: brightness(0.8);
-							}
-							.skn-srz1 .left-box .sectiontitle {
-								padding: 3px 0;
-								text-align: left;
-								position: relative;
-							}
-							.skn-srz1 .left-box .SECTION_CNTC {
-								padding-top: 20px !important;
-							}
-							.skn-srz1 .parentContainer {
-								border-collapse: collapse;
-								display: table;
-								min-height: inherit;
-								table-layout: fixed;
-								width: 100%;
-							}
+														/*Right Box */
+														.skn-srz1 .right-box {
+															display: table-cell;
+															letter-spacing: 0.2px;
+															padding: 15px;
+															vertical-align: top;
+														}
+														.skn-srz1 .right-box .section:first-child {
+															padding-top: 0;
+														}
+														.skn-srz1 .right-box .heading {
+															border-bottom: 1px solid #d5d6d6;
+															border-top: 1px solid #d5d6d6;
+															letter-spacing: 0;
+															padding: 5px 0;
+														}
+														.skn-srz1 .right-box .sectiontitle {
+															color: ${appearanceSettings?.primaryColor || "#002e58"};
+														}
+														.skn-srz1 .right-box .paddedline.date-content {
+															position: absolute;
+															margin-left: 0;
+															width: 65px;
+														}
+														.skn-srz1 .paragraph .singlecolumn {
+															position: relative;
+														}
+														.skn-srz1 .right-box .summary .paragraph .singlecolumn {
+															margin-left: 0;
+														}
+														.skn-srz1 .education .joblocation,
+														.txtItl {
+															font-style: italic;
+														}
 
-							/*Right Box */
-							.skn-srz1 .right-box {
-								display: table-cell;
-								letter-spacing: 0.2px;
-								padding: 15px;
-								vertical-align: top;
-							}
-							.skn-srz1 .right-box .section:first-child {
-								padding-top: 0;
-							}
-							.skn-srz1 .right-box .heading {
-								border-bottom: 1px solid #d5d6d6;
-								border-top: 1px solid #d5d6d6;
-								letter-spacing: 0;
-								padding: 5px 0;
-							}
-							.skn-srz1 .right-box .sectiontitle {
-								color: #002e58;
-							}
-							.skn-srz1 .right-box .paddedline.date-content {
-								position: absolute;
-								margin-left: 0;
-								width: 65px;
-							}
-							.skn-srz1 .paragraph .singlecolumn {
-								position: relative;
-							}
-							.skn-srz1 .right-box .summary .paragraph .singlecolumn {
-								margin-left: 0;
-							}
-							.skn-srz1 .education .joblocation,
-							.txtItl {
-								font-style: italic;
-							}
+														/*Personal details section*/
+														.skn-srz1 .details-wrap {
+															margin-bottom: 5px;
+														}
+														.skn-srz1 .details-wrap:last-child {
+															margin-bottom: 0;
+														}
 
-							/*Personal details section*/
-							.skn-srz1 .details-wrap {
-								margin-bottom: 5px;
-							}
-							.skn-srz1 .details-wrap:last-child {
-								margin-bottom: 0;
-							}
+														/* Issues fix for builder page */
+														.skn-srz1 > div {
+															min-height: inherit;
+														}
+														#displayResume .skn-srz1.document {
+															min-height: 792px;
+														}
+														.skn-srz1 .left-box .active * {
+															color: ${appearanceSettings?.primaryColor || "#343434"};
+														}
+														/* Only for firefox */
+														@-moz-document url-prefix() {
+															.skn-srz1 .parentContainer {
+																height: 1px;
+															}
+														}
+														.skn-srz1 .word-break {
+															word-wrap: break-word;
+														}
 
-							/* Issues fix for builder page */
-							.skn-srz1 > div {
-								min-height: inherit;
-							}
-							#displayResume .skn-srz1.document {
-								min-height: 792px;
-							}
-							.skn-srz1 .left-box .active * {
-								color: #343434;
-							}
-							/* Only for firefox */
-							@-moz-document url-prefix() {
-								.skn-srz1 .parentContainer {
-									height: 1px;
-								}
-							}
-							.skn-srz1 .word-break {
-								word-wrap: break-word;
-							}
+														.skn-srz1 .left-box .outer-square,
+														.skn-srz1 right-box .outer-square,
+														.skn-srz1 .left-box .inner-square,
+														.skn-srz1 .right-box .inner-square {
+															height: 7px;
+															position: relative;
+														}
+														.skn-srz1 .left-box .inner-square {
+															background: #fff;
+														}
 
-							.skn-srz1 .left-box .outer-square,
-							.skn-srz1 right-box .outer-square,
-							.skn-srz1 .left-box .inner-square,
-							.skn-srz1 .right-box .inner-square {
-								height: 7px;
-								position: relative;
-							}
-							.skn-srz1 .left-box .inner-square {
-								background: #fff;
-							}
+														.skn-srz1 .right-box .outer-square {
+															background: #d6d6d6;
+														}
+														.skn-srz1 .right-box .inner-square {
+															background: #003d73;
+															filter: brightness(0.8);
+														}
 
-							.skn-srz1 .right-box .outer-square {
-								background: #d6d6d6;
-							}
-							.skn-srz1 .right-box .inner-square {
-								background: #003d73;
-								filter: brightness(0.8);
-							}
+														/* For dates fix */
+														.skn-srz1 .right-box .hidedates {
+															visibility: hidden;
+															position: static !important;
+															display: block;
+															float: left;
+														}
+														.skn-srz1 .left-box .hidedates {
+															display: none;
+														}
+														.skn-srz1 .paragraph.datespara:after {
+															content: "";
+															display: table;
+															clear: both;
+														}
 
-							/* For dates fix */
-							.skn-srz1 .right-box .hidedates {
-								visibility: hidden;
-								position: static !important;
-								display: block;
-								float: left;
-							}
-							.skn-srz1 .left-box .hidedates {
-								display: none;
-							}
-							.skn-srz1 .paragraph.datespara:after {
-								content: "";
-								display: table;
-								clear: both;
-							}
+														/*PICT*/
+														.skn-srz1 .prflPic,
+														.skn-srz1 .prflPic > div {
+															width: 154px;
+															height: 154px;
+														}
+														.skn-srz1 .prflPic img {
+															min-width: 100%;
+															max-width: 100%;
+															min-height: 100%;
+															max-height: 100%;
+															object-fit: cover;
+														}
 
-							/*PICT*/
-							.skn-srz1 .prflPic,
-							.skn-srz1 .prflPic > div {
-								width: 154px;
-								height: 154px;
-							}
-							.skn-srz1 .prflPic img {
-								min-width: 100%;
-								max-width: 100%;
-								min-height: 100%;
-								max-height: 100%;
-								object-fit: cover;
-							}
+														/* Languages Starts Here */
+														.skn-srz1 .txt-bold {
+															font-weight: 700;
+														}
+														.skn-srz1 .beforecolonspace {
+															display: none !important;
+														}
+														.skn-srz1.show-colon-space .beforecolonspace {
+															display: inline !important;
+														}
 
-							/* Languages Starts Here */
-							.skn-srz1 .txt-bold {
-								font-weight: 700;
-							}
-							.skn-srz1 .beforecolonspace {
-								display: none !important;
-							}
-							.skn-srz1.show-colon-space .beforecolonspace {
-								display: inline !important;
-							}
+														/*Static CSS - common wider box*/
+														.skn-srz1 .common-lngg-skli .singlecolumn {
+															display: none;
+															margin: 0 !important;
+														}
+														.skn-srz1 .common-lngg-skli.infobarsec .infobarpara,
+														.skn-srz1 .common-lngg-skli.infotilesec .infotilepara {
+															display: block;
+														}
+														.skn-srz1 .common-lngg-skli .rating-heading {
+															flex: 1;
+														}
+														.skn-srz1 .common-lngg-skli .rating-level {
+															width: 15%;
+															text-align: right;
+														}
+														.skn-srz1 .common-lngg-skli .rating-level:empty {
+															display: none;
+														}
+														.skn-srz1 .common-lngg-skli .sliced-rect .sliced-rect-tile {
+															height: 100%;
+															background-color: #d5d6d6;
+															float: left;
+															margin-right: 3px;
+														}
+														.skn-srz1
+															.common-lngg-skli
+															.sliced-rect
+															.sliced-rect-tile:last-child {
+															margin-right: 0;
+														}
+														.skn-srz1 .common-lngg-skli .lang-space {
+															display: flex;
+															flex-wrap: wrap;
+															justify-content: space-between;
+															word-break: break-word;
+															align-items: flex-end;
+														}
+														.skn-srz1 .common-lngg-skli .nativeLangPara.paragraph {
+															width: 100%;
+															max-width: 100%;
+														}
+														.skn-srz1 .common-lngg-skli.infobarsec .field .colon,
+														.skn-srz1 .common-lngg-skli.infotilesec .field .colon {
+															display: none;
+														}
+														.skn-srz1 .common-lngg-skli .field p,
+														.skn-srz1 .common-lngg-skli .nativeLangPara .field,
+														.skn-srz1
+															.common-lngg-skli
+															.nativeLangPara
+															.rating-heading
+															.colon {
+															display: inline;
+														}
+														.skn-srz1 .common-lngg-skli .sliced-rect,
+														.skn-srz1 .common-lngg-skli .inner-rating {
+															height: 7px;
+														}
+														.skn-srz1 .common-lngg-skli .fielditem-ratt,
+														.skn-srz1 .common-lngg-skli .lang-scale {
+															text-align: right;
+														}
+														.skn-srz1 .hide-colon .colon {
+															display: none !important;
+														}
 
-							/*Static CSS - common wider box*/
-							.skn-srz1 .common-lngg-skli .singlecolumn {
-								display: none;
-								margin: 0 !important;
-							}
-							.skn-srz1 .common-lngg-skli.infobarsec .infobarpara,
-							.skn-srz1 .common-lngg-skli.infotilesec .infotilepara {
-								display: block;
-							}
-							.skn-srz1 .common-lngg-skli .rating-heading {
-								flex: 1;
-							}
-							.skn-srz1 .common-lngg-skli .rating-level {
-								width: 15%;
-								text-align: right;
-							}
-							.skn-srz1 .common-lngg-skli .rating-level:empty {
-								display: none;
-							}
-							.skn-srz1 .common-lngg-skli .sliced-rect .sliced-rect-tile {
-								height: 100%;
-								background-color: #d5d6d6;
-								float: left;
-								margin-right: 3px;
-							}
-							.skn-srz1
-								.common-lngg-skli
-								.sliced-rect
-								.sliced-rect-tile:last-child {
-								margin-right: 0;
-							}
-							.skn-srz1 .common-lngg-skli .lang-space {
-								display: flex;
-								flex-wrap: wrap;
-								justify-content: space-between;
-								word-break: break-word;
-								align-items: flex-end;
-							}
-							.skn-srz1 .common-lngg-skli .nativeLangPara.paragraph {
-								width: 100%;
-								max-width: 100%;
-							}
-							.skn-srz1 .common-lngg-skli.infobarsec .field .colon,
-							.skn-srz1 .common-lngg-skli.infotilesec .field .colon {
-								display: none;
-							}
-							.skn-srz1 .common-lngg-skli .field p,
-							.skn-srz1 .common-lngg-skli .nativeLangPara .field,
-							.skn-srz1
-								.common-lngg-skli
-								.nativeLangPara
-								.rating-heading
-								.colon {
-								display: inline;
-							}
-							.skn-srz1 .common-lngg-skli .sliced-rect,
-							.skn-srz1 .common-lngg-skli .inner-rating {
-								height: 7px;
-							}
-							.skn-srz1 .common-lngg-skli .fielditem-ratt,
-							.skn-srz1 .common-lngg-skli .lang-scale {
-								text-align: right;
-							}
-							.skn-srz1 .hide-colon .colon {
-								display: none !important;
-							}
+														/*Static CSS - only Bar wider box*/
+														.skn-srz1 .common-lngg-skli.hide-bar .rating-bar,
+														.skn-srz1 .common-lngg-skli.hide-bar .sliced-rect,
+														.skn-srz1 .common-lngg-skli.hide-only-bar .rating-bar,
+														.skn-srz1
+															.common-lngg-skli.hide-only-bar.infotilesec
+															.sliced-rect {
+															display: none !important;
+														}
+														.skn-srz1 .right-box .common-lngg-skli .rating-bar {
+															background: #d6d6d6;
+															page-break-inside: avoid;
+														}
+														.skn-srz1 .common-lngg-skli .inner-rating,
+														.skn-srz1
+															.common-lngg-skli
+															.sliced-rect
+															.sliced-rect-tile.ratvfill {
+															background: ${appearanceSettings?.primaryColor || "#002e58"};
+														}
+														.skn-srz1 .common-lngg-skli.hide-bar .fielditem-ratt {
+															display: none;
+														}
+														.skn-srz1
+															.common-lngg-skli.hide-bar
+															.nativeLangPara
+															.fielditem-ratt {
+															display: inline;
+														}
+														.skn-srz1 .nativeLangPara .rating-heading span,
+														.skn-srz1 .nativeLangPara .rating-heading .colon {
+															font-weight: bold;
+														}
 
-							/*Static CSS - only Bar wider box*/
-							.skn-srz1 .common-lngg-skli.hide-bar .rating-bar,
-							.skn-srz1 .common-lngg-skli.hide-bar .sliced-rect,
-							.skn-srz1 .common-lngg-skli.hide-only-bar .rating-bar,
-							.skn-srz1
-								.common-lngg-skli.hide-only-bar.infotilesec
-								.sliced-rect {
-								display: none !important;
-							}
-							.skn-srz1 .right-box .common-lngg-skli .rating-bar {
-								background: #d6d6d6;
-								page-break-inside: avoid;
-							}
-							.skn-srz1 .common-lngg-skli .inner-rating,
-							.skn-srz1
-								.common-lngg-skli
-								.sliced-rect
-								.sliced-rect-tile.ratvfill {
-								background: #002e58;
-							}
-							.skn-srz1 .common-lngg-skli.hide-bar .fielditem-ratt {
-								display: none;
-							}
-							.skn-srz1
-								.common-lngg-skli.hide-bar
-								.nativeLangPara
-								.fielditem-ratt {
-								display: inline;
-							}
-							.skn-srz1 .nativeLangPara .rating-heading span,
-							.skn-srz1 .nativeLangPara .rating-heading .colon {
-								font-weight: bold;
-							}
+														/*Static CSS - narrow box common*/
+														.skn-srz1 .left-box .common-lngg-skli {
+															padding-left: 0;
+															display: block;
+														}
+														/* .skn-srz1 .left-box .common-lngg-skli .heading{margin-left:0;width:100%} */
+														.skn-srz1 .left-box .common-lngg-skli .paragraph {
+															width: 100%;
+														}
+														.skn-srz1 .left-box .common-lngg-skli .rating-bar {
+															position: relative;
+														}
+														.skn-srz1 .left-box .common-lngg-skli .rating-bar:before {
+															background: #003d73;
+															content: "";
+															position: absolute;
+															width: 100%;
+															height: 7px;
+															filter: brightness(0.8);
+														}
+														.skn-srz1 .left-box .common-lngg-skli .inner-rating,
+														.skn-srz1
+															.left-box
+															.common-lngg-skli
+															.sliced-rect
+															.sliced-rect-tile.ratvfill {
+															background: #fff;
+															position: relative;
+														}
+														.skn-srz1
+															.left-box
+															.common-lngg-skli
+															.sliced-rect
+															.sliced-rect-tile {
+															height: 100%;
+															background-color: ${appearanceSettings?.primaryColor || "#002e58"};
+															filter: brightness(0.8);
+														}
+														.skn-srz1
+															.left-box
+															.common-lngg-skli
+															.sliced-rect
+															.sliced-rect-tile.ratvfill {
+															filter: none;
+														}
+														.skn-srz1 .left-box .common-lngg-skli .heading {
+															width: 100%;
+														}
 
-							/*Static CSS - narrow box common*/
-							.skn-srz1 .left-box .common-lngg-skli {
-								padding-left: 0;
-								display: block;
-							}
-							/* .skn-srz1 .left-box .common-lngg-skli .heading{margin-left:0;width:100%} */
-							.skn-srz1 .left-box .common-lngg-skli .paragraph {
-								width: 100%;
-							}
-							.skn-srz1 .left-box .common-lngg-skli .rating-bar {
-								position: relative;
-							}
-							.skn-srz1 .left-box .common-lngg-skli .rating-bar:before {
-								background: #003d73;
-								content: "";
-								position: absolute;
-								width: 100%;
-								height: 7px;
-								filter: brightness(0.8);
-							}
-							.skn-srz1 .left-box .common-lngg-skli .inner-rating,
-							.skn-srz1
-								.left-box
-								.common-lngg-skli
-								.sliced-rect
-								.sliced-rect-tile.ratvfill {
-								background: #fff;
-								position: relative;
-							}
-							.skn-srz1
-								.left-box
-								.common-lngg-skli
-								.sliced-rect
-								.sliced-rect-tile {
-								height: 100%;
-								background-color: #003d73;
-								filter: brightness(0.8);
-							}
-							.skn-srz1
-								.left-box
-								.common-lngg-skli
-								.sliced-rect
-								.sliced-rect-tile.ratvfill {
-								filter: none;
-							}
-							.skn-srz1 .left-box .common-lngg-skli .heading {
-								width: 100%;
-							}
+														.skn-srz1 .left-box .data-LNGG .common-lngg-skli .heading,
+														.skn-srz1 .left-box .data-SKLI .common-lngg-skli .heading {
+															width: auto;
+														}
+														/* Languages Ends Here */
 
-							.skn-srz1 .left-box .data-LNGG .common-lngg-skli .heading,
-							.skn-srz1 .left-box .data-SKLI .common-lngg-skli .heading {
-								width: auto;
-							}
-							/* Languages Ends Here */
+														.skn-srz1 .multi-hilt .paddedline {
+															display: table-cell;
+															width: 50%;
+															padding-left: 7px;
+														}
+														.skn-srz1 .multi-hilt .paddedline:first-child {
+															padding-left: 0;
+															padding-right: 7px;
+														}
+														.skn-srz1 .multi-hilt ul li:before {
+															display: none;
+														}
+														.skn-srz1 .multi-hilt ul li:last-child {
+															margin-bottom: 0;
+														}
+														.skn-srz1 .multi-hilt ul li,
+														.skn-srz1
+															.left-box
+															.multi-hilt
+															.skill:first-child
+															ul
+															li:last-child {
+															margin-bottom: 5px;
+														}
+														.skn-srz1 .multi-hilt .singlecolumn {
+															display: table;
+															table-layout: fixed;
+															width: 100%;
+														}
+														.skn-srz1 .left-box .multi-hilt .paddedline {
+															display: block;
+															width: 100%;
+															padding: 0;
+														}
 
-							.skn-srz1 .multi-hilt .paddedline {
-								display: table-cell;
-								width: 50%;
-								padding-left: 7px;
-							}
-							.skn-srz1 .multi-hilt .paddedline:first-child {
-								padding-left: 0;
-								padding-right: 7px;
-							}
-							.skn-srz1 .multi-hilt ul li:before {
-								display: none;
-							}
-							.skn-srz1 .multi-hilt ul li:last-child {
-								margin-bottom: 0;
-							}
-							.skn-srz1 .multi-hilt ul li,
-							.skn-srz1
-								.left-box
-								.multi-hilt
-								.skill:first-child
-								ul
-								li:last-child {
-								margin-bottom: 5px;
-							}
-							.skn-srz1 .multi-hilt .singlecolumn {
-								display: table;
-								table-layout: fixed;
-								width: 100%;
-							}
-							.skn-srz1 .left-box .multi-hilt .paddedline {
-								display: block;
-								width: 100%;
-								padding: 0;
-							}
+														/* For PDF HILT */
+														.skn-srz1.for-pdf {
+															min-height: auto;
+														}
+														.skn-srz1.for-pdf .parentContainer {
+															display: block;
+														}
+														.skn-srz1.for-pdf .left-box {
+															display: block;
+															float: left;
+															background: transparent;
+															padding-top: 0;
+															padding-bottom: 0;
+														}
+														.skn-srz1.for-pdf .right-box {
+															display: block;
+															float: right;
+															width: calc(100% - 214px);
+															padding-top: 0;
+															padding-bottom: 0;
+														}
 
-							/* For PDF HILT */
-							.skn-srz1.for-pdf {
-								min-height: auto;
-							}
-							.skn-srz1.for-pdf .parentContainer {
-								display: block;
-							}
-							.skn-srz1.for-pdf .left-box {
-								display: block;
-								float: left;
-								background: transparent;
-								padding-top: 0;
-								padding-bottom: 0;
-							}
-							.skn-srz1.for-pdf .right-box {
-								display: block;
-								float: right;
-								width: calc(100% - 214px);
-								padding-top: 0;
-								padding-bottom: 0;
-							}
+														.skn-srz1.for-pdf .right-box .paragraph.multi-hilt .singlecolumn {
+															display: block;
+														}
+														.skn-srz1.for-pdf
+															.right-box
+															.paragraph.multi-hilt
+															.singlecolumn
+															.paddedline {
+															display: block;
+															width: 48%;
+														}
+														.skn-srz1.for-pdf
+															.right-box
+															.paragraph.multi-hilt
+															.singlecolumn:after {
+															content: "";
+															clear: both;
+															display: table;
+														}
+														.skn-srz1.for-pdf
+															.right-box
+															.paragraph.multi-hilt
+															.singlecolumn
+															.paddedline:first-child {
+															float: left;
+															padding-right: 0;
+														}
+														.skn-srz1.for-pdf
+															.right-box
+															.paragraph.multi-hilt
+															.singlecolumn
+															.paddedline:last-child {
+															float: right;
+															padding-left: 0;
+														}
+														/* GRYR */
+														.skn-srz1 .displayNoneThisField {
+															display: none;
+														} /* Keep this class always at bottom */
 
-							.skn-srz1.for-pdf .right-box .paragraph.multi-hilt .singlecolumn {
-								display: block;
-							}
-							.skn-srz1.for-pdf
-								.right-box
-								.paragraph.multi-hilt
-								.singlecolumn
-								.paddedline {
-								display: block;
-								width: 48%;
-							}
-							.skn-srz1.for-pdf
-								.right-box
-								.paragraph.multi-hilt
-								.singlecolumn:after {
-								content: "";
-								clear: both;
-								display: table;
-							}
-							.skn-srz1.for-pdf
-								.right-box
-								.paragraph.multi-hilt
-								.singlecolumn
-								.paddedline:first-child {
-								float: left;
-								padding-right: 0;
-							}
-							.skn-srz1.for-pdf
-								.right-box
-								.paragraph.multi-hilt
-								.singlecolumn
-								.paddedline:last-child {
-								float: right;
-								padding-left: 0;
-							}
-							/* GRYR */
-							.skn-srz1 .displayNoneThisField {
-								display: none;
-							} /* Keep this class always at bottom */
+														/*Builder css*/
+														.skn-srz1 .common-lngg-skli .sortableInner .sortable-item,
+														.skn-srz1 .right-box .common-lngg-skli .doc-item {
+															width: 100%;
+														}
+														.skn-srz1
+															.right-box
+															.common-lngg-skli
+															.sortableInner
+															.sortable-item {
+															padding-top: 0;
+														}
+														.skn-srz1
+															.common-lngg-skli
+															.sortableInner
+															.sortable-item
+															.nativeLangPara
+															.rating-heading {
+															font-weight: bold;
+														}
+														.skn-srz1 .socl-fields a {
+															color: #fff;
+														}
 
-							/*Builder css*/
-							.skn-srz1 .common-lngg-skli .sortableInner .sortable-item,
-							.skn-srz1 .right-box .common-lngg-skli .doc-item {
-								width: 100%;
-							}
-							.skn-srz1
-								.right-box
-								.common-lngg-skli
-								.sortableInner
-								.sortable-item {
-								padding-top: 0;
-							}
-							.skn-srz1
-								.common-lngg-skli
-								.sortableInner
-								.sortable-item
-								.nativeLangPara
-								.rating-heading {
-								font-weight: bold;
-							}
-							.skn-srz1 .socl-fields a {
-								color: #fff;
-							}
-
-							/*PICT support*/
-							.skn-srz1.pict-pcpf-none .photo {
-								display: none;
-							}</style
+														/*PICT support*/
+														.skn-srz1.pict-pcpf-none .photo {
+															display: none;
+														}</style
 						><style
 							type="text/css"
 							id="dynamic"
@@ -705,10 +709,10 @@
 								width: 612px;
 							}
 							.skn-srz1.fontface {
-								font-family: ${additional.fontFamily ||  "Century Gothic"}
+								font-family: "${appearanceSettings?.fontFamily}", sans-serif;
 							}
 							.skn-srz1.fontsize {
-								font-size: ${additional.fontSize ? + additional.fontSize + 11 : 11}px;
+								font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 11 : 11}px;
 							}
 							.skn-srz1 .section {
 								padding-top: 20px;
@@ -733,20 +737,20 @@
 							.skn-srz1 .jobtitle,
 							.skn-srz1 .degree,
 							.skn-srz1 .programline {
-								font-size: ${additional.fontSize ? + additional.fontSize + 14 : 14}px;
+								font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 14 : 14}px;
 							}
 							.skn-srz1 .name {
-								font-size: ${additional.fontSize ? + additional.fontSize + 28 : 28}px;
+								font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 28 : 28}px;
 								line-height: 34px;
 							}
 							.skn-srz1 .heading {
 								line-height: 22px;
 							}
 							.skn-srz1 .sectiontitle {
-								font-size: ${additional.fontSize ? + additional.fontSize + 16 : 16}px;
+								font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 16 : 16}px;
 							}
 							.skn-srz1 .resumeTitle {
-								font-size: ${additional.fontSize ? + additional.fontSize + 14 : 14}px;
+								font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 14 : 14}px;
 								padding-top: 3px;
 							}
 							.skn-srz1 .right-box .multi-hilt .singlecolumn {
@@ -784,10 +788,10 @@
 								left: -91px;
 							}
 							.skn-srz1 .right-box .sectiontitle {
-								color: #003d73;
+								color: ${appearanceSettings?.primaryColor || "#002e58"};
 							}
 							.skn-srz1 .right-box .inner-square {
-								background: #003d73;
+								background: ${appearanceSettings?.primaryColor || "#002e58"};
 							}
 
 							/* Issues fix for builder page */
@@ -1197,7 +1201,7 @@
 										</div>
 									</div>
 								</div>
-								${skills?.length ?  `
+								${skills?.length ? `
 								<div
 									data-react-beautiful-dnd-draggable="0"
 									class="sortable-item section-container SortableItem-sibling data-HILT">
@@ -1242,7 +1246,7 @@
 										</div>
 									</div>
 								</div>
-								` : ""} ${languages?.length ?  `
+								` : ""} ${languages?.length ? `
 
 								<div
 									data-react-beautiful-dnd-draggable="0"
@@ -1361,11 +1365,14 @@
 																class="paddedline date-content hidedates"
 																dependency="JSTD|EDDT">
 																<span class="jobdates" dependency="JSTD"
-																	>${job.startDate ? moment(job.startDate).format("MM-YYYY") : ""}</span
+																	>${job.startDate ?
+																	moment(job.startDate).format("MM-YYYY") :
+																	""}</span
 																><span dependency="JSTD+EDDT"> - </span>
 																<span class="jobdates" dependency="EDDT"
-																	>${job.isPresent ? "Present" :
-																	job.endDate ? moment(job.endDate).format("MM-YYYY") : ""}</span
+																	>${job.isPresent ? "Present" : job.endDate ?
+																	moment(job.endDate).format("MM-YYYY") :
+																	""}</span
 																><br dependency="JTIT|COMP|JSTA|JCIT|JLOC" />
 															</div>
 															<div class="singlecolumn">
@@ -1376,14 +1383,17 @@
 																		class="jobdates"
 																		id="FIELD_JSTD"
 																		format="%Y-%m"
-																		>${job.startDate ? moment(job.startDate).format("MM-YYYY") : ""}</span
+																		>${job.startDate ?
+																		moment(job.startDate).format("MM-YYYY") :
+																		""}</span
 																	><span dependency="JSTD+EDDT"> - </span>
 																	<span
 																		class="jobdates"
 																		id="FIELD_EDDT"
 																		format="%Y-%m"
-																		>${job.isPresent ? "Present" :
-																		job.endDate ? moment(job.endDate).format("MM-YYYY") : ""}</span
+																		>${job.isPresent ? "Present" : job.endDate ?
+																		moment(job.endDate).format("MM-YYYY") :
+																		""}</span
 																	><br dependency="JTIT|COMP|JSTA|JCIT|JLOC" />
 																</div>
 																<span class="paddedline" dependency="JTIT">
@@ -1460,16 +1470,20 @@
 																		id="FIELD_GRYR"
 																		format="%Y-%m"
 																		dependency="GRYR"
-																		>${edu.startDate ? moment(edu.startDate).format("MM-YYYY") : ""}</span
+																		>${edu.startDate ?
+																		moment(edu.startDate).format("MM-YYYY") :
+																		""}</span
 																	><span
-																		class="xslt_static_change displayNoneThisField"
-																		> - </span
+																		class="xslt_static_change displayNoneThisField">
+																		- </span
 																	><span
 																		class="jobdates"
 																		id="FIELD_GRYR"
 																		format="%Y-%m"
 																		dependency="GRYR"
-																		>${edu.isPresent ? "Present" : edu.endDate ? moment(edu.endDate).format("MM-YYYY") : ""}</span
+																		>${edu.isPresent ? "Present" : edu.endDate ?
+																		moment(edu.endDate).format("MM-YYYY") :
+																		""}</span
 																	>
 																	<span
 																		class="jobdates"
