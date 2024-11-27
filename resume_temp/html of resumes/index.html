@@ -19,6 +19,7 @@
 				<div class="" tabindex="">
 					<div>
 						<style type="text/css" id="static">
+											
 														html,
 														body,
 														div,
@@ -87,6 +88,8 @@
 															outline: 0;
 															vertical-align: baseline;
 															background: transparent;
+															print-color-adjust: exact;
+															-webkit-print-color-adjust: exact;
 														}
 														h1,
 														h2,
@@ -97,19 +100,6 @@
 														p,
 														blockquote,
 														pre,
-														a,
-														abbr,
-														acronym,
-														address,
-														q,
-														s,
-														samp,
-														small,
-														strike,
-														strong,
-														sub,
-														span,
-														var,
 														b,
 														u,
 														i,
@@ -123,9 +113,6 @@
 														th,
 														td {
 														page-break-inside: avoid;
-														}
-														.avoid-break {
-															page-break-inside: avoid;
 														}
 														body {
 															text-align: left;
@@ -208,13 +195,15 @@
 															width: 1%;
 														}
 														.skn-srz1 {
-															color: ${appearanceSettings?.primaryColor || "#343434"};
+															color: ${appearanceSettings?.secondaryColor || "#343434"};
 															font-variant-ligatures: none;
-															line-height: 16px;
-															min-height: 792px;
+															line-height: ${appearanceSettings?.lineHeight ? appearanceSettings?.lineHeight + 16 : 16}px;
+															min-height: ${appearanceSettings?.resumeHeight || 1056}px;
+															overflow: hidden;
 															box-sizing: border-box;
 														}
 														.skn-srz1 .name {
+															margin-top: 20px;
 															font-weight: 700;
 															padding: 0;
 															position: relative;
@@ -226,7 +215,7 @@
 														}
 														.skn-srz1 .heading {
 															font-weight: 700;
-															line-height: 15px;
+															line-height: ${appearanceSettings?.lineHeight ? appearanceSettings?.lineHeight + 15 : 15}px;
 															margin-bottom: 10px;
 														}
 														.skn-srz1 .sectiontitle {
@@ -251,9 +240,10 @@
 
 														/*Left Box */
 														.skn-srz1 .left-box {
-															background: #003d73;
+															background: ${appearanceSettings?.primaryColor || "#003d73"};
+															min-height: ${appearanceSettings?.resumeHeight || 1056}px;
 															display: table-cell;
-															padding: 15px;
+															padding: 0 15px;
 															box-sizing: initial;
 														}
 														.skn-srz1 .left-box .section {
@@ -261,7 +251,7 @@
 															color: #fff;
 														}
 														.skn-srz1 .left-box .heading {
-															line-height: 1.5;
+															line-height: ${appearanceSettings?.lineHeight ? appearanceSettings?.lineHeight + 1.5 : 1.5}px;
 															margin-left: -15px;
 															margin-right: -15px;
 															padding: 0 15px;
@@ -272,7 +262,7 @@
 															position: absolute;
 															left: 0;
 															top: 0;
-															background: #003d73;
+															background: ${appearanceSettings?.primaryColor || "#003d73"};
 															height: 100%;
 															width: 100%;
 															filter: brightness(0.8);
@@ -297,7 +287,7 @@
 														.skn-srz1 .right-box {
 															display: table-cell;
 															letter-spacing: 0.2px;
-															padding: 15px;
+															padding: 0 15px;
 															vertical-align: top;
 														}
 														.skn-srz1 .right-box .section:first-child {
@@ -310,12 +300,14 @@
 															padding: 5px 0;
 														}
 														.skn-srz1 .right-box .sectiontitle {
-															color: ${appearanceSettings?.primaryColor || "#002e58"};
+															color: "#002e58";
 														}
 														.skn-srz1 .right-box .paddedline.date-content {
+															line-height: 110%;
+															font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 10 : 10}px;
 															position: absolute;
 															margin-left: 0;
-															width: 65px;
+															width: 16%;
 														}
 														.skn-srz1 .paragraph .singlecolumn {
 															position: relative;
@@ -341,10 +333,11 @@
 															min-height: inherit;
 														}
 														#displayResume .skn-srz1.document {
-															min-height: 792px;
+															min-height: ${appearanceSettings?.resumeHeight || 1056}px;
+															overflow: hidden;
 														}
 														.skn-srz1 .left-box .active * {
-															color: ${appearanceSettings?.primaryColor || "#343434"};
+															color: ${appearanceSettings?.secondaryColor || "#343434"};
 														}
 														/* Only for firefox */
 														@-moz-document url-prefix() {
@@ -371,7 +364,7 @@
 															background: #d6d6d6;
 														}
 														.skn-srz1 .right-box .inner-square {
-															background: #003d73;
+															background: ${appearanceSettings?.primaryColor || "#003d73"};
 															filter: brightness(0.8);
 														}
 
@@ -494,14 +487,13 @@
 														}
 														.skn-srz1 .right-box .common-lngg-skli .rating-bar {
 															background: #d6d6d6;
-															page-break-inside: avoid;
 														}
 														.skn-srz1 .common-lngg-skli .inner-rating,
 														.skn-srz1
 															.common-lngg-skli
 															.sliced-rect
 															.sliced-rect-tile.ratvfill {
-															background: ${appearanceSettings?.primaryColor || "#002e58"};
+															background: "#002e58";
 														}
 														.skn-srz1 .common-lngg-skli.hide-bar .fielditem-ratt {
 															display: none;
@@ -530,7 +522,7 @@
 															position: relative;
 														}
 														.skn-srz1 .left-box .common-lngg-skli .rating-bar:before {
-															background: #003d73;
+															background: ${appearanceSettings?.primaryColor || "#003d73"};
 															content: "";
 															position: absolute;
 															width: 100%;
@@ -552,7 +544,7 @@
 															.sliced-rect
 															.sliced-rect-tile {
 															height: 100%;
-															background-color: ${appearanceSettings?.primaryColor || "#002e58"};
+															background-color: "#002e58";
 															filter: brightness(0.8);
 														}
 														.skn-srz1
@@ -624,7 +616,7 @@
 														.skn-srz1.for-pdf .right-box {
 															display: block;
 															float: right;
-															width: calc(100% - 214px);
+															width: 65%;
 															padding-top: 0;
 															padding-bottom: 0;
 														}
@@ -696,17 +688,13 @@
 														/*PICT support*/
 														.skn-srz1.pict-pcpf-none .photo {
 															display: none;
-														}</style
-						><style
-							type="text/css"
-							id="dynamic"
-							data-time="Mon Sep 16 2024 02:02:22 GMT+0530 (India Standard Time)">
+														}
 							.skn-srz1,
 							.skn-srz1 table {
-								line-height: 18px;
+								line-height: ${appearanceSettings?.lineHeight ? appearanceSettings?.lineHeight + 18 : 18}px;
 							}
 							.skn-srz1.pagesize {
-								width: 612px;
+								width: ${appearanceSettings?.resumeWidth || 816}px;
 							}
 							.skn-srz1.fontface {
 								font-family: "${appearanceSettings?.fontFamily}", sans-serif;
@@ -741,10 +729,10 @@
 							}
 							.skn-srz1 .name {
 								font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 28 : 28}px;
-								line-height: 34px;
+								line-height: ${appearanceSettings?.lineHeight ? appearanceSettings?.lineHeight + 34 : 34}px;
 							}
 							.skn-srz1 .heading {
-								line-height: 22px;
+								line-height: ${appearanceSettings?.lineHeight ? appearanceSettings?.lineHeight + 22 : 22}px;
 							}
 							.skn-srz1 .sectiontitle {
 								font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 16 : 16}px;
@@ -754,25 +742,26 @@
 								padding-top: 3px;
 							}
 							.skn-srz1 .right-box .multi-hilt .singlecolumn {
-								width: calc(100% - 91px);
+								width: 86%;
 							}
 							/*Left Box*/
 							.skn-srz1 .left-box {
-								background: #003d73;
-								width: 154px;
+								background: ${appearanceSettings?.primaryColor || "#003d73"};
+									height: 100vh;
+								width: 25%;
 							}
 							.skn-srz1 .left-box .section {
 								padding-top: 20px;
 							}
 							.skn-srz1 .left-box .heading {
-								line-height: 22px;
+								line-height: ${appearanceSettings?.lineHeight ? appearanceSettings?.lineHeight + 22 : 22}px;
 							}
 							.skn-srz1 .left-box .heading:before,
 							.skn-srz1 .left-box .common-lngg-skli .rating-bar:before {
-								background: #003d73;
+								background: ${appearanceSettings?.primaryColor || "#003d73"};
 							}
 							.skn-srz1 .left-box .outer-square:before {
-								background: #003d73;
+								background: ${appearanceSettings?.primaryColor || "#003d73"};
 								content: "";
 								position: absolute;
 								height: 7px;
@@ -782,16 +771,17 @@
 
 							/*Right Box*/
 							.skn-srz1 .right-box .paragraph .singlecolumn {
-								margin-left: 91px;
+								margin-left: 15%;
+								margin-right: 2%;
 							}
 							.skn-srz1 .right-box .paddedline.date-content {
-								left: -91px;
+								left: -18%;
 							}
 							.skn-srz1 .right-box .sectiontitle {
-								color: ${appearanceSettings?.primaryColor || "#002e58"};
+								color: "#002e58";
 							}
 							.skn-srz1 .right-box .inner-square {
-								background: ${appearanceSettings?.primaryColor || "#002e58"};
+								background: "#002e58";
 							}
 
 							/* Issues fix for builder page */
@@ -878,7 +868,7 @@
 								.common-lngg-skli
 								.sliced-rect
 								.sliced-rect-tile.ratvfill {
-								background: #003d73;
+								background: ${appearanceSettings?.primaryColor || "#003d73"};
 							}
 							.skn-srz1
 								.left-box
@@ -933,7 +923,7 @@
 								filter: brightness(0.8);
 							}
 							.skn-srz1._single-parent-drag .inner-square {
-								background: #003d73;
+								background: ${appearanceSettings?.primaryColor || "#003d73"};
 							}
 							.skn-srz1._single-parent-drag .wrapper-bg + div .paragraph {
 								margin-top: 0;
@@ -973,7 +963,7 @@
 							}
 
 							/* support for IE Browser */
-							@media screen and (min-width: 0\0) {
+							@media screen and (min-width: 0) {
 								.skn-srz1 .left-box {
 									box-sizing: content-box;
 								}
@@ -981,7 +971,7 @@
 									display: flex;
 								}
 								.skn-srz1 .right-box {
-									width: calc(100% - 154px);
+									width: 75%;
 								}
 								.skn-srz1 .left-box,
 								.skn-srz1 .right-box {
@@ -991,22 +981,24 @@
 								}
 								.skn-srz1 .left-box:before {
 									content: "";
-									background: #003d73;
+									background: ${appearanceSettings?.primaryColor || "#003d73"};
+									min-height: ${appearanceSettings?.resumeHeight || 1056}px;
+									overflow: hidden;
 									position: absolute;
 									left: 0;
 									top: 0;
-									height: 100%;
+									/* height: 100%; */
 									width: 100%;
 									opacity: 0.9;
 								}
 							}
 
 							.skn-srz1 .common-lngg-skli {
-								padding-left: 91px;
+								padding-left: 15%;
 							}
 							.skn-srz1 .right-box .common-lngg-skli .heading {
-								margin-left: -91px;
-								width: calc(100% + 91px);
+								margin-left: -15%;
+								width: 115%;
 							}
 							.skn-srz1 .common-lngg-skli .inner-rating,
 							.skn-srz1
@@ -1018,7 +1010,7 @@
 								.common-lngg-skli
 								.sliced-rect
 								.sliced-rect-tile {
-								background: #003d73;
+								background: ${appearanceSettings?.primaryColor || "#003d73"};
 							}
 							.skn-srz1 .right-box .common-lngg-skli .inner-rating,
 							.skn-srz1
@@ -1039,7 +1031,7 @@
 								.sortable-item
 								.common-lngg-skli
 								.title-edit {
-								margin-left: -91px;
+								margin-left: -15%;
 							}
 
 							/*Dynamic CSS - hover and drag issue*/
@@ -1135,11 +1127,11 @@
 										data-section-cd="CNTC">
 										<div class="doc-item">
 											<div class="heading">
-												<div class="sectiontitle" id="SECTIONNAME_CNTC">
+												<h3 class="sectiontitle" id="SECTIONNAME_CNTC">
 													Contact<span
 														title="Rename Contact section"
 														class="rename-section text-rename"></span>
-												</div>
+												</h3>
 											</div>
 											<div class="">
 												<div class="">
@@ -1215,11 +1207,11 @@
 										data-section-cd="HILT">
 										<div class="doc-item">
 											<div class="heading">
-												<div class="sectiontitle" id="SECTIONNAME_HILT">
+												<h3 class="sectiontitle" id="SECTIONNAME_HILT">
 													Skills<span
 														title="Rename Skills section"
 														class="rename-section text-rename"></span>
-												</div>
+												</h3>
 											</div>
 											<div class="">
 												<div class="">
@@ -1261,11 +1253,11 @@
 										data-section-cd="LNGG">
 										<div class="doc-item">
 											<div class="heading">
-												<div class="sectiontitle" id="SECTIONNAME_LNGG">
+												<h3 class="sectiontitle" id="SECTIONNAME_LNGG">
 													Languages<span
 														title="Rename Languages section"
 														class="rename-section text-rename"></span>
-												</div>
+												</h3>
 											</div>
 											<div class="">
 												<div class="sortableInner">
@@ -1348,11 +1340,11 @@
 										data-section-cd="EXPR">
 										<div class="doc-item">
 											<div class="heading">
-												<div class="sectiontitle" id="SECTIONNAME_EXPR">
+												<h3 class="sectiontitle" id="SECTIONNAME_EXPR">
 													Work History<span
 														title="Rename Work History section"
 														class="rename-section text-rename"></span>
-												</div>
+												</h3>
 											</div>
 											<div class="">
 												<div class="sortableInner">
@@ -1366,12 +1358,12 @@
 																dependency="JSTD|EDDT">
 																<span class="jobdates" dependency="JSTD"
 																	>${job.startDate ?
-																	moment(job.startDate).format("MM-YYYY") :
+																	moment(job.startDate).format(appearanceSettings?.dateFormat || "MM-YYYY") :
 																	""}</span
 																><span dependency="JSTD+EDDT"> - </span>
 																<span class="jobdates" dependency="EDDT"
-																	>${job.isPresent ? "Present" : job.endDate ?
-																	moment(job.endDate).format("MM-YYYY") :
+																	>${job.isPresent ? " Present" : job.endDate ?
+																	moment(job.endDate).format(appearanceSettings?.dateFormat || "MM-YYYY") :
 																	""}</span
 																><br dependency="JTIT|COMP|JSTA|JCIT|JLOC" />
 															</div>
@@ -1384,15 +1376,15 @@
 																		id="FIELD_JSTD"
 																		format="%Y-%m"
 																		>${job.startDate ?
-																		moment(job.startDate).format("MM-YYYY") :
+																		moment(job.startDate).format(appearanceSettings?.dateFormat || "MM-YYYY") :
 																		""}</span
 																	><span dependency="JSTD+EDDT"> - </span>
 																	<span
 																		class="jobdates"
 																		id="FIELD_EDDT"
 																		format="%Y-%m"
-																		>${job.isPresent ? "Present" : job.endDate ?
-																		moment(job.endDate).format("MM-YYYY") :
+																		>${job.isPresent ? " Present" : job.endDate ?
+																		moment(job.endDate).format(appearanceSettings?.dateFormat || "MM-YYYY") :
 																		""}</span
 																	><br dependency="JTIT|COMP|JSTA|JCIT|JLOC" />
 																</div>
@@ -1447,11 +1439,11 @@
 										data-section-cd="EDUC">
 										<div class="doc-item">
 											<div class="heading">
-												<div class="sectiontitle" id="SECTIONNAME_EDUC">
+												<h3 class="sectiontitle" id="SECTIONNAME_EDUC">
 													Education<span
 														title="Rename Education section"
 														class="rename-section text-rename"></span>
-												</div>
+												</h3>
 											</div>
 											<div class="">
 												<div class="">
@@ -1463,26 +1455,23 @@
 															<div class="singlecolumn">
 																<div class="paddedline date-content">
 																	<span
-																		class="xslt_static_change displayNoneThisField"
-																		>Expected in </span
-																	><span
 																		class="jobdates"
 																		id="FIELD_GRYR"
 																		format="%Y-%m"
 																		dependency="GRYR"
 																		>${edu.startDate ?
-																		moment(edu.startDate).format("MM-YYYY") :
+																		moment(edu.startDate).format(appearanceSettings?.dateFormat || "MM-YYYY") :
 																		""}</span
 																	><span
-																		class="xslt_static_change displayNoneThisField">
+																		class="xslt_static_change">
 																		- </span
 																	><span
 																		class="jobdates"
 																		id="FIELD_GRYR"
 																		format="%Y-%m"
 																		dependency="GRYR"
-																		>${edu.isPresent ? "Present" : edu.endDate ?
-																		moment(edu.endDate).format("MM-YYYY") :
+																		>${edu.isPresent ? " Present" : edu.endDate ?
+																		moment(edu.endDate).format(appearanceSettings?.dateFormat || "MM-YYYY") :
 																		""}</span
 																	>
 																	<span

@@ -10,6 +10,7 @@ const {
 	callMeAPI,
 	callEmailAPI,
 } = require("../helper/auth.helper.js");
+const { convertHtmlToPdf } = require("../utils/utilFun.js");
 // const crypto = require("crypto");
 
 // signUp a User
@@ -50,6 +51,41 @@ exports.getResumeData = catchAsyncErrors(async (req, res, next) => {
 		data: getResumeData,
 		message: "Fetched resume data successfully",
 	});
+});
+
+exports.createResumeDownload = catchAsyncErrors(async (req, res, next) => {
+	try {
+		const {
+			resumeHTML,
+			heightResume,
+			widthResume,
+			totalPages,
+			headerTemplate,
+			footerTemplate,
+		} = req.body;
+	
+		const pdfBuffer = await convertHtmlToPdf(
+			resumeHTML,
+			heightResume,
+			widthResume,
+			totalPages,
+			headerTemplate,
+			footerTemplate
+		);
+
+		// Set response headers for file download
+		res.setHeader("Content-Type", "application/pdf");
+		res.setHeader(
+			"Content-Disposition",
+			'attachment; filename="resumeyoyo.pdf"'
+		);
+
+		// Send the PDF buffer as the response
+		res.end(pdfBuffer);
+	} catch (error) {
+		console.error("Error while sending PDF:", error);
+		res.status(500).send("Error sending PDF");
+	}
 });
 
 exports.loginUser = catchAsyncErrors(async (req, res, next) => {
