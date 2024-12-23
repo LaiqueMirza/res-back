@@ -11,6 +11,7 @@ const {
 	callEmailAPI,
 } = require("../helper/auth.helper.js");
 const { convertHtmlToPdf } = require("../utils/utilFun.js");
+const { extractDataFromPDF } = require("../biz/createResume.biz.js");
 // const crypto = require("crypto");
 
 // signUp a User
@@ -45,10 +46,14 @@ exports.getResumeData = catchAsyncErrors(async (req, res, next) => {
 		"resume",
 		{ user_id }
 	);
-
+	let noDataFound = false;
+	if (!getResumeData) {
+		noDataFound = true;
+	}
 	res.status(200).json({
 		success: true,
 		data: getResumeData,
+		noDataFound,
 		message: "Fetched resume data successfully",
 	});
 });
@@ -87,6 +92,19 @@ exports.createResumeDownload = catchAsyncErrors(async (req, res, next) => {
 		res.status(500).send("Error sending PDF");
 	}
 });
+
+exports.uploadPreviousResumeFile = catchAsyncErrors(async (req, res, next) => {
+	console.log(req.file.filename);
+		const data = await extractDataFromPDF(
+			`previousResumeFile/${req.file.filename}`
+		);
+
+	res.status(200).json({
+		success: true,
+		message: "File uploaded Successfully",
+	});
+});
+
 
 exports.loginUser = catchAsyncErrors(async (req, res, next) => {
 	const { email, password } = req.body;

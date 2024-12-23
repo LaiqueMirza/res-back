@@ -51,7 +51,7 @@ app.use((req, res, next) => {
 	next();
 });
 app.use(helmet());
-
+app.use("/previousResumeFile", express.static("previousResumeFile"));
 // app.use((req, res, next) => {
 // 	if (req.body) {
 // 		const originalBody = JSON.stringify(req.body);
