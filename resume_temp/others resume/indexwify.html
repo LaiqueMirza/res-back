@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIFY JSON form test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        input:focus {
+            border-color: #007BFF;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        WIFY JSON form test
+    </h1>
+    <form id="dynamicForm"></form>
+
+    <script>
+        const formFields = [
+            {
+                "key": "user_name",
+                "label": "Name",
+                "type": "text",
+                "maxLength": "50",
+                "placeholder": "Enter your name"
+            },
+            {
+                "key": "mobile_no",
+                "label": "Mobile number",
+                "type": "number",
+                "maxLength": "10",
+                "placeholder": "Enter your mobile number"
+            },
+            {
+                "key": "email",
+                "label": "Email",
+                "type": "email",
+                "placeholder": "Enter your email"
+            }
+        ];
+
+        const form = document.getElementById('dynamicForm');
+
+        // Creating form elements as per the elements in the field
+        formFields.forEach(({ key, label, type, maxLength, placeholder }) => {
+            const labelElement = document.createElement('label');
+            labelElement.setAttribute('for', key);
+            labelElement.textContent = `${label}:`;
+
+            const inputElement = document.createElement('input');
+            inputElement.type = type;
+            inputElement.id = key;
+            inputElement.name = key;
+            if (maxLength) inputElement.maxLength = maxLength;
+            if (placeholder) {
+                inputElement.placeholder = placeholder;
+            } else if(label) {
+                inputElement.placeholder = `Enter ${label}`;
+            }
+            inputElement.required = true;
+
+            // Appending labels and inputs to the form
+            form.appendChild(labelElement);
+            form.appendChild(inputElement);
+        });
+
+        // Adding a submit button
+        const submitButton = document.createElement('button');
+        submitButton.type = 'submit';
+        submitButton.textContent = 'Submit';
+        form.appendChild(submitButton);
+
+        // creating an eventlistener for form submission
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            alert('Submitted successfully');
+        });
+    </script>
+</body>
+</html>

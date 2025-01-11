@@ -34,7 +34,7 @@ app.use(express.urlencoded({ limit: "10mb", extended: true }));
 app.use(cookieParser());
 const corsOptions = {
 	origin: ["http://localhost:3000"],
-	methods: ["GET", "POST"],
+	methods: ["GET", "POST", "PATCH", "PUT"],
 	allowedHeaders:
 		"Origin, X-Requested-With, Content-Type, Accept, Authorization",
 	credentials: true, // Allow credentials (cookies, HTTP authentication) to be sent with the request
@@ -42,7 +42,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use((req, res, next) => {
 	res.header("Access-Control-Allow-Origin", ["http://localhost:3000"]);
-	res.header("Access-Control-Allow-Methods", "GET,POST");
+	res.header("Access-Control-Allow-Methods", "GET,POST,PATCH, PUT");
 	res.header(
 		"Access-Control-Allow-Headers",
 		"Origin, X-Requested-With, Content-Type, Accept"

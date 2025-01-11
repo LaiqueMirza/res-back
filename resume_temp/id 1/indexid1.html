@@ -1150,11 +1150,11 @@
 																		<div id="FIELD_STRT"></div>
 																		<span id="FIELD_CITY"
 																			>${personalDetails?.Address}</span
-																		><span dependency="CITY+STAT|ZIPC">,</span>
+																		>
 																		<span id="FIELD_STAT"
-																			>${personalDetails?.city}</span
+																			>${personalDetails?.country ? `${personalDetails?.city}, ` : personalDetails?.city }</span
 																		><span dependency="STAT+ZIPC"
-																			>${personalDetails?.nationality}</span
+																			>${personalDetails?.postalCode ? `${personalDetails?.country}, ` : personalDetails?.country }</span
 																		>
 																		<span id="FIELD_ZIPC"
 																			>${personalDetails?.postalCode}</span

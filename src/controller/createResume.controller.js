@@ -23,7 +23,6 @@ exports.createResumeData = catchAsyncErrors(async (req, res, next) => {
 		"resume",
 		{
 			resume_data: formData,
-			title: "Professional Resume",
 		},
 		{ user_id }
 	);
@@ -42,22 +41,57 @@ exports.createResumeData = catchAsyncErrors(async (req, res, next) => {
 
 exports.getResumeData = catchAsyncErrors(async (req, res, next) => {
 	const { user_id } = req.user;
-	const getResumeData = await commonService.findOne(
-		"resume",
-		{ user_id }
-	);
-	let noDataFound = false;
+	const getResumeData = await commonService.findOne("resume", { user_id }, [
+		"resume_data",
+		"resume_template_id",
+	]);
 	if (!getResumeData) {
-		noDataFound = true;
+		return next(new ErrorHander("No resume resume data found", 404));
 	}
 	res.status(200).json({
 		success: true,
 		data: getResumeData,
-		noDataFound,
 		message: "Fetched resume data successfully",
 	});
 });
 
+exports.updateResumeTemplateId = catchAsyncErrors(async (req, res, next) => {
+	const { resumeTempId } = req.body;
+	const { user_id } = req.user;
+	const [affectedRows, updatedRows] = await commonService.update(
+		"resume",
+		{
+			resume_template_id: resumeTempId,
+		},
+		{ user_id }
+	);
+	console.log(affectedRows, updatedRows);
+
+	if (affectedRows === 0) {
+		return next(new ErrorHander("Error in updating resume data", 404));
+	}
+	console.log(updatedResumeData);
+	res.status(200).json({
+		success: true,
+		message: "Resume tempate id updated successfully",
+	});
+});
+
+
+// exports.getResumeTemplateId = catchAsyncErrors(async (req, res, next) => {
+// 	const { user_id } = req.user;
+// 	const getResumeData = await commonService.findOne("resume", { user_id }, [
+// 		"resume_template_id",
+// 	]);
+// 	if (!getResumeData) {
+// 		return next(new ErrorHander("Resume template not found, select a temlate", 404));
+// 	}
+// 	res.status(200).json({
+// 		success: true,
+// 		data: getResumeData.resume_template_id,
+// 		message: "Fetched resume template id successfully",
+// 	});
+// });
 exports.createResumeDownload = catchAsyncErrors(async (req, res, next) => {
 	try {
 		const {
