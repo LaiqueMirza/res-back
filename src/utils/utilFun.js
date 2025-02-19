@@ -1,7 +1,9 @@
 const moment = require("moment");
+const fs = require("fs");
+
 moment.suppressDeprecationWarnings = true;
 const puppeteer = require("puppeteer");
-
+const { PDFDocument } = require("pdf-lib");
 let browser = null;
 
 async function initBrowser() {
@@ -38,7 +40,8 @@ exports.convertHtmlToPdf = async (
 	headerTemplate,
 	footerTemplate
 ) => {
-		console.log("HTML content:", resumeHTML);
+	fs.writeFileSync("resumePuppeteer.html", resumeHTML, "utf-8");
+
 	// pages, width, backgroundColor
 	await initBrowser();
 
@@ -54,7 +57,7 @@ exports.convertHtmlToPdf = async (
 			height: parseInt(heightResume, 10),
 		});
 
-		// await page.emulateMediaType("screen");
+		// Load the initial HTML
 		await page.setContent(resumeHTML, {
 			waitUntil: "networkidle2",
 			timeout: 60000,
@@ -62,12 +65,12 @@ exports.convertHtmlToPdf = async (
 		console.log("page.setContent done");
 
 		const options = {
-			height: `${heightResume}px`,
+			height: `${heightResume + 25}px`,
 			width: `${widthResume}px`,
-			pageRanges: totalPages,
+			// pageRanges: totalPages,
 			margin: {
-				top: "15px", // Space for the header
-				bottom: "15px", // Space for the footer
+				top: "15px",
+				bottom: "10px",
 				left: "0px",
 				right: "0px",
 			},
@@ -80,14 +83,48 @@ exports.convertHtmlToPdf = async (
 
 		// Generate the PDF buffer
 		pdfBuffer = await page.pdf(options);
+
+		// Load the generated PDF and count pages
+		const pdfDoc = await PDFDocument.load(pdfBuffer);
+		const numberOfPages = pdfDoc.getPageCount();
+		if (numberOfPages != totalPages) {
+			console.log("Modifying HTML for multi-page layout...");
+			console.log(heightResume * totalPages, heightResume * numberOfPages);
+			console.log(resumeHTML);
+
+			resumeHTML = resumeHTML.replaceAll(
+				heightResume * totalPages,
+				heightResume * numberOfPages
+			);
+			fs.writeFileSync("resumePuppeteer2.html", resumeHTML, "utf-8");
+
+			console.log(resumeHTML);
+			// Reapply the modified HTML
+			await page.setContent(resumeHTML, {
+				waitUntil: "networkidle2",
+				timeout: 60000,
+			});
+			console.log("Updated page.setContent done");
+			pdfBuffer = await page.pdf(options);
+		}
+
+		// console.log(`Generated PDF has ${pdfBuffer.length} pages`);
 		console.log("pdfBuffer done");
 	} catch (error) {
-		try {
+		if (error.message) console.log("error in generating puppeteer pdf", error);
+		if (error.message && error.message.includes("Connection closed")) {
 			browser = await puppeteer.launch({
 				headless: true,
 			});
-			throw error;
-		} catch (error) {
+			this.convertHtmlToPdf(
+				resumeHTML,
+				heightResume,
+				widthResume,
+				totalPages,
+				headerTemplate,
+				footerTemplate
+			);
+		} else {
 			throw error;
 		}
 	} finally {

@@ -70,7 +70,6 @@ exports.updateResumeTemplateId = catchAsyncErrors(async (req, res, next) => {
 	if (affectedRows === 0) {
 		return next(new ErrorHander("Error in updating resume data", 404));
 	}
-	console.log(updatedResumeData);
 	res.status(200).json({
 		success: true,
 		message: "Resume tempate id updated successfully",
@@ -87,7 +86,7 @@ exports.updateResumeTemplateId = catchAsyncErrors(async (req, res, next) => {
 // 		return next(new ErrorHander("Resume template not found, select a temlate", 404));
 // 	}
 // 	res.status(200).json({
-// 		success: true,
+// 		success: true,dd
 // 		data: getResumeData.resume_template_id,
 // 		message: "Fetched resume template id successfully",
 // 	});
