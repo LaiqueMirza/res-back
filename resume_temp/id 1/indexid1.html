@@ -1128,7 +1128,19 @@
 										<div class="doc-item">
 											<div class="heading">
 												<h3 class="sectiontitle" id="SECTIONNAME_CNTC">
-													Contact<span
+													 	${
+															[
+															personalDetails?.Address,
+															personalDetails?.phone,
+															personalDetails?.email,
+															personalDetails?.city,
+															personalDetails?.country,
+															personalDetails?.postalCode,
+															].some(Boolean)
+															? "Contact"
+															: ""
+														}
+														<span
 														title="Rename Contact section"
 														class="rename-section text-rename"></span>
 												</h3>
@@ -1144,7 +1156,7 @@
 																	<div dependency="STRT|CITY|STAT|ZIPC|ADDR">
 																		<div class="txt-bold">
 																			<span class="xslt_static_change"
-																				>Address
+																				>${personalDetails?.Address ? "Address" : "" }
 																			</span>
 																		</div>
 																		<div id="FIELD_STRT"></div>
@@ -1152,12 +1164,12 @@
 																			>${personalDetails?.Address}</span
 																		>
 																		<span id="FIELD_STAT"
-																			>${personalDetails?.country ? `${personalDetails?.city}, ` : personalDetails?.city }</span
+																			>${personalDetails?.city}</span
 																		><span dependency="STAT+ZIPC"
-																			>${personalDetails?.postalCode ? `${personalDetails?.country}, ` : personalDetails?.country }</span
+																			>${personalDetails?.country ? ","+ " " + personalDetails?.country: ""}</span
 																		>
 																		<span id="FIELD_ZIPC"
-																			>${personalDetails?.postalCode}</span
+																			>${personalDetails?.postalCode ? ","+ " " + personalDetails?.postalCode: ""}</span
 																		>
 																		<span id="FIELD_ADDR"></span>
 																	</div>
@@ -1165,7 +1177,7 @@
 																		class="txt-bold mt5"
 																		dependency="HPHN|CPHN">
 																		<span class="xslt_static_change"
-																			>Phone
+																			>${personalDetails?.phone ? "Phone" : "" }
 																		</span>
 																	</div>
 																	<div dependency="HPHN">
@@ -1176,7 +1188,7 @@
 
 																	<div class="txt-bold mt5" dependency="EMAI">
 																		<span class="xslt_static_change"
-																			>E-mail
+																			>${personalDetails?.email ? "E-mail" : "" }
 																		</span>
 																	</div>
 																	<div dependency="EMAI" class="word-break">

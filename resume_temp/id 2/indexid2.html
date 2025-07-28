@@ -998,7 +998,18 @@
 										data-section-cd="CNTC">
 										<div class="heading">
 											<div class="sectiontitle" id="SECTIONNAME_CNTC">
-												Contact
+												${
+															[
+															personalDetails?.Address,
+															personalDetails?.phone,
+															personalDetails?.email,
+															personalDetails?.city,
+															personalDetails?.country,
+															personalDetails?.postalCode,
+															].some(Boolean)
+															? "Contact"
+															: ""
+														}
 											</div>
 										</div>
 										<div
@@ -1009,7 +1020,9 @@
 													<div class="singlecolumn">
 														<div dependency="STRT|CITY|STAT|ZIPC|ADDR">
 															<div class="txtBold">
-																<span class="xslt_static_change">Address </span>
+																<span class="xslt_static_change"
+																				>${personalDetails?.city || personalDetails?.country ? "Address" : "" }
+															</span>
 															</div>
 															<div id="FIELD_STRT"></div>
 															<span id="FIELD_CITY"
@@ -1028,7 +1041,9 @@
 															<span id="FIELD_ADDR"></span>
 														</div>
 														<div class="txtBold mt5" dependency="HPHN|CPHN">
-															<span class="xslt_static_change">Phone </span>
+															<span class="xslt_static_change"
+																			>${personalDetails?.phone ? "Phone" : "" }
+														</span>
 														</div>
 														<div dependency="HPHN">
 															<span id="FIELD_HPHN"
@@ -1037,7 +1052,9 @@
 														</div>
 
 														<div class="txtBold mt5" dependency="EMAI">
-															<span class="xslt_static_change">E-mail </span>
+															<span class="xslt_static_change"
+																			>${personalDetails?.email ? "E-mail" : "" }
+														</span>
 														</div>
 														<div dependency="EMAI" class="word-break">
 															<span id="FIELD_EMAI"
