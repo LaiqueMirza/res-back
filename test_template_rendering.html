@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Rendering Test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+</head>
+<body>
+    <h1>Template Rendering Test</h1>
+    <div id="output"></div>
+
+    <script>
+        // Load the template and data
+        async function loadTemplateAndData() {
+            try {
+                // Load the template
+                const templateResponse = await fetch('temp/temp5 template_content.html');
+                const templateText = await templateResponse.text();
+                
+                // Load the sample data
+                const dataResponse = await fetch('temp/sampledataresponse.json');
+                const data = await dataResponse.json();
+                
+                // Render the template
+                const renderedHTML = renderTemplate(templateText, data);
+                
+                // Display the rendered HTML
+                document.getElementById('output').innerHTML = renderedHTML;
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('output').innerHTML = `<p>Error: ${error.message}</p>`;
+            }
+        }
+        
+        // Function to render the template (similar to the one in utilFun.js)
+        function renderTemplate(template, data) {
+            try {
+                // Create a new function that uses the template as its body
+                const keys = Object.keys(data);
+                const values = Object.values(data);
+                
+                // Add moment as the last parameter
+                keys.push('moment');
+                values.push(moment);
+                
+                const templateFn = new Function(...keys, `return \`${template}\`;`);
+                
+                // Call the function with the values from data
+                return templateFn(...values);
+            } catch (error) {
+                console.error('Template rendering error:', error);
+                return `<p>Template rendering error: ${error.message}</p>`;
+            }
+        }
+        
+        // Load and render when the page loads
+        window.onload = loadTemplateAndData;
+    </script>
+</body>
+</html>

@@ -179,3 +179,35 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
 	console.log(`Server running on port ${PORT}`);
 });
+
+
+
+<script>
+	// Data destructuring for template rendering const{" "}
+	{
+		(personalDetails,
+		profileSummary,
+		skills,
+		employment,
+		education,
+		languages,
+		courses,
+		certificates,
+		websitesAndSocialLinks,
+		appearanceSettings,
+		donotShowSkillLevel,
+		donotShowLanguageLevel)
+	}{" "}
+	= data;
+</script>;
+
+
+// Pre-process the template to fix octal escape sequences
+template = template.replace(/\\([0-7]{1,3})/g, (match, p1) => {
+    console.log("match", match)
+
+    // Convert octal escape to unicode escape
+    const codePoint = parseInt(p1, 8);
+    console.log("first", `\\u${codePoint.toString(16).padStart(4, "0")}`);
+    return `\\u${codePoint.toString(16).padStart(4, '0')}`;
+});

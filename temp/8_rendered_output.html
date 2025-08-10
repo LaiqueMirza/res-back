@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Global Styles */
+        body {
+            font-family: Arial;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #000;
+            background-color: #fff;
+        }
+        
+        .container {
+            width: 816px;
+            height: 1056px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+        
+        /* Header */
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #000;
+        }
+        
+        .resumeTitle {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .cntc-sec {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        /* Main Content */
+        .parentContainer {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .left-box {
+            flex: 2;
+        }
+        
+        .right-box {
+            flex: 1;
+        }
+        
+        /* Sections */
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .heading {
+            margin-bottom: 10px;
+        }
+        
+        .sectiontitle {
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+        }
+        
+        .paragraph {
+            margin-bottom: 10px;
+        }
+        
+        .singlecolumn {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .paddedline {
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        .txt-bold {
+            font-weight: bold;
+        }
+        
+        .inner-date {
+            margin-right: 10px;
+        }
+        
+        /* Skills and Languages */
+        .rating-bar {
+            height: 10px;
+            background-color: #eee;
+            border-radius: 5px;
+            margin-top: 5px;
+            overflow: hidden;
+        }
+        
+        .inner-rating {
+            height: 100%;
+            background-color: #000;
+        }
+        
+        .hide-bar .rating-bar {
+            display: none;
+        }
+        
+        /* Lists */
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="name">${personalDetails?.name || 'John Doe'}</div>
+            <div class="resumeTitle">${personalDetails?.jobTitle || 'Software Engineer'}</div>
+            <div class="section cntc-sec">
+                <div class="address">
+                    <div class="adrsDetails">
+                        ${personalDetails?.address || 'New York, NY 10001, USA'}
+                    </div>
+                </div>
+                <div class="email">
+                    ${personalDetails?.email || 'john.doe@example.com'}
+                </div>
+                <div class="phone">
+                    ${personalDetails?.phone || '+1 234 567 890'}
+                </div>
+            </div>
+        </div>
+        <div class="parentContainer">
+            <div class="left-box">
+                <!-- Professional Summary -->
+                <div class="section">
+                    <div class="heading">
+                        <div class="sectiontitle">Professional Summary</div>
+                    </div>
+                    <div class="paragraph">
+                        <div class="singlecolumn">
+                            ${profileSummary?.info || 'Experienced software developer with over 5 years of expertise in full-stack development. Proficient in JavaScript, React, Node.js, and modern web technologies. Strong problem-solving skills and a passion for creating efficient, scalable applications.'}
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Work History -->
+                <div class="section experience">
+                    <div class="heading">
+                        <div class="sectiontitle">Work History</div>
+                    </div>
+                    <!-- Job 1 -->
+                    <div class="paragraph">
+                        <div class="singlecolumn">
+                            <span class="paddedline">
+                                <span class="companyname txt-bold">${employment?.[0]?.employer || 'ABC Company'}</span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="jobtitle">${employment?.[0]?.jobTitle || 'Senior Developer'}</span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="inner-date">
+                                    <span class="jobdates">${employment?.[0]?.startDate || '01-2020'}</span>
+                                    <span class="space">-</span>
+                                    <span class="jobdates">${employment?.[0]?.isPresent ? 'Present' : employment?.[0]?.endDate || 'Present'}</span>
+                                </span>
+                                <span class="jloc-field">
+                                    ${employment?.[0]?.location || 'New York, NY'}
+                                </span>
+                            </span>
+                            <span class="paddedline jobline">
+                                ${employment?.[0]?.description || 'Led development team in creating innovative software solutions.'}
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Job 2 -->
+                    <div class="paragraph">
+                        <div class="singlecolumn">
+                            <span class="paddedline">
+                                <span class="companyname txt-bold">${employment?.[1]?.employer || 'XYZ Corporation'}</span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="jobtitle">${employment?.[1]?.jobTitle || 'Web Developer'}</span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="inner-date">
+                                    <span class="jobdates">${employment?.[1]?.startDate || '03-2018'}</span>
+                                    <span class="space">-</span>
+                                    <span class="jobdates">${employment?.[1]?.isPresent ? 'Present' : employment?.[1]?.endDate || '12-2019'}</span>
+                                </span>
+                                <span class="jloc-field">
+                                    ${employment?.[1]?.location || 'San Francisco, CA'}
+                                </span>
+                            </span>
+                            <span class="paddedline jobline">
+                                ${employment?.[1]?.description || 'Developed responsive web applications using modern frameworks.'}
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Job 3 -->
+                    <div class="paragraph">
+                        <div class="singlecolumn">
+                            <span class="paddedline">
+                                <span class="companyname txt-bold">${employment?.[2]?.employer || '123 Startup'}</span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="jobtitle">${employment?.[2]?.jobTitle || 'Junior Developer'}</span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="inner-date">
+                                    <span class="jobdates">${employment?.[2]?.startDate || '06-2016'}</span>
+                                    <span class="space">-</span>
+                                    <span class="jobdates">${employment?.[2]?.isPresent ? 'Present' : employment?.[2]?.endDate || '02-2018'}</span>
+                                </span>
+                                <span class="jloc-field">
+                                    ${employment?.[2]?.location || 'Austin, TX'}
+                                </span>
+                            </span>
+                            <span class="paddedline jobline">
+                                ${employment?.[2]?.description || 'Assisted in building and maintaining web applications.'}
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Job 4 -->
+                    <div class="paragraph">
+                        <div class="singlecolumn">
+                            <span class="paddedline">
+                                <span class="companyname txt-bold">${employment?.[3]?.employer || ''}</span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="jobtitle">${employment?.[3]?.jobTitle || ''}</span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="inner-date">
+                                    <span class="jobdates">${employment?.[3]?.startDate ? moment(employment[3].startDate).format('MM-YYYY') : ''}</span>
+                                    <span class="space">-</span>
+                                    <span class="jobdates">${employment?.[3]?.isPresent ? 'Present' : (employment?.[3]?.endDate ? moment(employment[3].endDate).format('MM-YYYY') : '')}</span>
+                                </span>
+                                <span class="jloc-field">
+                                    ${employment?.[3]?.location || ''}
+                                </span>
+                            </span>
+                            <span class="paddedline jobline">
+                                ${employment?.[3]?.description || ''}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Education -->
+                <div class="section education">
+                    <div class="heading">
+                        <div class="sectiontitle">Education</div>
+                    </div>
+                    <!-- Education 1 -->
+                    <div class="paragraph">
+                        <div class="singlecolumn">
+                            <span class="paddedline">
+                                <span class="degree txt-bold">${education?.[0]?.degree || 'Bachelor of Science'}</span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="programline">${education?.[0]?.fieldOfStudy || 'Computer Science'}</span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="inner-date">
+                                    <span class="jobdates">${education?.[0]?.startDate || '09-2014'}</span>
+                                    <span class="space">-</span>
+                                    <span class="jobdates">${education?.[0]?.isPresent ? 'Present' : education?.[0]?.endDate || '06-2018'}</span>
+                                </span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="companyname">${education?.[0]?.school || 'University of Technology'}</span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="jloc-field">
+                                    ${education?.[0]?.location || 'Boston, MA'}
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Education 2 -->
+                    <div class="paragraph">
+                        <div class="singlecolumn">
+                            <span class="paddedline">
+                                <span class="degree txt-bold">${education?.[1]?.degree || ''}</span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="programline">${education?.[1]?.fieldOfStudy || ''}</span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="inner-date">
+                                    <span class="jobdates">${education?.[1]?.startDate ? moment(education[1].startDate).format('MM-YYYY') : ''}</span>
+                                    <span class="space">-</span>
+                                    <span class="jobdates">${education?.[1]?.isPresent ? 'Present' : (education?.[1]?.endDate ? moment(education[1].endDate).format('MM-YYYY') : '')}</span>
+                                </span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="companyname">${education?.[1]?.school || ''}</span>
+                            </span>
+                            <span class="paddedline">
+                                <span class="jloc-field">
+                                    ${education?.[1]?.location || ''}
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-box">
+                <!-- Skills -->
+                <div class="section skli-sec">
+                    <div class="heading">
+                        <div class="sectiontitle">Skills</div>
+                    </div>
+                    <!-- Skill 1 -->
+                    <div class="paragraph">
+                        <div class="field">
+                            <b>${skills?.[0]?.skill || 'JavaScript'}</b>
+                        </div>
+                        <div class="rating-bar">
+                            <div class="inner-rating" style="width: ${skills?.[0]?.levelId ? (skills[0].levelId * 20) + '%' : '60%'}"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Skill 2 -->
+                    <div class="paragraph">
+                        <div class="field">
+                            <b>${skills?.[1]?.skill || 'React'}</b>
+                        </div>
+                        <div class="rating-bar">
+                            <div class="inner-rating" style="width: ${skills?.[1]?.levelId ? (skills[1].levelId * 20) + '%' : '60%'}"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Skill 3 -->
+                    <div class="paragraph">
+                        <div class="field">
+                            <b>${skills?.[2]?.skill || 'Node.js'}</b>
+                        </div>
+                        <div class="rating-bar">
+                            <div class="inner-rating" style="width: ${skills?.[2]?.levelId ? (skills[2].levelId * 20) + '%' : '60%'}"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Skill 4 -->
+                    <div class="paragraph">
+                        <div class="field">
+                            <b>${skills?.[3]?.skill || 'HTML/CSS'}</b>
+                        </div>
+                        <div class="rating-bar">
+                            <div class="inner-rating" style="width: ${skills?.[3]?.levelId ? (skills[3].levelId * 20) + '%' : '60%'}"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Languages -->
+                <div class="section lang-sec">
+                    <div class="heading">
+                        <div class="sectiontitle">Languages</div>
+                    </div>
+                    <!-- Languages Loop -->
+                    ${languages?.map((language, index) => `
+                    <div class="paragraph">
+                        <div class="field">
+                            <b>${language?.language || `Language ${index + 1}`}</b>
+                        </div>
+                        <div class="rating-bar">
+                            <div class="inner-rating" style="width: ${language?.levelId ? (language.levelId * 20) + '%' : '60%'}"></div>
+                        </div>
+                    </div>
+                    `).join('') || `
+                    <!-- Language 1 -->
+                    <div class="paragraph">
+                        <div class="field">
+                            <b>English</b>
+                        </div>
+                        <div class="rating-bar">
+                            <div class="inner-rating" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                    `}
+
+                </div>
+                
+                <!-- Courses -->
+                <div class="section">
+                    <div class="heading">
+                        <div class="sectiontitle">Courses</div>
+                    </div>
+                    <div class="paragraph">
+                        <div class="field">
+                            ${courses?.[0]?.course || ''}
+                        </div>
+                        <div class="field">
+                            ${courses?.[0]?.institution || ''}
+                        </div>
+                        <div class="field">
+                            ${courses?.[0]?.startDate ? moment(courses[0].startDate).format('MM-YYYY') : ''} - 
+                            ${courses?.[0]?.isPresent ? 'Present' : (courses?.[0]?.endDate ? moment(courses[0].endDate).format('MM-YYYY') : '')}
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificates -->
+                <div class="section">
+                    <div class="heading">
+                        <div class="sectiontitle">Certificates</div>
+                    </div>
+                    <div class="paragraph">
+                        <div class="field">
+                            ${certificates?.[0]?.certificateName || ''}
+                        </div>
+                        <div class="field">
+                            ${certificates?.[0]?.issuer || ''}
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Websites and Social Links -->
+                <div class="section">
+                    <div class="heading">
+                        <div class="sectiontitle">Links</div>
+                    </div>
+                    <div class="paragraph">
+                        <div class="field">
+                            <a href="${websitesAndSocialLinks?.[0]?.link || '#'}">${websitesAndSocialLinks?.[0]?.label || ''}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
