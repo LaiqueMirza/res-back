@@ -317,13 +317,13 @@
 							position: absolute;
 							top: -5px;
 							left: -40px;
-							width: 32px;
-							height: 32px;
+							width: 30px;
+							height: 30px;
 							z-index: 4;
 						}
 							.skn-srz2 .headingIcon svg {
-								width: 32px;
-								height: 32px;
+								width: 30px;
+								height: 30px;
 							}
 							.skn-srz2 .headingIcon svg circle {
 			fill: #789c30;
@@ -821,18 +821,18 @@
 							.skn-srz2 .multi-hilt ul li:before {
 								display: none;
 							}
-							.skn-srz2 .iconrow .icon {
+							.skn-srz2 .iconRow .iconSvg {
 								position: absolute;
 								top: 0;
 								left: 0;
 								width: 20px;
 								height: 20px;
 							}
-							.skn-srz2 .iconrow .icon svg {
+							.skn-srz2 .iconRow .iconSvg svg {
 								width: 20px;
 								height: 20px;
 							}
-							.skn-srz2 .iconrow .icon svg path {
+							.skn-srz2 .iconRow .iconSvg svg path {
 								fill: #789c30;
 							}
 							.skn-srz2 .multi-para {
@@ -1185,44 +1185,35 @@
 							.skn-srz2 .section-header {
 								color: #789c30;
 							}
-							.skn-srz2 .section-header .section-icon {
-							width: 30px;
-							height: 30px;
-						}
-							.skn-srz2 .section-header .section-icon svg {
-							width: 30px;
-							height: 30px;
-						}
-							.skn-srz2 .section-header .section-icon svg path {
-								fill: #789c30;
-							}
+
 							.skn-srz2 .timeline .dates_wrapper {
 								color: #789c30;
 							}
 						</style>
+					
 						<div class="skn-srz2">
 							<div class="name">
 								${personalDetails?.firstName || ""} ${personalDetails?.lastName || ""}
 							</div>
 							<div class="address">
-								<div class="iconrow">
-									<div class="icon">
+								<div class="iconRow">
+									<div class="iconSvg">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 											<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
 										</svg>
 									</div>
 									${personalDetails?.address?.city || ""} ${personalDetails?.address?.state || ""} ${personalDetails?.address?.zipCode || ""}
 								</div>
-								<div class="iconrow">
-									<div class="icon">
+								<div class="iconRow">
+									<div class="iconSvg">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 											<path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
 										</svg>
 									</div>
 									${personalDetails?.phone || ""}
 								</div>
-								<div class="iconrow">
-									<div class="icon">
+								<div class="iconRow">
+									<div class="iconSvg">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 											<path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
 										</svg>
@@ -1244,12 +1235,12 @@
 							${profileSummary ? `
 							<div class="section">
 								<div class="section-header">
-									<div class="section-icon">
+									<div class="headingIcon">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 											<path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
 										</svg>
 									</div>
-									<div class="section-title">Summary</div>
+									<div class="sectiontitle">Summary</div>
 								</div>
 								<div class="section-body">
 									<div class="paragraph">
@@ -1262,12 +1253,12 @@
 							${skills && skills.length > 0 ? `
 							<div class="section">
 								<div class="section-header">
-									<div class="section-icon">
+									<div class="headingIcon">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 											<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14h-2V9h-2V7h4v10z"/>
 										</svg>
 									</div>
-									<div class="section-title">Skills</div>
+									<div class="sectiontitle">Skills</div>
 								</div>
 								<div class="section-body">
 									<div class="skills-table">
@@ -1295,18 +1286,17 @@
 									</div>
 								</div>
 							</div>` : ""}
-						</div>
 							
 							<!-- Languages section -->
 							${languages && languages.length > 0 ? `
 							<div class="section">
 								<div class="section-header">
-									<div class="section-icon">
+									<div class="headingIcon">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-											<path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/>
+											<path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91-3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/>
 										</svg>
 									</div>
-									<div class="section-title">Languages</div>
+									<div class="sectiontitle">Languages</div>
 								</div>
 								<div class="section-body">
 									<div class="skills-table">
@@ -1337,12 +1327,12 @@
 							${courses && courses.length > 0 ? `
 							<div class="section">
 								<div class="section-header">
-									<div class="section-icon">
+									<div class="headingIcon">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 											<path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
 										</svg>
 									</div>
-									<div class="section-title">Courses</div>
+									<div class="sectiontitle">Courses</div>
 								</div>
 								<div class="section-body">
 									<div class="skills-table">
@@ -1375,12 +1365,12 @@
 							${certificates && certificates.length > 0 ? `
 							<div class="section">
 								<div class="section-header">
-									<div class="section-icon">
+									<div class="headingIcon">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 											<path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 9h-2V5h2v6zm0 4h-2v-2h2v2z"/>
 										</svg>
 									</div>
-									<div class="section-title">Certificates</div>
+									<div class="sectiontitle">Certificates</div>
 								</div>
 								<div class="section-body">
 									<div class="multi-para">
@@ -1406,12 +1396,12 @@
 							${websitesAndSocialLinks && websitesAndSocialLinks.length > 0 ? `
 							<div class="section">
 								<div class="section-header">
-									<div class="section-icon">
+									<div class="headingIcon">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 											<path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/>
 										</svg>
 									</div>
-									<div class="section-title">Links</div>
+									<div class="sectiontitle">Links</div>
 								</div>
 								<div class="section-body">
 									<div class="multi-para">
@@ -1430,7 +1420,7 @@
 							${skills && skills.length > 0 ? `
 							<div class="section">
 								<div class="section-header">
-									<div class="section-icon">
+									<div class="headingIcon">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 											<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14h-2V9h-2V7h4v10z"/>
 										</svg>
@@ -1468,12 +1458,12 @@
 							${employment && employment.length > 0 ? `
 							<div class="section">
 								<div class="section-header">
-									<div class="section-icon">
+									<div class="headingIcon">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 											<path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/>
 										</svg>
 									</div>
-									<div class="section-title">Work History</div>
+									<div class="sectiontitle">Work History</div>
 								</div>
 								<div class="section-body">
 									<div class="multi-para">
@@ -1506,13 +1496,13 @@
 							${education && education.length > 0 ? `
 							<div class="section">
 								<div class="section-header">
-									<div class="section-icon">
+									<div class="headingIcon">
 										<svg viewBox="0 0 54 54">
 											<circle cx="27" cy="27" r="26"></circle>
 											<path transform="translate(11,11)" d="M30.96 22.58v-9.217l.503-.303c.327-.194.533-.58.537-1 .004-.421-.196-.81-.518-1.014L16.44 1.848a.893.893 0 0 0-.967.004l-14.96 9.21c-.318.202-.515.587-.513 1.005.002.417.203.8.525.998l6.573 3.999a1.256 1.256 0 0 0-.133.56v9.669c0 .325.122.637.335.853.217.22 2.294 2.146 8.646 2.146 6.33 0 8.463-1.82 8.686-2.028a1.21 1.21 0 0 0 .367-.884v-9.917c0-.16-.03-.313-.082-.452l4.044-2.441v8.016c-.593.396-.995 1.124-.995 1.965 0 1.262.895 2.285 2 2.285 1.104 0 1.999-1.023 1.999-2.285 0-.845-.407-1.576-1.005-1.97zM23 26.725c-.787.432-2.866 1.282-7.054 1.282-4.214 0-6.246-.905-6.982-1.34v-8.468l6.493 3.95a.892.892 0 0 0 .937.006L23 18.17v8.556zm-7.06-6.876L3.08 12.045l12.881-7.89 12.922 7.868L15.94 19.85z"></path>
 										</svg>
 									</div>
-									<div class="section-title">Education</div>
+									<div class="sectiontitle">Education</div>
 								</div>
 								<div class="section-body">
 									<div class="multi-para">

@@ -13,8 +13,11 @@ module.exports = user = (sequelize, DataTypes) => {
 			},
 			email: {
 				type: DataTypes.STRING,
-				unique: true,
+				// unique: true,
 				allowNull: false,
+			},
+			mobile: {
+				type: DataTypes.STRING,
 			},
 			password: {
 				type: DataTypes.STRING,
@@ -29,6 +32,9 @@ module.exports = user = (sequelize, DataTypes) => {
 				type: DataTypes.BOOLEAN,
 			},
 			is_email_verified: {
+				type: DataTypes.BOOLEAN,
+			},
+			is_mobile_verified: {
 				type: DataTypes.BOOLEAN,
 			},
 			created_at: {

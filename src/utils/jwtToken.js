@@ -12,9 +12,10 @@ const sendToken = (payload, statusCode, res, message, providerAuth) => {
 	// options for cookie
 	const options = {
 		expires,
-		httpOnly: false,
+		httpOnly: false, // Allow JavaScript access to the cookie
 		sameSite: "lax",
 		secure: false,
+		path: "/", // Make cookie available for all paths
 	};
 	if(providerAuth){
 		return res.cookie("token", token, options).redirect("http://localhost:3000/create-resume")

@@ -18,38 +18,59 @@ const data = JSON.parse(fs.readFileSync('sampledataresponse.json', 'utf8'));
 // Function to render the template with improved error handling
 function renderTemplate(template, data) {
     try {
-			// Use a simple string replacement approach instead of template literals
-			let result = template;
+        // Extract all the data properties for template evaluation
+        const {
+            skills,
+            courses,
+            education,
+            languages,
+            employment,
+            certificates,
+            profileSummary,
+            personalDetails,
+            appearanceSettings,
+            donotShowSkillLevel,
+            donotShowLanguageLevel,
+            websitesAndSocialLinks
+        } = data;
 
-			// First, replace all instances of prefix- with prefix- in data-testid attributes
-			result = result.replace(/data-testid="prefix-/g, 'data-testid="prefix-');
+        // Create a function that evaluates the template as a template literal
+        const templateFunction = new Function(
+            'skills',
+            'courses', 
+            'education',
+            'languages',
+            'employment',
+            'certificates',
+            'profileSummary',
+            'personalDetails',
+            'appearanceSettings',
+            'donotShowSkillLevel',
+            'donotShowLanguageLevel',
+            'websitesAndSocialLinks',
+            'moment',
+            `return \`${template}\`;`
+        );
 
-			// Replace data placeholders in the template
-			for (const key in data) {
-				if (data.hasOwnProperty(key)) {
-					const value = data[key];
-					// Replace ${key} with the actual value
-					const regex = new RegExp("\\${" + key + "}", "g");
-					result = result.replace(regex, value);
-				}
-			}
+        // Execute the template function with the data
+        const result = templateFunction(
+            skills,
+            courses,
+            education,
+            languages,
+            employment,
+            certificates,
+            profileSummary,
+            personalDetails,
+            appearanceSettings,
+            donotShowSkillLevel,
+            donotShowLanguageLevel,
+            websitesAndSocialLinks,
+            moment
+        );
 
-			// Handle moment functions if needed
-			// This is a simplified approach and may need to be expanded
-			result = result.replace(
-				/\${moment\([^)]+\)\.format\([^)]+\)}/g,
-				(match) => {
-					try {
-						// Extract the arguments and evaluate
-						return eval(match.slice(2, -1));
-					} catch (e) {
-						return match;
-					}
-				}
-			);
-
-			return result;
-		} catch (error) {
+        return result;
+    } catch (error) {
         console.error('\nTemplate rendering error:', error.message);
         
         // Try to extract line number information from the error

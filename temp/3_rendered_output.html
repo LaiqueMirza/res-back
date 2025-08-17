@@ -113,7 +113,7 @@
 								position: relative;
 							}
 							.skn-cbg2 ul li:before {
-								content: "\u2022";
+								content: "•";
 								position: absolute;
 								left: -12px;
 								top: 1px;
@@ -133,7 +133,6 @@
 								margin: 0;
 							}
 							.skn-cbg2 .address li:before {
-								content: "\u0015C6\u0020";
 								vertical-align: bottom;
 								position: static;
 								left: unset;
@@ -172,7 +171,7 @@
 
 							.skn-cbg2 {
 								word-wrap: break-word;
-								color: ${appearanceSettings?.secondaryColor || "#000"};
+								color: #000;
 							}
 							.skn-cbg2 .lowerborder {
 								border-bottom: 3px solid;
@@ -183,8 +182,8 @@
 								padding-bottom: 7px;
 							}
 							.skn-cbg2 .name {
-								font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 15 : 15}px;
-								line-height: ${appearanceSettings?.lineHeight ? appearanceSettings?.lineHeight + 17 : 17}px;
+								font-size: 15px;
+								line-height: 17px;
 								font-weight: bold;
 								padding: 0 0 1px 0;
 								border-top: 1px solid;
@@ -203,7 +202,7 @@
 								position: relative;
 							}
 							.skn-cbg2 .heading:before {
-								border-top: 1px solid ${appearanceSettings?.primaryColor || "#34383c"};
+								border-top: 1px solid #051e4f;
 								content: "";
 								display: block;
 								height: 1px;
@@ -221,7 +220,7 @@
 								z-index: 5;
 								background: #fff !important;
 								padding: 0 10px;
-								color: ${appearanceSettings?.primaryColor || "#34383c"};
+								color: #051e4f;
 							}
 							.skn-cbg2 .address,
 							.skn-cbg2 .address2 {
@@ -273,11 +272,11 @@
 							.skn-cbg2 .name,
 							.skn-cbg2 .lowerborder,
 							.skn-cbg2 .sectiontitle {
-								color: ${appearanceSettings?.primaryColor || "#34383c"};
+								color: #051e4f;
 							}
 							.skn-cbg2 .profTitle {
-								font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 16 : 16}px;
-								line-height: ${appearanceSettings?.lineHeight ? appearanceSettings?.lineHeight + 16 : 16}px;
+								font-size: 16px;
+								line-height: 16px;
 								margin-bottom: 10px;
 							}
 						</style>
@@ -287,16 +286,16 @@
 							data-time="Mon Jul 28 2025 21:58:00 GMT+0530 (India Standard Time)">
 							.skn-cbg2,
 							.skn-cbg2 table {
-								line-height: ${appearanceSettings?.lineHeight ? appearanceSettings?.lineHeight + 20 : 20}px;
+								line-height: 20px;
 							}
 							.skn-cbg2.pagesize {
-								width: ${appearanceSettings?.resumeWidth || 538}px;
+								width: 816px;
 							}
 							.skn-cbg2.fontsize {
-								font-size: ${appearanceSettings?.fontSize || 12}px;
+								font-size: 12px;
 							}
 							.skn-cbg2.fontface {
-								font-family: ${appearanceSettings?.fontFamily || "Times New Roman"};
+								font-family: Arial;
 							}
 							.skn-cbg2.vmargins {
 								padding-top: 25px;
@@ -310,9 +309,9 @@
 								margin-top: 13px;
 							}
 							.skn-cbg2 .sectiontitle {
-								font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 15 : 15}px;
-								line-height: ${appearanceSettings?.lineHeight ? appearanceSettings?.lineHeight + 23 : 23}px;
-								max-width: ${appearanceSettings?.resumeWidth || 538}px;
+								font-size: 15px;
+								line-height: 23px;
+								max-width: 816px;
 							}
 							.skn-cbg2 .heading {
 								margin-bottom: 9px;
@@ -338,11 +337,11 @@
 								<div class="paragraph PARAGRAPH_NAME firstparagraph">
 									<div>
 										<div class="name">
-											<span data-testid="FIELD_FNAM">${personalDetails?.firstName || ""}</span>
+											<span data-testid="FIELD_FNAM">Laique</span>
 											<span></span>
-											<span data-testid="FIELD_LNAM">${personalDetails?.lastName || ""}</span>
+											<span data-testid="FIELD_LNAM">Mirza</span>
 											<div class="profTitle">
-												<span class="placeholder-text" data-testid="FIELD_DCTL">${personalDetails?.jobTitle || ""}</span>
+												<span class="placeholder-text" data-testid="FIELD_DCTL">Software Engineer</span>
 											</div>
 										</div>
 										<div class="lowerborder"></div>
@@ -356,30 +355,30 @@
 											<ul>
 												<li class="first">
 													<span class="zipsuffix">
-														<span data-testid="FIELD_STRT">${personalDetails?.Address || ""}</span>
-														<span class="spaced" data-testid="FIELD_CITY">${personalDetails?.city || ""}</span>
-														${personalDetails?.city && personalDetails?.country ? '<span class="xslt_static_change">, </span>' : ""}
-														<span class="spaced" data-testid="FIELD_STAT">${personalDetails?.country || ""}</span>
-														<span class="spaced" data-testid="FIELD_ZIPC">${personalDetails?.postalCode || ""}</span>
+														<span data-testid="FIELD_STRT"></span>
+														<span class="spaced" data-testid="FIELD_CITY">Thane</span>
+														<span class="xslt_static_change">, </span>
+														<span class="spaced" data-testid="FIELD_STAT">India</span>
+														<span class="spaced" data-testid="FIELD_ZIPC">400612</span>
 													</span>
 												</li>
-												${personalDetails?.phone ? `
+												
 												<li>
-													<span data-testid="FIELD_HPHN">${personalDetails?.phone}</span>
+													<span data-testid="FIELD_HPHN">09833285729</span>
 												</li>
-												` : ""}
-												${personalDetails?.email ? `
+												
+												
 												<li>
-													<span class="dir-ltr" data-testid="FIELD_EMAI">${personalDetails?.email}</span>
+													<span class="dir-ltr" data-testid="FIELD_EMAI">mirzalaique2ey@gmail.com</span>
 												</li>
-												` : ""}
+												
 											</ul>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div></div>
-							${profileSummary?.info ? `
+							
 							<div class="section SECTION_SUMM undefined" data-section-cd="SUMM">
 								<div class="heading">
 									<div class="sectiontitle">Professional Summary</div>
@@ -387,13 +386,13 @@
 								<div class="paragraph PARAGRAPH_SUMM firstparagraph">
 									<div class="clearfix doc-item">
 										<div class="singlecolumn" data-testid="FIELD_FRFM">
-											${profileSummary?.info}
+											<p>Full Stack Developer with over of experience specializing in React, Next.js, Node.js, MongoDB, SQL, and AWS. Proven leadership in managing a team of 8 software developers. Experienced in delivering high-impact projects, driving innovation, and optimizing performance across three major project</p>
 										</div>
 									</div>
 								</div>
 							</div>
-							` : ""}
-							${skills?.length ? `
+							
+							
 							<div class="section SECTION_HILT undefined" data-section-cd="HILT">
 								<div class="heading">
 									<div class="sectiontitle">Skills</div>
@@ -406,12 +405,12 @@
 													<tr>
 														<td class="twocol_1" data-testid="FIELD_SKC1">
 															<ul>
-																${skills.slice(0, Math.ceil(skills.length / 2)).map(skill => `<li>${skill.skill}${!donotShowSkillLevel && skill.level ? ` - ${skill.level}` : ""}</li>`).join('')}
+																<li>react - Specialist</li><li>Node - Specialist</li>
 															</ul>
 														</td>
 														<td class="twocol_2" data-testid="FIELD_SKC2">
 															<ul>
-																${skills.slice(Math.ceil(skills.length / 2)).map(skill => `<li>${skill.skill}${!donotShowSkillLevel && skill.level ? ` - ${skill.level}` : ""}</li>`).join('')}
+																<li>Express - Specialist</li><li>Mongo - Specialist</li>
 															</ul>
 														</td>
 													</tr>
@@ -421,82 +420,202 @@
 									</div>
 								</div>
 							</div>
-							` : ""}
-							${employment?.length ? `
+							
+							
 							<div class="section SECTION_EXPR multi-para undefined" data-section-cd="EXPR">
 								<div class="heading">
 									<div class="sectiontitle">Work History</div>
 								</div>
-								${employment.map((job, index) => `
-								<div class="paragraph PARAGRAPH_EXPR ${index === 0 ? 'firstparagraph' : ''}">
+								
+								<div class="paragraph PARAGRAPH_EXPR firstparagraph">
 									<div class="clearfix doc-item">
 										<div class="singlecolumn">
 											<span class="paddedline" style="display: inline">
-												<span class="jobtitle" data-testid="FIELD_JTIT">${job.jobTitle}</span>
+												<span class="jobtitle" data-testid="FIELD_JTIT">Software Engineer</span>
 												<span class="xslt_static_change">, </span>
 											</span>
 											<span class="paddedline" style="display: inline">
 												<span class="jobdates" data-testid="FIELD_JSTD">
-													${job.startDate ? moment(job.startDate).format(appearanceSettings?.dateFormat || "MM/YYYY") : ""}
+													07-2022
 												</span>
 												<span class="xslt_static_change"> - </span>
 												<span class="jobdates" data-testid="FIELD_EDDT">
-													${job.isPresent ? "Current" : job.endDate ? moment(job.endDate).format(appearanceSettings?.dateFormat || "MM/YYYY") : ""}
+													Current
 												</span>
 												<br />
 											</span>
 											<span class="paddedline">
-												<span class="companyname" data-testid="FIELD_COMP">${job.employer}</span>
+												<span class="companyname" data-testid="FIELD_COMP">kaal tech</span>
 												<span><span> – </span></span>
 												<span class="joblocation jobcity" data-testid="FIELD_JCIT">
-													${job.isRemote ? "Remote" : job.location}
+													Mumbai
 												</span>
 											</span>
-											${job.description ? `
+											
 											<span class="jobline" data-testid="FIELD_JDES">
-												${job.description}
+												<p>PR O J E C T : G E N E R A T I V E A I B O T S</p><p>• Developed 3 distinct bots: HR Policy Bot: Assisted employees with HR policy-related queries. Product Catalogue Bot: Provided detailed information on company products. Competitor Analysis Bot: Enabled managers to analyze competitor data, focusing on rivals like Tata AIG and Bajaj Allianz.</p><p>• Implemented LLM models: Gemini-1.5-Flash-001 and Text-Bison-32k. Conducted data ingestion (PDFs/Docs) into Google BigQuery to train the AI models. • Prompt engineered and created the following APIs in the backend.</p><p>▪ Bot Response API for conversational output.</p><p>▪ Suggested Questions API for dynamic follow-up queries.</p><p>▪ Feedback API for continuous learning and model improvement.</p><p><br></p><p>• PR O J E C T : P E H C H A A N</p><p>• Pehchaan is a KYC verification system, that caters to a customer base exceeding 10 million.</p><p>• Added features like OCR for document data scanning, a human verification dashboard for verification of manual entries, and API integration for partner companies like TVS, and Maruti.</p><p>• Utilized Signzy APIs to improve verification processes and retrieved data from the CKYC repository</p><p>• Customers with data in the CKYC repository were verified instantly, while those submitting manual entries experienced a turnaround time (TAT) of 12 hours for approval or rejection.</p><p>• Our timely project delivery, in line with the IRDAI’s KYC guidelines for insurance from January 1, 2023, prevented disruptions to the company’s daily sales operations.</p><p>• Technologies: MERN stack (MongoDB, Express.js, React.js, Node.js).</p><p><br></p><p>• PR O J E C T : C H A S E • Chase is an in-house application created for managing and investigating fraud claim cases. • Developed two separate applications: one for internal investigators across various hierarchies and another for vendors to gather and input data from incident sites. • Engineered logic to facilitate the seamless progression of claim cases through different investigative stages, with automatic adjustments in case hierarchy and invoice processing based on claim amounts and investigator inputs. • Achieved a 30% reduction in costs and enhanced investigation accuracy by 55%. • Technologies: PERN stack (PostgreSQL, Express.js, React.js, Node.js). • Please note that MITSGLOBAL was the hiring company, while HDFCERGO was the client throughout the engagement.</p>
 											</span>
-											` : ""}
+											
 										</div>
 									</div>
 								</div>
-								`).join('')}
+								
+								<div class="paragraph PARAGRAPH_EXPR ">
+									<div class="clearfix doc-item">
+										<div class="singlecolumn">
+											<span class="paddedline" style="display: inline">
+												<span class="jobtitle" data-testid="FIELD_JTIT">Web developer</span>
+												<span class="xslt_static_change">, </span>
+											</span>
+											<span class="paddedline" style="display: inline">
+												<span class="jobdates" data-testid="FIELD_JSTD">
+													02-2022
+												</span>
+												<span class="xslt_static_change"> - </span>
+												<span class="jobdates" data-testid="FIELD_EDDT">
+													07-2022
+												</span>
+												<br />
+											</span>
+											<span class="paddedline">
+												<span class="companyname" data-testid="FIELD_COMP">PROSOFOS</span>
+												<span><span> – </span></span>
+												<span class="joblocation jobcity" data-testid="FIELD_JCIT">
+													Remote
+												</span>
+											</span>
+											
+											<span class="jobline" data-testid="FIELD_JDES">
+												<ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Led frontend development using React.js and Redux for various projects, Spearheaded the design and implementation of interactive and user-friendly interfaces, resulting in a 30% increase in user engagement.</li><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Optimized code for scalability and maintainability by Refactoring existing codebase to enhance readability and efficiency, minimized overall bundle size, and eased future updates.</li></ol>
+											</span>
+											
+										</div>
+									</div>
+								</div>
+								
+								<div class="paragraph PARAGRAPH_EXPR ">
+									<div class="clearfix doc-item">
+										<div class="singlecolumn">
+											<span class="paddedline" style="display: inline">
+												<span class="jobtitle" data-testid="FIELD_JTIT">Web developer</span>
+												<span class="xslt_static_change">, </span>
+											</span>
+											<span class="paddedline" style="display: inline">
+												<span class="jobdates" data-testid="FIELD_JSTD">
+													05-2021
+												</span>
+												<span class="xslt_static_change"> - </span>
+												<span class="jobdates" data-testid="FIELD_EDDT">
+													02-2022
+												</span>
+												<br />
+											</span>
+											<span class="paddedline">
+												<span class="companyname" data-testid="FIELD_COMP">Lircteck</span>
+												<span><span> – </span></span>
+												<span class="joblocation jobcity" data-testid="FIELD_JCIT">
+													Banglore
+												</span>
+											</span>
+											
+											<span class="jobline" data-testid="FIELD_JDES">
+												<p>• P R O J E C T : E-T R U C K I N G S O F T</p><p>• E-TruckingSoft is a platform that helps truck owners manage and optimize the utilization of their fleet.</p><p>• Improved project performance by 80%, and reduced re-rendering issues using React Profiler, Memo, and batch updates.</p><p>• Implemented complex logic and features, including interactive forms, maps, tables, and dynamic graphs on the frontend for enhanced data visualization.</p><p>• Technologies: React.js, TypeScript, Node.js, Express.js, MySQL, Ant Design, Azure.</p>
+											</span>
+											
+										</div>
+									</div>
+								</div>
+								
+								<div class="paragraph PARAGRAPH_EXPR ">
+									<div class="clearfix doc-item">
+										<div class="singlecolumn">
+											<span class="paddedline" style="display: inline">
+												<span class="jobtitle" data-testid="FIELD_JTIT">Software Developer</span>
+												<span class="xslt_static_change">, </span>
+											</span>
+											<span class="paddedline" style="display: inline">
+												<span class="jobdates" data-testid="FIELD_JSTD">
+													10-2020
+												</span>
+												<span class="xslt_static_change"> - </span>
+												<span class="jobdates" data-testid="FIELD_EDDT">
+													05-2021
+												</span>
+												<br />
+											</span>
+											<span class="paddedline">
+												<span class="companyname" data-testid="FIELD_COMP">Freelance</span>
+												<span><span> – </span></span>
+												<span class="joblocation jobcity" data-testid="FIELD_JCIT">
+													Remote
+												</span>
+											</span>
+											
+											<span class="jobline" data-testid="FIELD_JDES">
+												<ol><li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Developed a full-stack e-commerce platform from the ground up, including both the admin dashboard and the customer-facing website, and deployed it on AWS (EC2, S3).</li></ol><p>• Successfully delivered portfolio and business websites for clients on Upwork, increasing their sales and customer engagement.</p><p>• Technologies: MERN stack (MongoDB, Express.js, React.js, Node.js).</p>
+											</span>
+											
+										</div>
+									</div>
+								</div>
+								
 							</div>
-							` : ""}
-							${education?.length ? `
+							
+							
 							<div class="section SECTION_EDUC multi-para undefined" data-section-cd="EDUC">
 								<div class="heading">
 									<div class="sectiontitle">Education</div>
 								</div>
-								${education.map((edu, index) => `
-								<div class="paragraph PARAGRAPH_EDUC ${index === 0 ? 'firstparagraph' : ''}">
+								
+								<div class="paragraph PARAGRAPH_EDUC firstparagraph">
 									<div class="clearfix doc-item">
 										<div class="singlecolumn">
 											<span class="paddedline">
-												<span class="degree" data-testid="FIELD_DGRE">${edu.degree}</span>
+												<span class="degree" data-testid="FIELD_DGRE">HSC</span>
 												<span class="arb-bold"><span>: </span></span>
 												<span class="xslt_static_change displayNoneThisField">Expected in </span>
 												<span data-testid="FIELD_GRYR">
-													${edu.isPresent ? "Expected " : ""}${edu.endDate ? moment(edu.endDate).format(appearanceSettings?.dateFormat || "MM/YYYY") : ""}
+													05-2018
 												</span>
 												<br />
 											</span>
 											<span class="paddedline">
-												<span class="companyname companyname_educ" data-testid="FIELD_SCHO">${edu.school}</span>
+												<span class="companyname companyname_educ" data-testid="FIELD_SCHO">mesco</span>
 												<span> - </span>
-												<span class="joblocation jobcity" data-testid="FIELD_SCIT">${edu.location}</span>
+												<span class="joblocation jobcity" data-testid="FIELD_SCIT">Mumbai</span>
 												<br />
 											</span>
-											${edu.description ? `
-											<span data-testid="FIELD_FRFM">${edu.description}</span>
-											` : ""}
+											
 										</div>
 									</div>
 								</div>
-								`).join('')}
+								
+								<div class="paragraph PARAGRAPH_EDUC ">
+									<div class="clearfix doc-item">
+										<div class="singlecolumn">
+											<span class="paddedline">
+												<span class="degree" data-testid="FIELD_DGRE">BSC IT</span>
+												<span class="arb-bold"><span>: </span></span>
+												<span class="xslt_static_change displayNoneThisField">Expected in </span>
+												<span data-testid="FIELD_GRYR">
+													05-2023
+												</span>
+												<br />
+											</span>
+											<span class="paddedline">
+												<span class="companyname companyname_educ" data-testid="FIELD_SCHO">Gr patil Mumbai university</span>
+												<span> - </span>
+												<span class="joblocation jobcity" data-testid="FIELD_SCIT">Mumbra</span>
+												<br />
+											</span>
+											
+										</div>
+									</div>
+								</div>
+								
 							</div>
-							` : ""}
-							${languages?.length ? `
+							
+							
 							<div class="section SECTION_LNGG undefined" data-section-cd="LNGG">
 								<div class="heading">
 									<div class="sectiontitle">Languages</div>
@@ -505,73 +624,72 @@
 									<div class="clearfix doc-item">
 										<div class="singlecolumn">
 											<ul>
-												${languages.map(lang => `
-												<li>${lang.language}${!donotShowLanguageLevel && lang.level ? ` - ${lang.level}` : ""}</li>
-												`).join('')}
+												
+												<li>English - Professional</li>
+												
+												<li>Hindi - Native or Bilingual</li>
+												
 											</ul>
 										</div>
 									</div>
 								</div>
 							</div>
-							` : ""}
-							${courses?.length ? `
+							
+							
 							<div class="section SECTION_COUR undefined" data-section-cd="COUR">
 								<div class="heading">
 									<div class="sectiontitle">Courses</div>
 								</div>
-								${courses.map((course, index) => `
-								<div class="paragraph PARAGRAPH_COUR ${index === 0 ? 'firstparagraph' : ''}">
+								
+								<div class="paragraph PARAGRAPH_COUR firstparagraph">
 									<div class="clearfix doc-item">
 										<div class="singlecolumn">
 											<span class="paddedline">
-												<span class="degree" data-testid="FIELD_COUR">${course.course}</span>
+												<span class="degree" data-testid="FIELD_COUR">Fullstack development</span>
 												<span class="arb-bold"><span>: </span></span>
 												<span data-testid="FIELD_GRYR">
-													${course.isPresent ? "Expected " : ""}${course.endDate ? moment(course.endDate).format(appearanceSettings?.dateFormat || "MM/YYYY") : ""}
+													12-2020
 												</span>
 												<br />
 											</span>
 											<span class="paddedline">
-												<span class="companyname companyname_educ" data-testid="FIELD_INST">${course.institution}</span>
+												<span class="companyname companyname_educ" data-testid="FIELD_INST">Edyoda</span>
 												<br />
 											</span>
-											${course.description ? `
-											<span data-testid="FIELD_FRFM">${course.description}</span>
-											` : ""}
+											
+											<span data-testid="FIELD_FRFM"><p>Learned Full stack development In depth</p></span>
+											
 										</div>
 									</div>
 								</div>
-								`).join('')}
+								
 							</div>
-							` : ""}
-							${certificates?.length ? `
+							
+							
 							<div class="section SECTION_CERT undefined" data-section-cd="CERT">
 								<div class="heading">
 									<div class="sectiontitle">Certificates</div>
 								</div>
-								${certificates.map((cert, index) => `
-								<div class="paragraph PARAGRAPH_CERT ${index === 0 ? 'firstparagraph' : ''}">
+								
+								<div class="paragraph PARAGRAPH_CERT firstparagraph">
 									<div class="clearfix doc-item">
 										<div class="singlecolumn">
 											<span class="paddedline">
-												<span class="degree" data-testid="FIELD_CERT">${cert.certificateName}</span>
+												<span class="degree" data-testid="FIELD_CERT">React</span>
 												<br />
 											</span>
 											<span class="paddedline">
-												<span class="companyname companyname_educ" data-testid="FIELD_ISSU">${cert.issuer}</span>
-												${cert.link ? `
-												<span> - </span>
-												<span class="joblocation jobcity" data-testid="FIELD_LINK">${cert.link}</span>
-												` : ""}
+												<span class="companyname companyname_educ" data-testid="FIELD_ISSU">Edyoda </span>
+												
 												<br />
 											</span>
 										</div>
 									</div>
 								</div>
-								`).join('')}
+								
 							</div>
-							` : ""}
-							${websitesAndSocialLinks?.length ? `
+							
+							
 							<div class="section SECTION_WEBS undefined" data-section-cd="WEBS">
 								<div class="heading">
 									<div class="sectiontitle">Websites & Social Links</div>
@@ -580,15 +698,15 @@
 									<div class="clearfix doc-item">
 										<div class="singlecolumn">
 											<ul>
-												${websitesAndSocialLinks.map(link => `
-												<li>${link.label}: ${link.link}</li>
-												`).join('')}
+												
+												<li>Portfolio: https://laique.site/</li>
+												
 											</ul>
 										</div>
 									</div>
 								</div>
 							</div>
-							` : ""}
+							
 						</div>
 					</div>
 				</div>
