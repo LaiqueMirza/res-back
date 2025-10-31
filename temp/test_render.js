@@ -72,6 +72,8 @@ function renderTemplate(template, data) {
         return result;
     } catch (error) {
         console.error('\nTemplate rendering error:', error.message);
+        console.error('Full error:', error);
+        console.error('Error stack:', error.stack);
         
         // Try to extract line number information from the error
         const lineMatch = error.stack.match(/anonymous>:([0-9]+):([0-9]+)/);
