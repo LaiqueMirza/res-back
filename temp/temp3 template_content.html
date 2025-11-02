@@ -483,7 +483,7 @@
 											<span class="paddedline">
 												<span class="companyname companyname_educ" data-testid="FIELD_SCHO">${edu.school}</span>
 												<span> - </span>
-												<span class="joblocation jobcity" data-testid="FIELD_SCIT">${edu.location}</span>
+												<span class="joblocation jobcity" data-testid="FIELD_SCIT">${edu.isDistancedLearning ? 'Remote' : edu.location ?  edu.location : ''}</span>
 												<br />
 											</span>
 											${edu.description ? `

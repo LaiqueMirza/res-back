@@ -42,12 +42,12 @@
 			"degree": "HSC",
 			"school": "mesco",
 			"endDate": "2018-05-18T18:30:00.000Z",
-			"location": "Mumbai",
+			"location": "",
 			"position": 1,
 			"isPresent": false,
 			"startDate": "2016-08-18T18:30:00.000Z",
 			"description": "",
-			"isDistancedLearning": false
+			"isDistancedLearning": true
 		},
 		{
 			"city": "",
@@ -77,28 +77,6 @@
 		}
 	],
 	"employment": [
-		{
-			"endDate": "",
-			"employer": "kaal tech",
-			"isRemote": false,
-			"jobTitle": "Software Engineer",
-			"location": "Mumbai",
-			"position": 1,
-			"isPresent": true,
-			"startDate": "2022-07-18T18:30:00.000Z",
-			"description": "<p>PR O J E C T : G E N E R A T I V E A I B O T S</p><p>• Developed 3 distinct bots: HR Policy Bot: Assisted employees with HR policy-related queries. Product Catalogue Bot: Provided detailed information on company products. Competitor Analysis Bot: Enabled managers to analyze competitor data, focusing on rivals like Tata AIG and Bajaj Allianz.</p><p>• Implemented LLM models: Gemini-1.5-Flash-001 and Text-Bison-32k. Conducted data ingestion (PDFs/Docs) into Google BigQuery to train the AI models. • Prompt engineered and created the following APIs in the backend.</p><p>▪ Bot Response API for conversational output.</p><p>▪ Suggested Questions API for dynamic follow-up queries.</p><p>▪ Feedback API for continuous learning and model improvement.</p><p><br></p><p>• PR O J E C T : P E H C H A A N</p><p>• Pehchaan is a KYC verification system, that caters to a customer base exceeding 10 million.</p><p>• Added features like OCR for document data scanning, a human verification dashboard for verification of manual entries, and API integration for partner companies like TVS, and Maruti.</p><p>• Utilized Signzy APIs to improve verification processes and retrieved data from the CKYC repository</p><p>• Customers with data in the CKYC repository were verified instantly, while those submitting manual entries experienced a turnaround time (TAT) of 12 hours for approval or rejection.</p><p>• Our timely project delivery, in line with the IRDAI’s KYC guidelines for insurance from January 1, 2023, prevented disruptions to the company’s daily sales operations.</p><p>• Technologies: MERN stack (MongoDB, Express.js, React.js, Node.js).</p><p><br></p><p>• PR O J E C T : C H A S E • Chase is an in-house application created for managing and investigating fraud claim cases. • Developed two separate applications: one for internal investigators across various hierarchies and another for vendors to gather and input data from incident sites. • Engineered logic to facilitate the seamless progression of claim cases through different investigative stages, with automatic adjustments in case hierarchy and invoice processing based on claim amounts and investigator inputs. • Achieved a 30% reduction in costs and enhanced investigation accuracy by 55%. • Technologies: PERN stack (PostgreSQL, Express.js, React.js, Node.js). • Please note that MITSGLOBAL was the hiring company, while HDFCERGO was the client throughout the engagement.</p>"
-		},
-		{
-			"endDate": "",
-			"employer": "kaal tech",
-			"isRemote": false,
-			"jobTitle": "Software Engineer",
-			"location": "Mumbai",
-			"position": 1,
-			"isPresent": true,
-			"startDate": "2022-07-18T18:30:00.000Z",
-			"description": "<p>PR O J E C T : G E N E R A T I V E A I B O T S</p><p>• Developed 3 distinct bots: HR Policy Bot: Assisted employees with HR policy-related queries. Product Catalogue Bot: Provided detailed information on company products. Competitor Analysis Bot: Enabled managers to analyze competitor data, focusing on rivals like Tata AIG and Bajaj Allianz.</p><p>• Implemented LLM models: Gemini-1.5-Flash-001 and Text-Bison-32k. Conducted data ingestion (PDFs/Docs) into Google BigQuery to train the AI models. • Prompt engineered and created the following APIs in the backend.</p><p>▪ Bot Response API for conversational output.</p><p>▪ Suggested Questions API for dynamic follow-up queries.</p><p>▪ Feedback API for continuous learning and model improvement.</p><p><br></p><p>• PR O J E C T : P E H C H A A N</p><p>• Pehchaan is a KYC verification system, that caters to a customer base exceeding 10 million.</p><p>• Added features like OCR for document data scanning, a human verification dashboard for verification of manual entries, and API integration for partner companies like TVS, and Maruti.</p><p>• Utilized Signzy APIs to improve verification processes and retrieved data from the CKYC repository</p><p>• Customers with data in the CKYC repository were verified instantly, while those submitting manual entries experienced a turnaround time (TAT) of 12 hours for approval or rejection.</p><p>• Our timely project delivery, in line with the IRDAI’s KYC guidelines for insurance from January 1, 2023, prevented disruptions to the company’s daily sales operations.</p><p>• Technologies: MERN stack (MongoDB, Express.js, React.js, Node.js).</p><p><br></p><p>• PR O J E C T : C H A S E • Chase is an in-house application created for managing and investigating fraud claim cases. • Developed two separate applications: one for internal investigators across various hierarchies and another for vendors to gather and input data from incident sites. • Engineered logic to facilitate the seamless progression of claim cases through different investigative stages, with automatic adjustments in case hierarchy and invoice processing based on claim amounts and investigator inputs. • Achieved a 30% reduction in costs and enhanced investigation accuracy by 55%. • Technologies: PERN stack (PostgreSQL, Express.js, React.js, Node.js). • Please note that MITSGLOBAL was the hiring company, while HDFCERGO was the client throughout the engagement.</p>"
-		},
 		{
 			"endDate": "",
 			"employer": "kaal tech",
@@ -172,14 +150,15 @@
 	},
 	"appearanceSettings": {
 		"fontSize": 0,
-		"dateFormat": "MM-YYYY",
-		"fontFamily": "Arial",
-		"lineHeight": 0,
+		"dateFormat": "MM/YYYY",
+		"fontFamily": "Times New Roman",
+		"lineHeight": 10,
 		"resumeWidth": 816,
-		"primaryColor": "#546D22",
+		"primaryColor": "#051e4f",
 		"resumeFormat": "Letter",
 		"resumeHeight": 1056,
-		"secondaryColor": "#000"
+		"secondaryColor": "#fff",
+		"tertiaryColor": "#00bca3"
 	},
 	"donotShowSkillLevel": false,
 	"donotShowLanguageLevel": false,
