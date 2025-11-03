@@ -1,115 +1,1153 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+<div
+data-testid="prefix-94fUVSRUPT1-non-photo-skin-card-wrap"
+class="card-wrap js-thumbnail-animation slide-in"
+>
+<div
+  data-testid="prefix-95qgJm9UPT1-non-photo-skin-card"
+  class="card js-thumbnail-index skin-box"
+  data-index="36"
+  data-skin="UPT1"
+  data-displayname="Artistic"
+  data-color=${appearanceSettings?.tertiaryColor || "#00bca3"}
+>
+  <div
+    data-testid="prefix-94l8g7RUPT1-skin-document"
+    data-skinid="UPT1"
+    data-skincd="UPT1"
+    class="template-preview document-ctnr small-upt1"
+  >
+    <div data-testid="prefix-98t1CZ7" class="" tabindex="">
+      <style type="text/css" id="static">
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        font,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td {
+          margin: 0;
+          padding: 0;
+          border: 0;
+          outline: 0;
+          vertical-align: baseline;
+          background: transparent;
         }
-        
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
+          background: #fff;
+          text-align: left;
+          font-feature-settings: "liga" 0;
+          -moz-font-feature-settings: "liga" off;
         }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+        .skn-upt1 table {
+          border-collapse: collapse;
+          border-spacing: 0;
+          font-size: inherit;
+          color: inherit;
+          width: 100%;
+          table-layout: fixed;
         }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
+
+        .skn-upt1 ul,
+        .skn-upt1 li {
+          list-style-type: none;
+          margin: 0 0 0 10px;
+          padding: 0;
+          position: relative;
         }
-        
-        .name {
-            font-size: 2.5em;
-            font-weight: bold;
-            margin-bottom: 10px;
+        .skn-upt1 ul li:before {
+          content: "\\2022";
+          position: absolute;
+          left: -12px;
+          top: 1px;
         }
-        
-        .title {
-            font-size: 1.2em;
-            color: #666;
-            margin-bottom: 10px;
+        .skn-upt1 .skli-sec ul,
+        .skn-upt1 .lang-sec ul {
+          margin-left: 0;
         }
-        
-        .contact {
-            font-size: 0.9em;
-            color: #666;
+        .skn-upt1 .skli-sec ul li:before,
+        .skn-upt1 .lang-sec ul li:before {
+          left: -13px;
         }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <div class="name">${personalDetails?.firstName || ''} ${personalDetails?.lastName || ''}</div>
-            <div class="title">${personalDetails?.jobTitle || ''}</div>
-            <div class="contact">
-                ${personalDetails?.email || ''} | ${personalDetails?.phone || ''}
+        .skn-upt1 ul li {
+          margin: 0 0 0 13px;
+        }
+
+        .skn-upt1 {
+          word-wrap: break-word;
+          color: ${appearanceSettings?.primaryColor || "#000000"};
+        }
+        .skn-upt1 .paddedline {
+          display: block;
+        }
+        .skn-upt1 .jobtitle,
+        .skn-upt1 .companyname,
+        .skn-upt1 .degree,
+        .skn-upt1 .txt-bold {
+          font-weight: bold;
+        }
+        .skn-upt1 .skli-name-normalwgt .txt-bold {
+          font-weight: 400;
+        }
+        .skn-upt1 .datesWrapper,
+        .skn-upt1 .flt-right {
+          float: right;
+        }
+        .skn-upt1 .logo,
+        .skn-upt1 .nodisplay,
+        .skn-upt1 .displayNoneThisField {
+          display: none;
+        }
+
+        .skn-upt1 .section {
+          position: relative;
+        }
+        .skn-upt1 .name {
+					font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 15 : 15}px;
+                    line-height: ${appearanceSettings?.lineHeight ? appearanceSettings?.lineHeight + 17 : 17}px;
+
+          font-weight: bold;
+          padding: 0;
+          text-align: right;
+          text-transform: uppercase;
+        }
+        .skn-upt1 .name .lName {
+          color: ${appearanceSettings?.primaryColor || "#000000"};
+        }
+        .skn-upt1 .profTitle {
+          text-align: right;
+          padding-bottom: 2px;
+          font-weight: bold;
+        }
+        .skn-upt1 .paragraph {
+          position: relative;
+        }
+        .skn-upt1 .heading {
+          clear: both;
+          font-weight: bold;
+        }
+        .skn-upt1 .address {
+          position: relative;
+          text-align: right;
+					font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 10 : 10}px;
+					line-height: ${appearanceSettings?.lineHeight ? appearanceSettings?.lineHeight + 14 : 14}px;
+          margin-top: 11px;
+          background-color: ${appearanceSettings?.primaryColor || "#000000"};
+          font-weight: bold;
+          padding: 4px 5px;
+          color: ${appearanceSettings?.secondaryColor || "#000000"};
+        }
+        .skn-upt1 .address2 {
+          position: relative;
+          text-align: left;
+          font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 10 : 10}px;
+					line-height: ${appearanceSettings?.lineHeight ? appearanceSettings?.lineHeight + 14 : 14}px;
+        }
+        .skn-upt1 .table_wrapper {
+          width: 100%;
+          margin-top: 0;
+        }
+        .skn-upt1 table.twocol td {
+          width: 50%;
+        }
+        .skn-upt1 table.skills th,
+        .skn-upt1 table.skills td {
+          width: 20%;
+          text-align: center;
+        }
+        .skn-upt1 table.skills th {
+          text-decoration: underline;
+        }
+        .skn-upt1 table.skills .skillname,
+        .skn-upt1 table.skills .skillrating {
+          text-align: left;
+          width: 35%;
+        }
+        .skn-upt1 table.skills .skillrating {
+          width: 20%;
+        }
+        .skn-upt1 table.skills .skillyears,
+        .skn-upt1 table.skills .skilllast {
+          width: 19%;
+        }
+        .skn-upt1 table.skills .pad1 {
+          width: 5%;
+        }
+        .skn-upt1 table.skills .pad2,
+        .skn-upt1 table.skills .pad3 {
+          width: 1%;
+        }
+        .skn-upt1 .bottomborder {
+          border-color: ${appearanceSettings?.primaryColor || "#000000"} !important;
+        }
+        .skn-upt1 .social {
+          display: inline-block;
+        }
+        .skn-upt1 .social .field a {
+          color: ${appearanceSettings?.secondaryColor || "#fff"};
+          text-decoration: underline;
+        }
+        .skn-upt1 .social .field a:hover {
+          text-decoration: underline;
+        }
+
+        .skn-upt1 .social:last-child .sprtr {
+          display: none;
+        }
+        .skn-upt1 .social .sprtr {
+          padding-right: 2px;
+        }
+        .skn-upt1 .dispInBlk {
+          display: inline-block;
+        }
+        .skn-upt1 .brk-all {
+          word-break: break-all;
+        }
+        /* Style for Signature */
+        .skn-upt1 .signPic {
+          font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 7 : 7}px;
+          color: #8a8a8a !important;
+        }
+        .skn-upt1 .txtleft + .field_sign {
+          text-align: left;
+        }
+        .skn-upt1 .txtcenter + .field_sign {
+          text-align: center;
+        }
+        .skn-upt1 .txtright + .field_sign {
+          text-align: right;
+        }
+        .skn-upt1 .signPic img {
+          padding-top: 5px;
+          max-width: 100%;
+        }
+
+        /*FIX for FORCEFULLY making left margin ZERO for CL*/
+        .skn-upt1 .sectionCL .paragraph {
+          margin-top: 0 !important;
+        }
+
+        /* MFR portal specific changes */
+        .skn-upt1 .zipprefix,
+        .skn-upt1 .zipprefixRcnt,
+        .skn-upt1.MFR .zipsuffix,
+        .skn-upt1.MFR .zipsuffixRcnt {
+          display: none;
+        }
+        .skn-upt1 .zipsuffix,
+        .skn-upt1.MFR .zipprefix {
+          display: inline;
+        }
+        .skn-upt1 .zipsuffixRcnt,
+        .skn-upt1.MFR .zipprefixRcnt {
+          display: block;
+        }
+
+        /*New logic for infographic*/
+        .skn-upt1 .lang-sec .singlecolumn,
+        .skn-upt1 .fielditem-olsh {
+          display: none;
+        }
+        .skn-upt1 .lang-sec.infobarsec .infobarpara,
+        .skn-upt1 .lang-sec.infotilesec .infotilepara,
+        .skn-upt1 .nativeLangPara .fielditem-olsh {
+          display: block;
+        }
+
+        /*Infographic*/
+        .skn-upt1 .lang-sec.infobarsec {
+          font-size: 0;
+        }
+        .skn-upt1 .lang-sec.infobarsec .field p,
+        .skn-upt1 .lang-sec.infobarsec .nativeLangPara .field {
+          display: inline;
+        }
+        .skn-upt1 .lang-sec.infobarsec .paragraph {
+          display: inline-block;
+          vertical-align: top;
+          padding-bottom: 5px;
+          margin-top: 0;
+        }
+        .skn-upt1 .lang-sec.infobarsec .singlecolumn {
+          margin-left: 0 !important;
+          padding-left: 0;
+          position: relative;
+        }
+        .skn-upt1 .lang-sec.infobarsec .para_odd {
+          margin-right: 15px;
+        }
+        .skn-upt1 .lang-sec.infobarsec .nativeLangPara {
+          width: 100% !important;
+        }
+        .skn-upt1 .lang-sec.infobarsec .inner-rating {
+          position: relative;
+        }
+        .skn-upt1 .lang-sec.infobarsec .rating-bar {
+          background: #d5d6d6;
+          width: 100%;
+          clear: both;
+          margin-top: 3px;
+        }
+        .skn-upt1 .lang-sec.infobarsec .inner-rating {
+          background-color: ${appearanceSettings?.primaryColor || "#000000"};
+          height: 4px;
+          width: 60%;
+        }
+        .skn-upt1 .lang-sec.infobarsec .paragraph:before {
+          display: none;
+        }
+        .skn-upt1 .lang-sec.infobarsec > .paragraph:nth-last-child(1),
+        .skn-upt1 .lang-sec.infobarsec > .paragraph:nth-last-child(2) {
+          padding-bottom: 0 !important;
+        }
+
+        /*Infographic Tiles*/
+        .skn-upt1 .lang-sec.infotilesec,
+        .skn-upt1 .skli-sec {
+          font-size: 0;
+        }
+        .skn-upt1 .lang-sec.infotilesec .paragraph,
+        .skn-upt1 .skli-sec .paragraph {
+          display: inline-block;
+          vertical-align: top;
+          padding-bottom: 5px !important;
+          margin-top: 0;
+        }
+        .skn-upt1 .lang-sec.infotilesec > .paragraph:nth-last-child(1),
+        .skn-upt1 .lang-sec.infotilesec > .paragraph:nth-last-child(2),
+        .skn-upt1 .skli-sec > .paragraph:nth-last-child(1),
+        .skn-upt1 .skli-sec > .paragraph:nth-last-child(2) {
+          padding-bottom: 0 !important;
+        }
+        .skn-upt1 .lang-sec.infotilesec .field p,
+        .skn-upt1 .skli-sec .field p,
+        .skn-upt1 .lang-sec.infotilesec .nativeLangPara .field {
+          display: inline;
+        }
+        .skn-upt1 .lang-sec.infotilesec .singlecolumn,
+        .skn-upt1 .skli-sec .singlecolumn {
+          margin-left: 0 !important;
+        }
+        .skn-upt1 .lang-sec.infotilesec .sliced-rect,
+        .skn-upt1 .skli-sec .sliced-rect {
+          height: 6px;
+          width: 100%;
+          margin-top: 3px;
+                    line-height: ${appearanceSettings?.lineHeight ? appearanceSettings?.lineHeight : 0}px;
+
+          clear: both;
+        }
+        .skn-upt1 .lang-sec.infotilesec .paragraph.para_odd,
+        .skn-upt1 .skli-sec .paragraph.para_odd {
+          margin-right: 15px;
+        }
+        .skn-upt1 .lang-sec.infotilesec .sliced-rect .sliced-rect-tile,
+        .skn-upt1 .skli-sec .sliced-rect .sliced-rect-tile {
+          height: 100%;
+          background-color: ${appearanceSettings?.primaryColor || "#000000"};
+          float: left;
+          margin-right: 3px;
+        }
+        .skn-upt1
+          .lang-sec.infotilesec
+          .sliced-rect
+          .sliced-rect-tile:last-child,
+        .skn-upt1 .skli-sec .sliced-rect .sliced-rect-tile:last-child {
+          margin-right: 0;
+        }
+        .skn-upt1 .hide-bar .field-ratt {
+          display: none;
+        }
+        .skn-upt1 .nativeLangPara .field:first-child {
+          font-weight: bold;
+        }
+
+        /*Rectangular Rating Blocks*/
+        .skn-upt1 .sliced-rect .sliced-rect-tile.ratvfill {
+          background-color: ${appearanceSettings?.primaryColor || "#000000"};
+        }
+        .skn-upt1 .hide-bar .rating-bar,
+        .skn-upt1 .hide-bar .sliced-rect,
+        .skn-upt1 .hide-colon .colon,
+        .skn-upt1 .lang-sec.hide-only-bar .rating-bar,
+        .skn-upt1 .lang-sec.hide-only-bar.infotilesec .sliced-rect {
+          display: none !important;
+        }
+        .skn-upt1 .social-link a {
+          color: ${appearanceSettings?.secondaryColor || "#fff"};
+        }
+        .skn-upt1 .social-link:last-child .sprtr {
+        display: none;
+        }
+        /*Dyanmic BG*/
+        .skn-upt1.dynamicbg {
+          position: relative;
+        }
+        .skn-upt1.dynamicbg:before {
+          background-image: url("");
+          background-repeat: no-repeat;
+          background-position: 0 top;
+          background-size: contain;
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+        }
+
+        /*For Extra Space Before Colon*/
+        .skn-upt1 .beforecolonspace {
+          display: none !important;
+        }
+        .skn-upt1.MFR .beforecolonspace {
+          display: inline !important;
+        }
+
+        /*textAlign changes*/
+        .skn-upt1 .sectionTextAlignLeft * {
+          text-align: left !important;
+        }
+        .skn-upt1 .sectionTextAlignRight * {
+          text-align: right !important;
+          list-style-position: inside;
+        }
+        .skn-upt1 .sectionTextAlignCenter * {
+          text-align: center !important;
+          list-style-position: inside;
+        }
+        .skn-upt1 .sectionTextAlignJustify * {
+          text-align: justify !important;
+        }
+
+        .skn-upt1 .pdet-sec .singlecolumn {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
+        .skn-upt1 .pdet-sec .details-wrap {
+          width: 49%;
+          margin-bottom: 5px;
+        }
+        .skn-upt1 .pdet-sec .details-wrap:last-child,
+        .skn-upt1 .pdet-sec .details-wrap:nth-last-child(2) {
+          margin-bottom: 0;
+        }
+
+        /*HILT multi para*/
+        .skn-upt1 .multi-para-hilt {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .skn-upt1 .multi-para-hilt .heading {
+          width: 100%;
+        }
+        .skn-upt1 .multi-para-hilt .paragraph {
+          width: 49%;
+          margin-bottom: 18px;
+          margin-top: 0;
+        }
+        .skn-upt1 .multi-para-hilt .paragraph:last-child,
+        .skn-upt1
+          .multi-para-hilt
+          .paragraph:nth-last-child(2):nth-child(2n) {
+          margin-bottom: 0;
+        }
+        .skn-upt1 .multi-para-hilt .paragraph:nth-child(2n + 1) {
+          margin-left: 2%;
+        }
+        .skn-upt1 .multi-para-hilt .paragraph:nth-child(2n) {
+          margin-left: 0;
+        }
+        .skn-upt1 .multi-para-hilt .singlecolumn {
+          margin: 0;
+        }
+        .skn-upt1 .multi-section-hilt .multi-para-opt,
+        .skn-upt1
+          .section:not(.multi-para-hilt):not(.multi-section-hilt)
+          .multi-para-opt,
+        .skn-upt1 .multi-para-hilt .twocol {
+          display: none;
+        }
+        .skn-upt1 .multi-para-opt .hilt-title {
+          margin-bottom: 5px;
+        }
+
+        /*HILT multi para - For PDF*/
+        .skn-upt1.for-pdf .multi-para-hilt {
+          display: block;
+        }
+        .skn-upt1.for-pdf .multi-para-hilt .pdfparawrapper:after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+        .skn-upt1.for-pdf
+          .multi-para-hilt
+          .pdfparawrapper
+          .paragraph:first-child {
+          float: left;
+          margin-left: 0;
+        }
+        .skn-upt1.for-pdf
+          .multi-para-hilt
+          .pdfparawrapper
+          .paragraph:nth-child(2) {
+          float: right;
+          margin-left: 2%;
+        }
+        .skn-upt1.for-pdf .multi-para-hilt .pdfparawrapper .paragraph {
+          margin-bottom: 10px;
+        }
+        .skn-upt1.for-pdf
+          .multi-para-hilt
+          .pdfparawrapper:last-child
+          .paragraph {
+          margin-bottom: 0;
+        }
+        .skn-upt1.for-pdf .skli-sec ul li,
+        .skn-upt1.for-pdf .lang-sec ul li {
+          margin: 0 0 0 12.5px;
+        }
+
+        /* Multi Experience */
+        .skn-upt1 .multi-para-exp .jobtitle {
+          font-weight: normal;
+        }
+        .skn-upt1 .multi-para-exp .flx {
+          display: flex;
+          justify-content: space-between;
+        }
+        .skn-upt1 .multi-para-exp .datesWrapper {
+          float: none;
+          flex: none;
+          padding-left: 3%;
+        }
+        .skn-upt1 .groupChildPara.paragraph .singlecolumn .companyloc {
+          display: none;
+        }
+
+        /*Paginated HTML PDF*/
+        .skn-upt1.for-paginated-pdf .inf-sec .paragraph,
+        .skn-upt1.for-paginated-pdf .inf-sec .paginatedpdfinfwrapper {
+          display: block !important;
+        }
+        .skn-upt1.for-paginated-pdf
+          .inf-sec
+          .paginatedpdfinfwrapper
+          .paragraph-container,
+        .skn-upt1.for-paginated-pdf
+          .inf-sec
+          .paginatedpdfinfwrapper
+          > .paragraph {
+          display: block !important;
+          float: left;
+        }
+        .skn-upt1.for-paginated-pdf
+          .inf-sec
+          .paginatedpdfinfwrapper
+          .paragraph-container
+          + .paragraph-container,
+        .skn-upt1.for-paginated-pdf
+          .inf-sec
+          .paginatedpdfinfwrapper
+          > .paragraph
+          + .paragraph {
+          float: right;
+        }
+        .skn-upt1.for-paginated-pdf
+          .inf-sec
+          .paginatedpdfinfwrapper
+          > .paragraph {
+          clear: none !important;
+        }
+        .skn-upt1.for-paginated-pdf .inf-sec .paginatedpdfinfwrapper:after {
+          content: "";
+          display: table;
+          clear: both;
+        }</style
+      ><style
+        type="text/css"
+        id="dynamic"
+        data-time="Tue Jul 29 2025 23:20:07 GMT+0530 (India Standard Time)"
+      >
+        .skn-upt1,
+        .skn-upt1 table {
+          line-height: ${appearanceSettings?.lineHeight ? appearanceSettings?.lineHeight + 14 : 14}px;
+     
+        }
+        .skn-upt1.pagesize {
+          width:  ${appearanceSettings?.resumeWidth || 816}px;
+        }
+        .skn-upt1.fontsize,
+        .skn-upt1 .lang-sec.infobarsec .paragraph *,
+        .skn-upt1 .lang-sec.infotilesec .paragraph *,
+        .skn-upt1 .skli-sec .paragraph * {
+          font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 11 : 11}px;
+        }
+        .skn-upt1.fontface {
+          font-family: ${appearanceSettings?.fontFamily || "Arial"};
+        }
+        .skn-upt1.vmargins {
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+        .skn-upt1.hmargins {
+          padding-left: 42px;
+          padding-right: 42px;
+        }
+        .skn-upt1 .section {
+          margin-top: 14px;
+        }
+        .skn-upt1 .firstsection,
+        .skn-upt1 .firstparagraph,
+        .skn-upt1 .SECTION_CNTC {
+          margin-top: 0 !important;
+        }
+        .skn-upt1 .heading {
+          margin-bottom: 9px;
+          border-color: ${appearanceSettings?.tertiaryColor || "#00bca3"} !important;
+        }
+        .skn-upt1 .paragraph {
+          margin-top: 18px;
+        }
+        .skn-upt1 .name {
+          font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 29 : 29}px;
+          line-height: ${appearanceSettings?.lineHeight ? appearanceSettings?.lineHeight + 35 : 35}px;
+        }
+        .skn-upt1 .name .lName {
+          color: ${appearanceSettings?.tertiaryColor || "#00bca3"};
+        }
+        .skn-upt1 .profTitle {
+          font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 15 : 15}px;
+          line-height: ${appearanceSettings?.lineHeight ? appearanceSettings?.lineHeight + 21 : 21}px;
+        }
+        .skn-upt1 .singlecolumn,
+        .skn-upt1 .maincolumn {
+          margin-left: 0px;
+        }
+        .skn-upt1 .bottomborder {
+          border-bottom: 1px solid;
+        }
+        .skn-upt1 .sectiontitle {
+          font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 15 : 15}px;
+          line-height: ${appearanceSettings?.lineHeight ? appearanceSettings?.lineHeight + 18 : 18}px;
+      }
+        .skn-upt1 .address {
+             font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 10 : 10}px;
+          line-height: ${appearanceSettings?.lineHeight ? appearanceSettings?.lineHeight + 16 : 16}px;
+       margin-top: 3px;
+        }
+        .skn-upt1 table.skills td {
+          padding-top: 9px;
+        }
+        .skn-upt1.dynamicbg:before {
+          background-image: url({$DYBG});
+          width: ${appearanceSettings?.resumeWidth || 816}px;
+          height: ${appearanceSettings?.resumeHeight || 1056}px;
+        }
+        .skn-upt1 ul li:before {
+     
+     font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 14 : 14}px;
+        }
+        /* .skn-upt1 .lang-sec .heading,.skn-upt1 .skli-sec .heading{margin-left:-0px} */
+
+        /* Style for Signature */
+        .skn-upt1 .sign {
+          margin-top: 70px !important;
+        }
+        .skn-upt1.documentCL .sign {
+          margin-top: 21px !important;
+        } /*documentCL class is coming from backend for cover letter only*/
+
+        /*FIX for Re-calculating width of singlecolumn for CL*/
+        .skn-upt1 .sectionCL .singlecolumn {
+          margin-left: 0 !important;
+          width: 100%;
+        }
+        .skn-upt1 .address2 {
+             font-size: ${appearanceSettings?.fontSize ? appearanceSettings?.fontSize + 11 : 11}px;
+          line-height: ${appearanceSettings?.lineHeight ? appearanceSettings?.lineHeight + 14 : 14}px;
+        }
+
+        /*Infographic*/
+        .skn-upt1 .lang-sec.infobarsec .inner-rating {
+          background-color: ${appearanceSettings?.tertiaryColor || "#00bca3"};
+          
+        }
+        .skn-upt1 .lang-sec.infobarsec {
+          padding-left: 0px;
+        }
+        .skn-upt1 .lang-sec.infobarsec .heading {
+          margin-left: -0px;
+        }
+        .skn-upt1 .lang-sec.infobarsec .paragraph {
+          width:  ${appearanceSettings?.resumeWidth || 816}px;
+          max-width: 49%;
+        }
+        .skn-upt1 .lang-sec.infobarsec .nativeLangPara {
+          width:  ${appearanceSettings?.resumeWidth || 816}px;
+          max-width:  ${appearanceSettings?.resumeWidth || 816}px;
+        }
+        .skn-upt1 .lang-sec,
+        .skn-upt1 .skli-sec {
+          padding-left: 0px;
+        }
+        .skn-upt1 .lang-sec.infobarsec .heading,
+        .skn-upt1 .skli-sec {
+          padding-left: -0px !important;
+        }
+
+        /*Infographic Skills*/
+        .skn-upt1 .lang-sec.infotilesec,
+        .skn-upt1 .skli-sec {
+          padding-left: 0px;
+        }
+        .skn-upt1 .lang-sec.infotilesec .heading,
+        .skn-upt1 .skli-sec .heading {
+          margin-left: -0px;
+        }
+        .skn-upt1 .lang-sec.infotilesec .paragraph,
+        .skn-upt1 .skli-sec .paragraph {
+          width: 49%;
+        }
+        .skn-upt1 .lang-sec.infotilesec .nativeLangPara {
+          width:  ${appearanceSettings?.resumeWidth || 816}px;;
+          max-width:  ${appearanceSettings?.resumeWidth || 816}px;;
+        }
+        .skn-upt1 .fielditem-olsh {
+          padding-top: 5px;
+          margin-bottom: -3px;
+        }
+
+        /*Finalize fixes*/
+        .skn-upt1 .data-LNGG .sortable-item,
+        .skn-upt1 .data-CERT .PARAGRAPH_CERT p,
+        .modal-preview-resume .skn-upt1 .PARAGRAPH_CERT span,
+        .skn-upt1 .cert-sec span p {
+          display: inline-block;
+        }
+
+        /*Rectangular Rating Blocks*/
+        .skn-upt1 .paragraph .sliced-rect .sliced-rect-tile.ratvfill {
+          background-color: ${appearanceSettings?.tertiaryColor || "#00bca3"};;
+        }
+
+        /*Infographic Languages Ordering Support*/
+        .skn-upt1 .lang-sec.infobarsec .colon,
+        .skn-upt1 .lang-sec.infotilesec .colon {
+          display: none;
+        }
+        .skn-upt1 .lang-sec.infobarsec .field:first-child .colon,
+        .skn-upt1 .lang-sec.infotilesec .field:first-child .colon {
+          display: inline;
+        }
+        /* Builder css for mobile device */
+        .android .skn-upt1,
+        .ios .skn-upt1 {
+          box-sizing: content-box;
+        }
+
+        /*HILT multi para*/
+        .skn-upt1 .multi-para-hilt .heading {
+          width: calc(100% + 0px);
+          margin-left: -0px;
+        }
+        .skn-upt1 .multi-para-hilt {
+          margin-left: 0px;
+        }
+
+        /*For-PDF*/
+        .skn-upt1.for-pdf .skli-sec ul li:before,
+        .skn-upt1.for-pdf .lang-sec ul li:before {
+          top: -0.5px;
+        }
+
+        /*Pagination Parameters*/
+        .skn-upt1 {
+          data-ptbm: 25px;
+          data-pgsz: 612px;
+        }
+
+        .edu-paragraph {
+          margin-top: 0px;
+        }
+      </style>
+      <div
+        data-testid="prefix-80z1mVl"
+        class="document doc-root doc-preview fontsize fontface vmargins hmargins pagesize skn-upt1 UPT1 ZTY"
+      >
+        <div
+          data-testid="SECTION_NAME1a1a32ad-f01c-4377-b2f6-1a65f9bf6cb8"
+          class="section notdraggable SECTION_NAME firstsection undefined"
+          data-section-cd="NAME"
+        >
+          <div
+            data-testid="PARAGRAPH_NAME_44bc0bd4-6d0c-480d-8f32-8d70df1621d0"
+            class="paragraph PARAGRAPH_NAME firstparagraph"
+          >
+            <div data-testid="prefix-79x56Jf">
+              <div class="name">
+                <span data-content-id="text_1slLGm" data-testid="FIELD_FNAM"
+                  >${personalDetails?.firstName || ''}</span
+                ><span> </span
+                ><span
+                  class="lName"
+                  data-content-id="text_1slLGl"
+                  data-testid="FIELD_LNAM"
+                  >${personalDetails?.lastName || ''}</span
+                >
+              </div>
+              <div class="profTitle">
+                <span
+                  class="placeholder-text"
+                  data-content-id=""
+                  data-testid="FIELD_DCTL"
+                  >${personalDetails?.jobTitle || ''}</span
+                >
+              </div>
             </div>
+          </div>
         </div>
-        
-        ${profileSummary?.info ? `
-        <div class="section">
-            <h2>Profile Summary</h2>
-            <p>${profileSummary.info.replace(/<[^>]*>/g, '')}</p>
-        </div>
-        ` : ''}
-        
-        ${skills?.length ? `
-        <div class="section">
-            <h2>Skills</h2>
-            <ul>
-                ${skills.map(skill => '<li>' + skill.skill + (!donotShowSkillLevel && skill.level ? ' - ' + skill.level : '') + '</li>').join('')}
-            </ul>
-        </div>
-        ` : ''}
-        
-        ${employment?.length ? `
-        <div class="section">
-            <h2>Work History</h2>
-            ${employment.map(job => `
-            <div class="job">
-                <h3>${job.jobTitle}</h3>
-                <p><strong>${job.employer}</strong> | ${job.startDate} - ${job.endDate || 'Present'}</p>
-                <p>${job.jobDescription}</p>
+        <div
+          data-testid="SECTION_CNTCd3d40c22-1b29-401e-a809-9cb7e72d6fdc"
+          class="section SECTION_CNTC notdraggable undefined"
+          data-section-cd="CNTC"
+        >
+          <div
+            data-testid="PARAGRAPH_CNTC_3912838f-29f6-467c-8297-bf45ee1ff720"
+            class="paragraph PARAGRAPH_CNTC firstparagraph"
+          >
+            <div data-testid="prefix-79Y8yhv" class="clearfix doc-item">
+              <div class="address">
+                <div>
+                  <span class="zipsuffix">
+                    <span data-content-id="" data-testid="FIELD_STRT">${personalDetails?.street || ''}</span
+                    ><span
+                      class="spaced"
+                      data-content-id="text_1sftXM"
+                      data-testid="FIELD_CITY"
+                      >${personalDetails?.city || ''}</span
+                    ><span>${personalDetails?.state ? ", " : ''}</span
+                    ><span
+                      class="spaced"
+                      data-content-id="text_1sftXD"
+                      data-testid="FIELD_STAT"
+                      >${personalDetails?.state || ''}</span
+                    >
+                    <span
+                      class="spaced"
+                      data-content-id="text_1sftXY"
+                      data-testid="FIELD_ZIPC"
+                      >${personalDetails?.zipCode || ''}</span
+                    >
+                  </span>
+
+                  <span
+                    class="spaced"
+                    data-content-id="text_1sxQwc"
+                    data-testid="FIELD_ADDR"
+                  >${personalDetails?.address || ''}</span>
+                  <span><span> | </span></span
+                  ><span
+                    data-content-id="text_1sftYa"
+                    data-testid="FIELD_HPHN"
+                    >${personalDetails?.phone || ''}</span
+                  >
+                  <span><span>| </span></span
+                  ><span data-content-id="" data-testid="FIELD_CPHN">${personalDetails?.mobile || ''}</span>
+                  <span
+                    data-content-id="text_1sftYc"
+                    data-testid="FIELD_EMAI"
+                    >${personalDetails?.email || ''}</span
+                  >
+                  <span></span>
+                </div>
+                <div></div>
+              </div>
             </div>
-            `).join('')}
+          </div>
         </div>
-        ` : ''}
-        
-        ${education?.length ? `
-        <div class="section">
-            <h2>Education</h2>
-            ${education.map(edu => `
-            <div class="education">
-                <h3>${edu.degree}</h3>
-                <p><strong>${edu.school}</strong> | ${edu.startDate} - ${edu.endDate || 'Present'}</p>
+        <div></div>
+        <div
+          data-testid="SECTION_SUMMe885db04-e68d-4751-b609-8fc7e3118c39"
+          class="section SECTION_SUMM undefined"
+          data-section-cd="SUMM"
+        >
+          <div data-testid="prefix-86qXoTj-SUMM" class="heading bottomborder">
+            <div data-testid="SECTIONNAME_SUMM" class="sectiontitle">
+              Professional Summary
             </div>
-            `).join('')}
+          </div>
+          <div
+            data-testid="PARAGRAPH_SUMM_d3c5ea53-20e5-4bba-aa5c-6d1eaf7e0cd7"
+            class="paragraph PARAGRAPH_SUMM firstparagraph"
+          >
+            <div data-testid="prefix-79Y8yhv" class="clearfix doc-item">
+              <div
+                class="singlecolumn"
+                data-content-id="text_1sftYe"
+                data-testid="FIELD_FRFM"
+              >
+                ${profileSummary?.info || ''}
+              </div>
+            </div>
+          </div>
         </div>
-        ` : ''}
+        <div
+          data-testid="SECTION_HILT66551e16-9025-4c6a-88fd-21c891f7b2b4"
+          class="section SECTION_HILT undefined"
+          data-section-cd="HILT"
+        >
+          <div data-testid="prefix-86qXoTj-HILT" class="heading bottomborder">
+            <div data-testid="SECTIONNAME_HILT" class="sectiontitle">
+              Skills
+            </div>
+          </div>
+          <div
+            data-testid="PARAGRAPH_HILT_f6d39a0e-45b4-431c-82b8-567b069b1da4"
+            class="paragraph PARAGRAPH_HILT firstparagraph"
+          >
+            <div data-testid="prefix-79Y8yhv" class="clearfix doc-item">
+              <div class="singlecolumn maincolumn">
+                <table class="twocol">
+                  <tbody>
+                    <tr>
+                      <td
+                        class="twocol_1"
+                        data-content-id="text_1sftZf"
+                        data-testid="FIELD_SKC1"
+                      >
+                        <ul>
+                          ${skills?.filter((_, index) => index % 2 === 0)?.map(skill => `<li>${skill.skill || ''}</li>`).join('') || ''}
+                        </ul>
+                      </td>
+                      <td
+                        class="twocol_2"
+                        data-content-id="text_1sftZi"
+                        data-testid="FIELD_SKC2"
+                      >
+                        <ul>
+                          ${skills?.filter((_, index) => index % 2 === 1)?.map(skill => `<li>${skill.skill || ''}</li>`).join('') || ''}
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="multi-para-opt">
+                  <div
+                    class="txt-bold hilt-title"
+                    data-content-id=""
+                    data-testid="FIELD_PTTL"
+                  ></div>
+                  <div class="multi-para-content">
+                    <div
+                      data-content-id="text_1sftZf"
+                      data-testid="FIELD_SKC1"
+                    >
+                      <ul>
+                        ${skills?.filter((_, index) => index % 2 === 0).map(skill => `<li>${skill.name || ''}</li>`).join('') || ''}
+                      </ul>
+                    </div>
+                    <div
+                      data-content-id="text_1sftZi"
+                      data-testid="FIELD_SKC2"
+                    >
+                      <ul>
+                        ${skills?.filter((_, index) => index % 2 === 1).map(skill => `<li>${skill.name || ''}</li>`).join('') || ''}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          data-testid="SECTION_EXPR313e1c77-349e-497b-bdb6-f0271f1e85bf"
+          class="section SECTION_EXPR multi-para undefined"
+          data-section-cd="EXPR"
+        >
+          <div data-testid="prefix-86qXoTj-EXPR" class="heading bottomborder">
+            <div data-testid="SECTIONNAME_EXPR" class="sectiontitle">
+              Work History
+            </div>
+          </div>
+          ${employment?.map((job, index) => `
+          <div
+            data-testid="PARAGRAPH_EXPR_${index}"
+            class="paragraph PARAGRAPH_EXPR ${index === 0 ? 'firstparagraph' : ''}"
+          >
+            <div data-testid="prefix-79Y8yhv" class="clearfix doc-item">
+              <div class="singlecolumn">
+                  <span class="paddedline"
+                  >
+                <span
+                    class="jobtitle"
+                    data-content-id="text_1sftbV"
+                    data-testid="FIELD_JTIT"
+                    >${job.jobTitle || ''}</span
+                  >
+                  <span class="datesWrapper">
+                    <span
+                      class="jobdates"
+                      format="%m/%Y"
+                      data-content-id="text_1sftZk"
+                      data-testid="FIELD_JSTD"
+                      >${job.startDate ? moment(job.startDate).format(appearanceSettings?.dateFormat || "MM-YYYY") : ""}</span
+                    ><span class="xslt_static_change"> - </span
+                    ><span
+                      class="jobdates"
+                      format="%m/%Y"
+                      data-content-id="text_1sftZq"
+                      data-testid="FIELD_EDDT"
+                      >${job.isPresent ? 'Current' : (job.endDate ? moment(job.endDate).format(appearanceSettings?.dateFormat || "MM-YYYY") : "")}</span
+                    ><br /> </span></span>
+                      <span class="paddedline"
+                  ><span
+                    class="companyname"
+                    data-content-id="text_1sftZv"
+                    data-testid="FIELD_COMP"
+                    >${job.employer || ''}</span
+                  ><span>${job.location ? ", " : ''}</span>
+                  <span
+                    class="joblocation jobcity"
+                    data-content-id="text_1sftbX"
+                    data-testid="FIELD_JCIT"
+                    >${job.location || ''}</span
+                  ><span
+                    class="joblocation"
+                    data-content-id=""
+                    data-testid="FIELD_JLOC"
+                  ></span></span>
+                  <br /> <span
+                  class="jobline"
+                  data-content-id="text_1sftbc"
+                  data-testid="FIELD_JDES"
+                  >${job.description || ''}</span
+                >
+              </div>
+            </div>
+          </div>
+          `).join('') || ''}
+        </div>
+        <div
+          data-testid="SECTION_EDUCfd38dd6c-e289-4f1b-96e2-457086a24cc8"
+          class="section SECTION_EDUC multi-para undefined"
+          data-section-cd="EDUC"
+        >
+          <div data-testid="prefix-86qXoTj-EDUC" class="heading bottomborder">
+            <div data-testid="SECTIONNAME_EDUC" class="sectiontitle">
+              Education
+            </div>
+          </div>
+          ${education?.map((edu, index) => `
+          <div
+            data-testid="PARAGRAPH_EDUC_${index}"
+            class="edu-paragraph PARAGRAPH_EDUC ${index === 0 ? 'firstparagraph' : ''}"
+          >
+            <div data-testid="prefix-79Y8yhv" class="clearfix doc-item">
+              <div class="singlecolumn">
+                <span class="paddedline"
+                  ><span
+                    class="companyname companyname_educ"
+                    data-content-id="text_1sftd7"
+                    data-testid="FIELD_SCHO"
+                    >${edu.school || ''}</span
+                  ><span> ${edu.degree ? "-" : ""} </span
+                  ><span
+                    class="degree"
+                    data-content-id="text_1sftd4"
+                    data-testid="FIELD_DGRE"
+                    >${edu.degree || ''}</span
+                  ><span>  ${edu.isDistancedLearning || edu.location ? "-" : ""} </span
+                  ><span
+                    class="joblocation jobcity"
+                    data-content-id="text_1sftd9"
+                    data-testid="FIELD_SCIT"
+                    >${edu.isDistancedLearning ? 'Remote' : edu.location ?  edu.location : ''}</span
+                  >
+                  <span class="datesWrapper"
+                    ><span
+                      format="%m/%Y"
+                      data-content-id="text_1sftd9"
+                      data-testid="FIELD_STDT"
+                      >${edu.startDate ? moment(edu.startDate).format(appearanceSettings?.dateFormat || "MM-YYYY") : ""}</span
+                    ><span class="xslt_static_change"> - </span
+                    ><span
+                      format="%m/%Y"
+                      data-content-id="text_1sftdt"
+                      data-testid="FIELD_GRYR"
+                      >${edu.isPresent ? 'Current' : (edu.endDate ? moment(edu.endDate).format(appearanceSettings?.dateFormat || "MM-YYYY") : "")}</span
+                    >
+                  </span> </span
+                ><span class="paddedline"
+                  ><span
+                ><span
+                  data-content-id="text_1slLjr"
+                  data-testid="FIELD_FRFM"
+                >${edu.description || ''}</span>
+              </div>
+            </div>
+          </div>
+          `).join('') || ''}
+        </div>
+      </div>
+      <div></div>
     </div>
-    
-    <script>
-    function formatDate(dateString, format) {
-        if (!dateString) return '';
-        const date = new Date(dateString);
-        const month = String(date.getMonth() + 1).padStart(2, '0');
-        const year = date.getFullYear();
-        
-        if (format === 'MM-YYYY') {
-            return month + '-' + year;
-        }
-        return dateString;
-    }
-    </script>
-</body>
-</html>
+  </div>
+</div>
+</div>
