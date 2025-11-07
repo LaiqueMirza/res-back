@@ -5,109 +5,112 @@ const dotenv = require("dotenv");
 dotenv.config({
 	path: process.env.NODE_ENV ? `.env.${process.env.NODE_ENV}` : ".env.dev",
 });
+
+// Validate environment variables
+require('./src/utils/validateEnv');
+
 const cookieParser = require("cookie-parser");
-const cors = require("cors");
-const helmet = require("helmet");
-const morgan = require("morgan");
-const rateLimit = require("express-rate-limit");
 const initDb = require("./db/models/index");
 const path = require("path");
-const errorMiddleware = require("./src/middleware/error");
 const googleAuthFun = require("./src/services/googleAuth.js");
-// const connectDB = require("./config/db");
 
-const limiter = rateLimit({
-	windowMs: 15 * 60 * 1000, // 15 minutes
-	max: 100, // limit each IP to 100 requests per windowMs,
-	standardHeaders: false,
-	legacyHeaders: false,
-	message: {
-		success: false,
-		message: "Too many requests, please try again later",
-	},
-	JSON: true,
-});
-// app.use(limiter);
-app.use(morgan("common"));
-app.use(express.json({ limit: "20mb", extended: true }));
+// Import new middleware
+const logger = require('./src/utils/logger');
+const { 
+	helmetConfig, 
+	apiLimiter, 
+	authLimiter,
+	corsOptions,
+	sanitizeRequest,
+	securityLogger,
+	requestSizeLimiter
+} = require('./src/middleware/security');
+const { 
+	errorHandler, 
+	notFoundHandler, 
+	initializeErrorHandlers 
+} = require('./src/middleware/errorHandler');
+
+// Initialize global error handlers
+initializeErrorHandlers();
+
+// Security middleware
+app.use(helmetConfig);
+app.use(requestSizeLimiter);
+app.use(securityLogger);
+
+// Logging
+const morgan = require('morgan');
+app.use(morgan('combined', { stream: logger.stream }));
+
+// Body parsing
+app.use(express.json({ limit: "10mb", extended: true }));
 app.use(express.urlencoded({ limit: "10mb", extended: true }));
+
+// Cookie parsing
 app.use(cookieParser());
-const corsOptions = {
-	origin: ["http://localhost:3000"],
-	methods: ["GET", "POST", "PATCH", "PUT"],
-	allowedHeaders:
-		"Origin, X-Requested-With, Content-Type, Accept, Authorization",
-	credentials: true, // Allow credentials (cookies, HTTP authentication) to be sent with the request
-};
+
+// CORS
+const cors = require('cors');
 app.use(cors(corsOptions));
-app.use((req, res, next) => {
-	res.header("Access-Control-Allow-Origin", ["http://localhost:3000"]);
-	res.header("Access-Control-Allow-Methods", "GET,POST,PATCH, PUT");
-	res.header(
-		"Access-Control-Allow-Headers",
-		"Origin, X-Requested-With, Content-Type, Accept"
-	);
-	res.header("Access-Control-Allow-Credentials", true);
-	next();
-});
-app.use(helmet());
+
+// Request sanitization
+app.use(sanitizeRequest);
+
+// Static files
 app.use("/previousResumeFile", express.static("previousResumeFile"));
-// app.use((req, res, next) => {
-// 	if (req.body) {
-// 		const originalBody = JSON.stringify(req.body);
-// 		const htmlScriptRegex = /<[^>]*>|[<>]/;
-// 		if (htmlScriptRegex.test(originalBody)) {
-// 			return res.status(400).json({
-// 				success: false,
-// 				error: true,
-// 				message: "Invalid request: Unsanitized data",
-// 			});
-// 		}
-// 	}
-// 	next();
-// });
 
-app.use((err, req, res, next) => {
-	if (err instanceof SyntaxError && err.status === 400 && "body" in err) {
-		res.status(400).json({
-			success: false,
-			error: true,
-			message: "Invalid JSON request",
-		});
-	}
-	next();
-});
-
+// Google authentication
 googleAuthFun(app);
-app.use("/v1", require("./src/routes/index"));
-app.use("*", (req, res, next) => {
-	return res.status(400).json({
-		success: false,
-		error: false,
-		message: `Route not found`,
-	});
-});
 
-app.use(errorMiddleware);
+// API routes with rate limiting
+app.use("/v1", apiLimiter, require("./src/routes/index"));
+
+// 404 handler
+app.use(notFoundHandler);
+
+// Global error handler
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 8000;
-app.listen(PORT, async () => {
-	console.log(`Server is running on port ${PORT}`);
+const server = app.listen(PORT, async () => {
+	logger.info(`Server is running on port ${PORT}`);
 	try {
 		await initDb().sequelize.sync({ alter: true });
-		console.log("Database synced and connected successfully");
+		logger.info("Database synced and connected successfully");
 	} catch (error) {
-		console.log("Database not connected XXX", error);
+		logger.error("Database connection failed", {
+			error: error.message,
+			stack: error.stack,
+		});
 		process.exit(1);
 	}
 });
 
-// Unhandled Promise Rejection
+// Graceful shutdown handlers
 process.on("unhandledRejection", (err) => {
-	console.log(`Error: ${err.message}`);
-	console.log(`Shutting down the server due to Unhandled Promise Rejection`);
+	logger.error(`Unhandled Promise Rejection: ${err.message}`, {
+		stack: err.stack,
+	});
+	logger.info(`Shutting down the server due to Unhandled Promise Rejection`);
 
 	server.close(() => {
 		process.exit(1);
+	});
+});
+
+process.on("SIGTERM", () => {
+	logger.info("SIGTERM signal received: closing HTTP server");
+	server.close(() => {
+		logger.info("HTTP server closed");
+		process.exit(0);
+	});
+});
+
+process.on("SIGINT", () => {
+	logger.info("SIGINT signal received: closing HTTP server");
+	server.close(() => {
+		logger.info("HTTP server closed");
+		process.exit(0);
 	});
 });
