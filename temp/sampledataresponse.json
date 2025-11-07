@@ -150,15 +150,14 @@
 	},
 	"appearanceSettings": {
 		"fontSize": 0,
-		"dateFormat": "MM/YYYY",
-		"fontFamily": "Times New Roman",
-		"lineHeight": 10,
+		"dateFormat": "YYYY-MM",
+		"fontFamily": "Century Gothic",
+		"lineHeight": 0,
 		"resumeWidth": 816,
-		"primaryColor": "#051e4f",
+		"primaryColor": "#7d47b2",
 		"resumeFormat": "Letter",
 		"resumeHeight": 1056,
-		"secondaryColor": "#fff",
-		"tertiaryColor": "#00bca3"
+		"secondaryColor": "#343434"
 	},
 	"donotShowSkillLevel": false,
 	"donotShowLanguageLevel": false,

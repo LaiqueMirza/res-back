@@ -1,11 +1,12 @@
 {
 	"fontSize": 0,
-	"dateFormat": "MM-YYYY",
-	"fontFamily": "Arial",
+	"dateFormat": "YYYY-MM",
+	"fontFamily": "Century Gothic",
 	"lineHeight": 0,
 	"resumeWidth": 816,
-	"primaryColor": "#051e4f",
+	"primaryColor": "#7d47b2",
 	"resumeFormat": "Letter",
 	"resumeHeight": 1056,
-	"secondaryColor": "#000"
+	"secondaryColor": "#343434",
+	"tertiaryColor": "#fff"
 }
