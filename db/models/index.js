@@ -18,23 +18,40 @@ console.log(
 );
 module.exports = initDb = () => {
 
-	const sequelize = new Sequelize(
-		dbconfig.database,
-		dbconfig.user,
-		dbconfig.password,
-		{
-			host: dbconfig.host, // or your host address
-			dialect: "postgres", // Specify the dialect you're using (e.g., postgres, mysql, sqlite)
-			logging: false, // Disable logging for better performance
-			pool: {
-				// Connection pool configuration to optimize performance
-				max: 50, // Maximum number of connections in pool
-				min: 20, // Minimum number of connections in pool
-				acquire: 30000, // Maximum time (ms) to acquire a connection before throwing an error
-				idle: 10000, // Maximum time (ms) a connection can be idle before being released
+	// Use DATABASE_URL if available (Render provides this), otherwise use individual config
+	const sequelize = process.env.DATABASE_URL 
+		? new Sequelize(process.env.DATABASE_URL, {
+			dialect: "postgres",
+			logging: false,
+			dialectOptions: {
+				ssl: {
+					require: true,
+					rejectUnauthorized: false // Required for Render PostgreSQL
+				}
 			},
-		}
-	);
+			pool: {
+				max: 50,
+				min: 20,
+				acquire: 30000,
+				idle: 10000,
+			},
+		})
+		: new Sequelize(
+			dbconfig.database,
+			dbconfig.user,
+			dbconfig.password,
+			{
+				host: dbconfig.host,
+				dialect: "postgres",
+				logging: false,
+				pool: {
+					max: 50,
+					min: 20,
+					acquire: 30000,
+					idle: 10000,
+				},
+			}
+		);
 
 	fs.readdirSync(__dirname)
 		.filter((file) => {
