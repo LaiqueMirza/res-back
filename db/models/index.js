@@ -17,30 +17,25 @@ console.log(
 	process.env.DB_PORT
 );
 module.exports = initDb = () => {
-
 	// Use DATABASE_URL if available (Render provides this), otherwise use individual config
-	const sequelize = process.env.DATABASE_URL 
+	const sequelize = process.env.DATABASE_URL
 		? new Sequelize(process.env.DATABASE_URL, {
-			dialect: "postgres",
-			logging: false,
-			dialectOptions: {
-				ssl: {
-					require: true,
-					rejectUnauthorized: false // Required for Render PostgreSQL
-				}
-			},
-			pool: {
-				max: 50,
-				min: 20,
-				acquire: 30000,
-				idle: 10000,
-			},
-		})
-		: new Sequelize(
-			dbconfig.database,
-			dbconfig.user,
-			dbconfig.password,
-			{
+				dialect: "postgres",
+				logging: false,
+				dialectOptions: {
+					ssl: {
+						require: true,
+						rejectUnauthorized: false, // Required for Render PostgreSQL
+					},
+				},
+				pool: {
+					max: 50,
+					min: 20,
+					acquire: 30000,
+					idle: 10000,
+				},
+			})
+		: new Sequelize(dbconfig.database, dbconfig.user, dbconfig.password, {
 				host: dbconfig.host,
 				dialect: "postgres",
 				logging: false,
@@ -50,15 +45,19 @@ module.exports = initDb = () => {
 					acquire: 30000,
 					idle: 10000,
 				},
-			}
-		);
+			});
 
 	fs.readdirSync(__dirname)
 		.filter((file) => {
-			return file.indexOf('.') !== 0 && file !== basename && file.slice(-3) === '.js';
+			return (
+				file.indexOf(".") !== 0 && file !== basename && file.slice(-3) === ".js"
+			);
 		})
 		.forEach((file) => {
-			const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
+			const model = require(path.join(__dirname, file))(
+				sequelize,
+				Sequelize.DataTypes
+			);
 			db[model.name] = model;
 		});
 
