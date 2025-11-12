@@ -8,6 +8,7 @@
 		"start": "set NODE_ENV=dev && node index.js",
 		"dev": "set NODE_ENV=dev && node index.js",
 		"uat": "set NODE_ENV=uat && node index.js",
+		"generic": "node index.js",
 		"prod": "set NODE_ENV=prod && node index.js",
 		"dev:linux": "NODE_ENV=dev node index.js",
 		"uat:linux": "NODE_ENV=uat node index.js",
