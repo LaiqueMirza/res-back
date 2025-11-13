@@ -9,27 +9,35 @@ const sendToken = (payload, statusCode, res, message, providerAuth) => {
 		expiresIn: process.env.JWT_EXPIRE,
 	});
 
-	// Detect environment and cross-origin scenarios
-	const isProduction = process.env.NODE_ENV === "production";
-	const allowCrossOrigin = process.env.ALLOW_CROSS_ORIGIN === "true";
-	const frontendUrl = process.env.FRONTEND_URL || "http://localhost:3000";
-
-	// Determine if we're in a cross-origin scenario
-	// Production: frontend on Vercel (HTTPS) + backend on localhost (HTTP) = cross-origin
-	// Development: both on localhost = same-origin
-	const isCrossOrigin =
-		allowCrossOrigin || (isProduction && frontendUrl.includes("vercel.app"));
+	// Detect environment and determine cookie configuration
+	const isDev = process.env.NODE_ENV === "dev";
+	const isProd = !isDev; // Everything else is treated as production
 
 	// Cookie options based on environment
-	const options = {
-		expires,
-		httpOnly: false, // Allow JavaScript access to the cookie
-		sameSite: isCrossOrigin ? "none" : "lax",
-		// secure must be true with sameSite: 'none' BUT this only works if backend is HTTPS
-		// For localhost backend with Vercel frontend, cookies won't work - use response body token instead
-		secure: isCrossOrigin && isProduction, // Only true if both backend and frontend are HTTPS
-		path: "/",
-	};
+	let options;
+
+	if (isDev) {
+		// Development: localhost to localhost
+		options = {
+			expires,
+			httpOnly: false, // Allow JS access for development
+			secure: false, // HTTP localhost
+			sameSite: "lax", // Same-site for localhost
+			path: "/",
+		};
+	} else {
+		// Production: HTTPS to HTTPS, same domain (.resumaye.com)
+		options = {
+			expires,
+			httpOnly: true, // Secure for production
+			secure: true, // HTTPS required
+			sameSite: "none", // Cross-site cookies for subdomain
+			domain: ".resumaye.com", // Allow sharing between subdomains
+			path: "/",
+		};
+	}
+
+	const frontendUrl = process.env.FRONTEND_URL || "http://localhost:3000";
 
 	if (providerAuth) {
 		return res

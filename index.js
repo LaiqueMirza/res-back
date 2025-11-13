@@ -3,20 +3,18 @@ const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
 // Load environment file based on NODE_ENV
-// Production uses .env, other environments use .env.{NODE_ENV}
-let envFile = ".env";
+// Development uses .env.dev, everything else (production) uses .env
+let envFile = ".env"; // Default to production
 
-if (
-	process.env.NODE_ENV &&
-	process.env.NODE_ENV !== "" &&
-	process.env.NODE_ENV !== "production" &&
-	process.env.NODE_ENV !== "prod"
-) {
-	envFile = `.env.${process.env.NODE_ENV}`;
+const isDev = process.env.NODE_ENV === "dev";
+if (isDev) {
+	envFile = `.env.dev`;
 }
 
 console.log(`Loading environment from: ${envFile}`);
-console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
+console.log(
+	`NODE_ENV: ${process.env.NODE_ENV} (${isDev ? "Development" : "Production"})`
+);
 
 dotenv.config({
 	path: envFile,

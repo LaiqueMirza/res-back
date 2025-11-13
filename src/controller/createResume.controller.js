@@ -5,6 +5,7 @@ const sendEmail = require("../utils/sendEmail");
 const bcrypt = require("bcryptjs"); // Import bcryptjs
 const commonService = require("../services/common.js");
 const error = require("../middleware/error.js");
+const getLogoutCookieOptions = require("../utils/logoutCookie");
 const {
 	getAccessToken,
 	callMeAPI,
@@ -192,12 +193,7 @@ exports.linkedInAuth = catchAsyncErrors(async (req, res, next) => {
 
 // Logout User
 exports.logout = catchAsyncErrors(async (req, res, next) => {
-	const options = {
-		expires: new Date(Date.now()),
-		httpOnly: false,
-		sameSite: "lax",
-		secure: false,
-	};
+	const options = getLogoutCookieOptions();
 	res.status(200).cookie("token", null, options).json({
 		success: true,
 		error: false,
