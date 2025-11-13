@@ -2,8 +2,16 @@
 const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
+// Load environment file based on NODE_ENV
+// If NODE_ENV is set, load .env.{NODE_ENV}, otherwise load .env
+let envFile = ".env";
+
+if (process.env.NODE_ENV !== "production" || process.env.NODE_ENV !== "prod") {
+	envFile = `.env.${process.env.NODE_ENV}`;
+} 
+
 dotenv.config({
-	path: process.env.NODE_ENV ? `.env.${process.env.NODE_ENV}` : ".env.dev",
+	path: envFile,
 });
 
 // Validate environment variables
