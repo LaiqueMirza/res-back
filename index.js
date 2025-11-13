@@ -3,16 +3,30 @@ const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
 // Load environment file based on NODE_ENV
-// If NODE_ENV is set, load .env.{NODE_ENV}, otherwise load .env
+// Production uses .env, other environments use .env.{NODE_ENV}
 let envFile = ".env";
 
-if (process.env.NODE_ENV !== "production" || process.env.NODE_ENV !== "prod") {
+if (
+	process.env.NODE_ENV &&
+	process.env.NODE_ENV !== "" &&
+	process.env.NODE_ENV !== "production" &&
+	process.env.NODE_ENV !== "prod"
+) {
 	envFile = `.env.${process.env.NODE_ENV}`;
-} 
+}
+
+console.log(`Loading environment from: ${envFile}`);
+console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 
 dotenv.config({
 	path: envFile,
 });
+
+console.log(
+	`After loading env - GOOGLE_CLIENT_ID: ${process.env.GOOGLE_CLIENT_ID ? "SET" : "NOT SET"}`
+);
+console.log(`After loading env - DB_HOST: ${process.env.DB_HOST}`);
+console.log(`After loading env - PORT: ${process.env.PORT}`);
 
 // Validate environment variables
 require('./src/utils/validateEnv');
