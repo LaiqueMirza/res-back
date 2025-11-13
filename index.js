@@ -93,8 +93,10 @@ app.use(notFoundHandler);
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 8000;
-const server = app.listen(PORT, '0.0.0.0', async () => {
-	logger.info(`Server is running on port ${PORT} and listening on all interfaces (0.0.0.0)`);
+const server = app.listen(PORT, "0.0.0.0", async () => {
+	logger.info(
+		`Server is running on port ${PORT} and listening on all interfaces (0.0.0.0)`
+	);
 	try {
 		await initDb().sequelize.sync({ alter: true });
 		logger.info("Database synced and connected successfully");
