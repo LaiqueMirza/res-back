@@ -6,9 +6,11 @@ const {
 	signUpUser,
 	logout,
 	linkedInAuth,
+	getMe,
 } = require("../controller/auth.controller");
 const { authLimiter } = require("../middleware/security");
 const { validators } = require("../middleware/validation");
+const { isAuthenticatedUser } = require("../middleware/auth.middleware");
 const router = express.Router();
 
 // Apply strict rate limiting to auth routes
@@ -25,5 +27,8 @@ router.post(
 
 router.get("/linkedin", linkedInAuth);
 router.post("/logout", logout);
+
+// Get current authenticated user
+router.get("/me", isAuthenticatedUser, getMe);
 
 module.exports = router;

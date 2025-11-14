@@ -1,7 +1,7 @@
 {
 	"name": "resume-back",
 	"version": "1.0.0",
-	"description": "one stop resume backend",
+	"description": "resumaye backend",
 	"main": "index.js",
 	"scripts": {
 		"nodemon": "cross-env NODE_ENV=dev nodemon index.js",

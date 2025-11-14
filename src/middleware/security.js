@@ -33,7 +33,7 @@ const helmetConfig = helmet({
 /**
  * Rate limiting configuration
  */
-const createRateLimiter = (windowMs = 15 * 60 * 1000, max = 100) => {
+const createRateLimiter = (windowMs = 15 * 60 * 1000, max = 200) => {
   return rateLimit({
     windowMs,
     max,

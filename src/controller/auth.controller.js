@@ -32,7 +32,7 @@ exports.signUpUser = catchAsyncErrors(async (req, res, next) => {
 				)
 			);
 		}
-		return sendToken(
+		return await sendToken(
 			{
 				id: alreadyUser.user_id,
 			},
@@ -49,7 +49,7 @@ exports.signUpUser = catchAsyncErrors(async (req, res, next) => {
 		password: hashedPassword,
 	});
 
-	return sendToken(
+	return await sendToken(
 		{
 			id: user.user_id,
 		},
@@ -87,7 +87,7 @@ exports.loginUser = catchAsyncErrors(async (req, res, next) => {
 		return next(new ErrorHander("Invalid email or password", 401));
 	}
 
-	return sendToken(
+	return await sendToken(
 		{
 			id: user.user_id,
 		},
@@ -117,6 +117,21 @@ exports.logout = catchAsyncErrors(async (req, res, next) => {
 		success: true,
 		error: false,
 		message: "Logged Out",
+	});
+});
+
+// Get current user (requires authentication)
+exports.getMe = catchAsyncErrors(async (req, res, next) => {
+	// req.user is set by isAuthenticatedUser middleware
+	const user = req.user;
+	
+	// Remove sensitive data
+	const { password, ...userWithoutPassword } = user;
+	
+	res.status(200).json({
+		success: true,
+		error: false,
+		user: userWithoutPassword,
 	});
 });
 

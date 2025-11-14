@@ -88,12 +88,12 @@ module.exports = googleAuthFun = (app) => {
 			session: false,
 			failureRedirect: "http://localhost:3000/login",
 		}),
-		(req, res) => {
+		async (req, res) => {
 			// Access the user, statusCode, and message from req.user
 			const { user, statusCode, message } = req.user;
 
 			// Call sendToken to set the cookie and send the response
-			return sendToken(
+			return await sendToken(
 				{
 					id: user.user_id,
 				},

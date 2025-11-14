@@ -168,7 +168,7 @@ exports.loginUser = catchAsyncErrors(async (req, res, next) => {
 		return next(new ErrorHander("Invalid email or password", 401));
 	}
 
-	return sendToken(
+	return await sendToken(
 		{
 			id: user.user_id,
 		},
