@@ -68,20 +68,20 @@ const strictLimiter = createRateLimiter(60 * 60 * 1000, 5); // 5 requests per ho
  */
 const corsOptions = {
   origin: function (origin, callback) {
-    const isDev = process.env.NODE_ENV === "dev";
-		const isProd = !isDev; // Everything else is treated as production
-
-		// Determine allowed origins based on environment
-		let allowedOrigins;
-		if (isDev) {
-			// Development - allow all origins from env or defaults
-			allowedOrigins = process.env.CORS_ORIGIN
-				? process.env.CORS_ORIGIN.split(",")
-				: ["http://localhost:3000"];
-		} else {
-			// Production - only allow the main domain
-			allowedOrigins = ["https://resumaye.com"];
-		}
+    const isDev = process.env.NODE_ENV === 'dev';
+    const isProd = !isDev; // Everything else is treated as production
+    
+    // Determine allowed origins based on environment
+    let allowedOrigins;
+    if (isDev) {
+      // Development - allow all origins from env or defaults
+      allowedOrigins = process.env.CORS_ORIGIN 
+        ? process.env.CORS_ORIGIN.split(',')
+        : ['http://localhost:3000'];
+    } else {
+      // Production - allow both www and non-www domains
+      allowedOrigins = ['https://resumaye.com', 'https://www.resumaye.com'];
+    }
     
     // Allow requests with no origin (mobile apps, Postman, etc.)
     if (!origin) return callback(null, true);
