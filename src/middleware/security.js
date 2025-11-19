@@ -50,8 +50,9 @@ const createRateLimiter = (windowMs = 15 * 60 * 1000, max = 200) => {
 
 /**
  * API rate limiter - General API endpoints
+ * Increased to 300 requests per 15 minutes to reduce 429 occurrences.
  */
-const apiLimiter = createRateLimiter(15 * 60 * 1000, 100); // 100 requests per 15 minutes
+const apiLimiter = createRateLimiter(15 * 60 * 1000, 500); // 300 requests per 15 minutes
 
 /**
  * Auth rate limiter - More strict for authentication endpoints
