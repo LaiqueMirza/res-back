@@ -120,7 +120,8 @@ exports.createResumeDownload = catchAsyncErrors(async (req, res, next) => {
 		);
 
 		// Send the PDF buffer as the response
-		res.end(pdfBuffer);
+		res.setHeader("Content-Length", pdfBuffer.length);
+		res.send(Buffer.from(pdfBuffer));
 	} catch (error) {
 		console.error("Error while sending PDF:", error);
 		res.status(500).send("Error sending PDF");

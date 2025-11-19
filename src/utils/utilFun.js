@@ -8,9 +8,22 @@ let browser = null;
 
 async function initBrowser() {
 	if (!browser) {
-		browser = await puppeteer.launch({
+		// In production we may need additional launch args (no-sandbox, disable-setuid-sandbox)
+		const launchOptions = {
 			headless: true,
-		});
+			args: [
+				"--no-sandbox",
+				"--disable-setuid-sandbox",
+				"--disable-dev-shm-usage",
+			],
+		};
+
+		// Allow overriding executable path via env (useful on some hosts)
+		if (process.env.CHROME_EXECUTABLE_PATH) {
+			launchOptions.executablePath = process.env.CHROME_EXECUTABLE_PATH;
+		}
+
+		browser = await puppeteer.launch(launchOptions);
 	}
 	// executablePath: "/usr/bin/chromium-browser",
 	// 		args: ["--no-sandbox", "--disable-setuid-sandbox"],
@@ -111,22 +124,41 @@ exports.convertHtmlToPdf = async (
 		// console.log(`Generated PDF has ${pdfBuffer.length} pages`);
 		console.log("pdfBuffer done");
 	} catch (error) {
-		if (error.message) console.log("error in generating puppeteer pdf", error);
-		if (error.message && error.message.includes("Connection closed")) {
-			browser = await puppeteer.launch({
-				headless: true,
-			});
-			this.convertHtmlToPdf(
-				resumeHTML,
-				heightResume,
-				widthResume,
-				totalPages,
-				headerTemplate,
-				footerTemplate
-			);
-		} else {
-			throw error;
+		console.error("error in generating puppeteer pdf", error?.message || error);
+		// If the browser connection closed unexpectedly, try to relaunch and retry once
+		if (error && String(error.message || error).includes("Connection closed")) {
+			try {
+				// Relaunch browser with same options
+				const launchOptions = {
+					headless: true,
+					args: [
+						"--no-sandbox",
+						"--disable-setuid-sandbox",
+						"--disable-dev-shm-usage",
+					],
+				};
+				if (process.env.CHROME_EXECUTABLE_PATH) {
+					launchOptions.executablePath = process.env.CHROME_EXECUTABLE_PATH;
+				}
+				browser = await puppeteer.launch(launchOptions);
+				// Retry generating PDF once
+				return await exports.convertHtmlToPdf(
+					resumeHTML,
+					heightResume,
+					widthResume,
+					totalPages,
+					headerTemplate,
+					footerTemplate
+				);
+			} catch (retryError) {
+				console.error(
+					"Retry after connection closed failed",
+					retryError?.message || retryError
+				);
+				throw retryError;
+			}
 		}
+		throw error;
 	} finally {
 		if (page) await page.close();
 	}
