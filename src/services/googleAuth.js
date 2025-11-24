@@ -6,6 +6,12 @@ module.exports = googleAuthFun = (app) => {
 	const commonService = require("../services/common.js");
 	const OAuth2Strategy = require("passport-google-oauth2").Strategy;
 
+	// If the app is behind a proxy (load balancer / TLS terminator), enable trust proxy
+	// so Express can correctly determine the original protocol (http/https).
+	if (typeof app.set === "function") {
+		app.set("trust proxy", true);
+	}
+
 	// setup session
 	app.use(
 		session({
@@ -34,7 +40,7 @@ module.exports = googleAuthFun = (app) => {
 						"profile",
 						profile.email,
 						profile.given_name,
-						profile.picture, 
+						profile.picture,
 						profile.id,
 						profile.provider
 					);
@@ -99,7 +105,7 @@ module.exports = googleAuthFun = (app) => {
 				},
 				statusCode,
 				res,
-				message, 
+				message,
 				true
 			);
 		}
