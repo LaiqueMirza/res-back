@@ -92,7 +92,9 @@ module.exports = googleAuthFun = (app) => {
 		"/v1/auth/google/callback",
 		passport.authenticate("google", {
 			session: false,
-			failureRedirect: "http://localhost:3000/login",
+			failureRedirect: process.env.FRONTEND_URL
+				? `${process.env.FRONTEND_URL.replace(/\/$/, "")}/login`
+				: "http://localhost:3000/login",
 		}),
 		async (req, res) => {
 			// Access the user, statusCode, and message from req.user
