@@ -46,9 +46,9 @@ exports.getResumeData = catchAsyncErrors(async (req, res, next) => {
 		"resume_data",
 		"resume_template_id",
 	]);
-	if (!getResumeData) {
-		return next(new ErrorHander("No resume resume data found", 404));
-	}
+	// if (!getResumeData) {
+	// 	return next(new ErrorHander("No resume resume data found", 404));
+	// }
 	res.status(200).json({
 		success: true,
 		data: getResumeData,

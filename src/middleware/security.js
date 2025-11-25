@@ -50,19 +50,19 @@ const createRateLimiter = (windowMs = 15 * 60 * 1000, max = 200) => {
 
 /**
  * API rate limiter - General API endpoints
- * Increased to 300 requests per 15 minutes to reduce 429 occurrences.
+ * Increased to 500 requests per 15 minutes to reduce 429 occurrences.
  */
-const apiLimiter = createRateLimiter(15 * 60 * 1000, 500); // 300 requests per 15 minutes
+const apiLimiter = createRateLimiter(15 * 60 * 1000, 500); // 500 requests per 15 minutes
 
 /**
  * Auth rate limiter - More strict for authentication endpoints
  */
-const authLimiter = createRateLimiter(15 * 60 * 1000, 10); // 10 requests per 15 minutes
+const authLimiter = createRateLimiter(15 * 60 * 1000, 50); // 50 requests per 15 minutes
 
 /**
  * Strict rate limiter - For sensitive operations
  */
-const strictLimiter = createRateLimiter(60 * 60 * 1000, 5); // 5 requests per hour
+const strictLimiter = createRateLimiter(60 * 60 * 1000, 10); // 10 requests per hour
 
 /**
  * CORS configuration
@@ -131,10 +131,10 @@ const securityLogger = (req, res, next) => {
  * Request size limiter
  */
 const requestSizeLimiter = require('express').json({
-  limit: '10mb',
+  limit: '20mb',
   verify: (req, res, buf) => {
     const size = buf.length;
-    const maxSize = 10 * 1024 * 1024; // 10MB
+    const maxSize = 20 * 1024 * 1024; // 20MB
     
     if (size > maxSize) {
       throw new Error('Request entity too large');
