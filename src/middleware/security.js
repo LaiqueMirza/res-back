@@ -35,17 +35,19 @@ const helmetConfig = helmet({
  */
 const createRateLimiter = (windowMs = 15 * 60 * 1000, max = 200) => {
   return rateLimit({
-    windowMs,
-    max,
-    message: {
-      error: 'Too many requests from this IP, please try again later.',
-      retryAfter: Math.ceil(windowMs / 1000),
-    },
-    standardHeaders: true,
-    legacyHeaders: false,
-    // Store rate limit info in memory (use Redis in production for distributed systems)
-    // store: new RedisStore({ client: redisClient }),
-  });
+		windowMs,
+		max,
+		message: {
+			error: "Too many requests from this IP, please try again later.",
+			retryAfter: Math.ceil(windowMs / 1000),
+		},
+		standardHeaders: true,
+		legacyHeaders: false,
+		// Disable trust proxy validation in development
+		validate: { trustProxy: false },
+		// Store rate limit info in memory (use Redis in production for distributed systems)
+		// store: new RedisStore({ client: redisClient }),
+	});
 };
 
 /**

@@ -5,3 +5,7 @@ Dockerfile
 .env
 .env.dev
 .env.prod
+
+# Temporary upload directories
+previousResumeFile/
+ats-files/

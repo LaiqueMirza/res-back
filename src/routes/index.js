@@ -4,6 +4,7 @@ const user = require('./user.routes');
 const auth = require("./auth.routes");
 const createResume = require("./createResume.routes.js");
 const resumeTemplate = require("./resumeTemplate.routes.js");
+const ats = require("./ats.routes.js");
 const health = require("./health.routes");
 const routes = [
 	{
@@ -26,6 +27,10 @@ const routes = [
 	{
 		path: "/resume-template",
 		route: resumeTemplate,
+	},
+	{
+		path: "/ats",
+		route: ats,
 	},
 ];
 

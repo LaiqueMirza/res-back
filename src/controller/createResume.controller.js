@@ -129,15 +129,38 @@ exports.createResumeDownload = catchAsyncErrors(async (req, res, next) => {
 });
 
 exports.uploadPreviousResumeFile = catchAsyncErrors(async (req, res, next) => {
-	console.log(req.file.filename);
-		const data = await extractDataFromPDF(
-			`previousResumeFile/${req.file.filename}`
-		);
+	try {
+		// Check if file was uploaded
+		if (!req.file) {
+			return next(new ErrorHander("No file uploaded. Please select a PDF file.", 400));
+		}
 
-	res.status(200).json({
-		success: true,
-		message: "File uploaded Successfully",
-	});
+		console.log("Uploaded file:", req.file.filename);
+		console.log("File path:", req.file.path);
+
+		// Get user ID from authenticated request
+		const userId = req.user?.user_id || null;
+
+		// Parse the uploaded PDF resume using Gemini AI
+		// Use the full path provided by multer
+		const filePath = req.file.path;
+		const { parseResume } = require("../parser");
+
+		const parsedData = await parseResume(filePath, userId, true);
+
+		console.log("Successfully parsed uploaded resume");
+
+		res.status(200).json({
+			success: true,
+			message: "Resume parsed successfully",
+			data: parsedData,
+		});
+	} catch (error) {
+		console.error("Error parsing uploaded resume:", error);
+		return next(
+			new ErrorHander("Failed to parse resume: " + error.message, 500)
+		);
+	}
 });
 
 
