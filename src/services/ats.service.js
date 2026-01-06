@@ -41,7 +41,7 @@ const analyzeResume = async (userId, experienceLevel, file) => {
 			uploadedAt: new Date().toISOString(),
 			atsScore,
 			status: "analyzed",
-			message: "Resume analyzed successfully",
+			message: "Resume analyzed and uploaded to S3 successfully",
 			parsedData: parsedResumeData,
 			recommendations: generateRecommendations(parsedResumeData, atsScore),
 		};

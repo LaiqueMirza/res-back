@@ -76,24 +76,28 @@ async function parseResume(filePath, user_id, isReplacedData = false) {
 					["resume_id"]
 				);
 
+				const resumeData = {
+					user_id: user_id,
+					title: null,
+					resume_data: parsedData,
+					resume_template_id: 1,
+					ats_score: null,
+				};
+
 				if (!existingResume) {
 					// Insert if no resume exists for this user
-					const resumeRecord = await commonService.create("resume", {
-						user_id: user_id,
-						title: null,
-						resume_data: parsedData,
-						resume_template_id: 1,
-						ats_score: null,
-					});
+					const resumeRecord = await commonService.create("resume", resumeData);
 					console.log("Resume data inserted to database successfully");
 				} else if (isReplacedData) {
 					// Update existing resume data only if isReplacedData is true
+					const updateData = {
+						resume_data: parsedData,
+						updated_at: new Date(),
+					};
+
 					const [affectedRows] = await commonService.update(
 						"resume",
-						{
-							resume_data: parsedData,
-							updated_at: new Date(),
-						},
+						updateData,
 						{ user_id: user_id }
 					);
 					if (affectedRows > 0) {

@@ -5,6 +5,7 @@ const sendEmail = require("../utils/sendEmail");
 const bcrypt = require("bcryptjs"); // Import bcryptjs
 const commonService = require("../services/common.js");
 const error = require("../middleware/error.js");
+const { parseResume } = require("../parser");
 const getLogoutCookieOptions = require("../utils/logoutCookie");
 const {
 	getAccessToken,
@@ -144,7 +145,6 @@ exports.uploadPreviousResumeFile = catchAsyncErrors(async (req, res, next) => {
 		// Parse the uploaded PDF resume using Gemini AI
 		// Use the full path provided by multer
 		const filePath = req.file.path;
-		const { parseResume } = require("../parser");
 
 		const parsedData = await parseResume(filePath, userId, true);
 
