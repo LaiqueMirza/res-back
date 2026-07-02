@@ -1,15 +1,17 @@
 const fs = require("fs").promises;
 const path = require("path");
 const { parseResume } = require("../parser");
+const { generateATSScore, runFullAnalysis } = require("./ats");
 
 /**
  * Analyze resume for ATS compatibility
  * @param {string} userId - User ID
  * @param {string} experienceLevel - Experience level (junior, mid, senior)
  * @param {object} file - Uploaded file object from multer
- * @returns {object} Analysis result
+ * @param {object} options - Additional options (pdfUrl, resumeSource)
+ * @returns {object} Analysis result matching frontend schema
  */
-const analyzeResume = async (userId, experienceLevel, file) => {
+const analyzeResume = async (userId, experienceLevel, file, options = {}) => {
 	try {
 		const filePath = file.path;
 		const fileName = file.filename;
@@ -22,36 +24,33 @@ const analyzeResume = async (userId, experienceLevel, file) => {
 
 		console.log("Resume parsed successfully");
 		console.log("Extracted sections:", {
-			employment: parsedResumeData.employment,
-			education: parsedResumeData.education,
-			skills: parsedResumeData.skills,
-			languages: parsedResumeData.languages,
-			courses: parsedResumeData.courses,
+			employment: parsedResumeData.employment?.length || 0,
+			education: parsedResumeData.education?.length || 0,
+			skills: parsedResumeData.skills?.length || 0,
+			languages: parsedResumeData.languages?.length || 0,
+			courses: parsedResumeData.courses?.length || 0,
 		});
 
-		// Calculate ATS score based on parsed data
-		const atsScore = calculateATSScore(parsedResumeData, experienceLevel);
-
-		// Build analysis result
-		const analysisResult = {
+		// Generate comprehensive ATS score using the new scoring engine
+		// This returns the full schema matching sampleData.js structure
+		const atsScoreResult = generateATSScore(
+			parsedResumeData,
 			userId,
 			experienceLevel,
-			fileName,
-			filePath,
-			uploadedAt: new Date().toISOString(),
-			atsScore,
-			status: "analyzed",
-			message: "Resume analyzed and uploaded to S3 successfully",
-			parsedData: parsedResumeData,
-			recommendations: generateRecommendations(parsedResumeData, atsScore),
-		};
+			{
+				pdfUrl: options.pdfUrl || "",
+				resumeSource: options.resumeSource || "upload",
+			}
+		);
 
-		console.log("Resume analysis completed. ATS Score:", atsScore);
+		console.log("Resume analysis completed. Overall ATS Score:", atsScoreResult.overallScore);
 
 		// Optional: Delete the temporary file after analysis
 		// await deleteResumeFile(filePath);
 
-		return analysisResult;
+		// Return the full ATS score response
+		// This matches the schema defined in sampleData.js
+		return atsScoreResult;
 	} catch (error) {
 		console.error("Error in analyzeResume service:", error);
 		throw new Error("Failed to analyze resume: " + error.message);
@@ -59,12 +58,13 @@ const analyzeResume = async (userId, experienceLevel, file) => {
 };
 
 /**
- * Calculate ATS score based on parsed resume data
+ * @deprecated Use generateATSScore from ./ats module instead
+ * Legacy simple ATS score calculation - kept for backward compatibility
  * @param {object} parsedData - Parsed resume data
  * @param {string} experienceLevel - Experience level
  * @returns {number} ATS score (0-100)
  */
-function calculateATSScore(parsedData, experienceLevel) {
+function calculateSimpleATSScore(parsedData, experienceLevel) {
 	let score = 0;
 
 	// 1. Contact Information (15 points)
@@ -121,12 +121,13 @@ function calculateATSScore(parsedData, experienceLevel) {
 }
 
 /**
- * Generate recommendations based on parsed data and score
+ * @deprecated Use generateATSScore from ./ats module instead - it includes summary.improvements
+ * Legacy recommendations generator - kept for backward compatibility
  * @param {object} parsedData - Parsed resume data
  * @param {number} score - ATS score
  * @returns {array} Array of recommendation strings
  */
-function generateRecommendations(parsedData, score) {
+function generateLegacyRecommendations(parsedData, score) {
 	const recommendations = [];
 
 	// Contact information recommendations
@@ -227,4 +228,10 @@ module.exports = {
 	analyzeResume,
 	deleteResumeFile,
 	getAnalysisById,
+	// Expose scoring engine for direct use
+	generateATSScore,
+	runFullAnalysis,
+	// Legacy functions (deprecated)
+	calculateSimpleATSScore,
+	generateLegacyRecommendations,
 };

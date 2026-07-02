@@ -1,0 +1,1840 @@
+{
+  "success": true,
+  "message": "Resume analyzed successfully",
+  "data": {
+    "atsResultId": "ats_1773571349581_2bzxae",
+    "userId": 63,
+    "experienceLevel": "mid",
+    "resumeSource": "upload",
+    "pdfUrl": "",
+    "overallScore": 76,
+    "scoreBreakdown": {
+      "grammarScore": 100,
+      "weakVerbScore": 68,
+      "impactScore": 9,
+      "sectionCompletenessScore": 100
+    },
+    "weightedScoreBreakdown": {
+      "categories": {
+        "writingQuality": {
+          "score": 88,
+          "weight": 0.2,
+          "weightedContribution": 17.7,
+          "analyzers": {
+            "grammar": {
+              "score": 100,
+              "weight": 0.35,
+              "contribution": 35
+            },
+            "sentenceClarity": {
+              "score": 100,
+              "weight": 0.2,
+              "contribution": 20
+            },
+            "tenseConsistency": {
+              "score": 85,
+              "weight": 0.25,
+              "contribution": 21.3
+            },
+            "readability": {
+              "score": 60,
+              "weight": 0.2,
+              "contribution": 12
+            }
+          }
+        },
+        "bulletQuality": {
+          "score": 44,
+          "weight": 0.3,
+          "weightedContribution": 13.1,
+          "analyzers": {
+            "weakVerbs": {
+              "score": 68,
+              "weight": 0.3,
+              "contribution": 20.4
+            },
+            "impactScore": {
+              "score": 9,
+              "weight": 0.3,
+              "contribution": 2.7
+            },
+            "metricsQuality": {
+              "score": 40,
+              "weight": 0.25,
+              "contribution": 10
+            },
+            "conciseness": {
+              "score": 70,
+              "weight": 0.15,
+              "contribution": 10.5
+            }
+          }
+        },
+        "resumeStructure": {
+          "score": 91,
+          "weight": 0.2,
+          "weightedContribution": 18.2,
+          "analyzers": {
+            "sectionCompleteness": {
+              "score": 100,
+              "weight": 0.35,
+              "contribution": 35
+            },
+            "contactDetails": {
+              "score": 85,
+              "weight": 0.25,
+              "contribution": 21.3
+            },
+            "summaryEffectiveness": {
+              "score": 85,
+              "weight": 0.2,
+              "contribution": 17
+            },
+            "lengthAndDensity": {
+              "score": 76,
+              "weight": 0.1,
+              "contribution": 7.6
+            },
+            "sectionOrdering": {
+              "score": 100,
+              "weight": 0.1,
+              "contribution": 10
+            }
+          }
+        },
+        "atsCompatibility": {
+          "score": 81,
+          "weight": 0.1,
+          "weightedContribution": 8.1,
+          "analyzers": {
+            "formatting": {
+              "score": 70,
+              "weight": 0.4,
+              "contribution": 28
+            },
+            "bulletConsistency": {
+              "score": 90,
+              "weight": 0.3,
+              "contribution": 27
+            },
+            "atsReadability": {
+              "score": 85,
+              "weight": 0.3,
+              "contribution": 25.5
+            }
+          }
+        },
+        "experienceRelevance": {
+          "score": 97,
+          "weight": 0.1,
+          "weightedContribution": 9.7,
+          "analyzers": {
+            "roleDepth": {
+              "score": 100,
+              "weight": 0.3,
+              "contribution": 30
+            },
+            "seniorityAlignment": {
+              "score": 88,
+              "weight": 0.25,
+              "contribution": 22
+            },
+            "careerProgression": {
+              "score": 100,
+              "weight": 0.2,
+              "contribution": 20
+            },
+            "skillRelevance": {
+              "score": 100,
+              "weight": 0.15,
+              "contribution": 15
+            },
+            "skillGrouping": {
+              "score": 100,
+              "weight": 0.1,
+              "contribution": 10
+            }
+          }
+        },
+        "contentRedundancy": {
+          "score": 89,
+          "weight": 0.1,
+          "weightedContribution": 8.9,
+          "analyzers": {
+            "repeatedPhrases": {
+              "score": 80,
+              "weight": 0.25,
+              "contribution": 20
+            },
+            "duplicateBullets": {
+              "score": 85,
+              "weight": 0.2,
+              "contribution": 17
+            },
+            "repetitionScore": {
+              "score": 92,
+              "weight": 0.15,
+              "contribution": 13.8
+            },
+            "buzzwordsAndCliches": {
+              "score": 92,
+              "weight": 0.25,
+              "contribution": 23
+            },
+            "toneAndProfessionalism": {
+              "score": 100,
+              "weight": 0.15,
+              "contribution": 15
+            }
+          }
+        }
+      },
+      "analyzers": {
+        "grammar": {
+          "score": 100,
+          "occurrenceCount": 0,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 12,
+            "maxPenalty": 100,
+            "minScore": 0
+          }
+        },
+        "sentenceClarity": {
+          "score": 100,
+          "occurrenceCount": 0,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 10,
+            "maxPenalty": 60,
+            "minScore": 40
+          }
+        },
+        "tenseConsistency": {
+          "score": 85,
+          "occurrenceCount": 1,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 15,
+            "maxPenalty": 75,
+            "minScore": 25
+          }
+        },
+        "readability": {
+          "score": 60,
+          "occurrenceCount": 5,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 8,
+            "maxPenalty": 50,
+            "minScore": 50
+          }
+        },
+        "weakVerbs": {
+          "score": 68,
+          "occurrenceCount": 4,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 8,
+            "maxPenalty": 80,
+            "minScore": 20
+          }
+        },
+        "impactScore": {
+          "score": 9,
+          "occurrenceCount": 0,
+          "threshold": {
+            "baseScore": 100
+          }
+        },
+        "metricsQuality": {
+          "score": 40,
+          "occurrenceCount": 25,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 6,
+            "maxPenalty": 60,
+            "minScore": 40
+          }
+        },
+        "conciseness": {
+          "score": 70,
+          "occurrenceCount": 3,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 10,
+            "maxPenalty": 50,
+            "minScore": 50
+          }
+        },
+        "sectionCompleteness": {
+          "score": 100,
+          "occurrenceCount": 0,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 20,
+            "maxPenalty": 80,
+            "minScore": 20
+          }
+        },
+        "contactDetails": {
+          "score": 85,
+          "occurrenceCount": 1,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 15,
+            "maxPenalty": 45,
+            "minScore": 55
+          }
+        },
+        "summaryEffectiveness": {
+          "score": 85,
+          "occurrenceCount": 1,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 15,
+            "maxPenalty": 60,
+            "minScore": 40
+          }
+        },
+        "lengthAndDensity": {
+          "score": 76,
+          "occurrenceCount": 2,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 12,
+            "maxPenalty": 36,
+            "minScore": 64
+          }
+        },
+        "sectionOrdering": {
+          "score": 100,
+          "occurrenceCount": 0,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 10,
+            "maxPenalty": 30,
+            "minScore": 70
+          }
+        },
+        "formatting": {
+          "score": 70,
+          "occurrenceCount": 2,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 15,
+            "maxPenalty": 60,
+            "minScore": 40
+          }
+        },
+        "bulletConsistency": {
+          "score": 90,
+          "occurrenceCount": 1,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 10,
+            "maxPenalty": 30,
+            "minScore": 70
+          }
+        },
+        "atsReadability": {
+          "score": 85,
+          "occurrenceCount": 0,
+          "threshold": {
+            "baseScore": 85,
+            "penaltyPerIssue": 10,
+            "maxPenalty": 40,
+            "minScore": 45
+          }
+        },
+        "roleDepth": {
+          "score": 100,
+          "occurrenceCount": 0,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 15,
+            "maxPenalty": 60,
+            "minScore": 40
+          }
+        },
+        "seniorityAlignment": {
+          "score": 88,
+          "occurrenceCount": 1,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 12,
+            "maxPenalty": 48,
+            "minScore": 52
+          }
+        },
+        "careerProgression": {
+          "score": 100,
+          "occurrenceCount": 0,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 10,
+            "maxPenalty": 30,
+            "minScore": 70
+          }
+        },
+        "skillRelevance": {
+          "score": 100,
+          "occurrenceCount": 0,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 8,
+            "maxPenalty": 40,
+            "minScore": 60
+          }
+        },
+        "skillGrouping": {
+          "score": 100,
+          "occurrenceCount": 0,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 10,
+            "maxPenalty": 30,
+            "minScore": 70
+          }
+        },
+        "repeatedPhrases": {
+          "score": 80,
+          "occurrenceCount": 2,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 10,
+            "maxPenalty": 50,
+            "minScore": 50
+          }
+        },
+        "duplicateBullets": {
+          "score": 85,
+          "occurrenceCount": 1,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 15,
+            "maxPenalty": 60,
+            "minScore": 40
+          }
+        },
+        "repetitionScore": {
+          "score": 92,
+          "occurrenceCount": 1,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 8,
+            "maxPenalty": 40,
+            "minScore": 60
+          }
+        },
+        "buzzwordsAndCliches": {
+          "score": 92,
+          "occurrenceCount": 1,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 8,
+            "maxPenalty": 40,
+            "minScore": 60
+          }
+        },
+        "toneAndProfessionalism": {
+          "score": 100,
+          "occurrenceCount": 0,
+          "threshold": {
+            "baseScore": 100,
+            "penaltyPerIssue": 10,
+            "maxPenalty": 40,
+            "minScore": 60
+          }
+        }
+      },
+      "weightsUsed": {
+        "writingQuality": {
+          "categoryWeight": 0.2,
+          "analyzers": {
+            "grammar": 0.35,
+            "sentenceClarity": 0.2,
+            "tenseConsistency": 0.25,
+            "readability": 0.2
+          }
+        },
+        "bulletQuality": {
+          "categoryWeight": 0.3,
+          "analyzers": {
+            "weakVerbs": 0.3,
+            "impactScore": 0.3,
+            "metricsQuality": 0.25,
+            "conciseness": 0.15
+          }
+        },
+        "resumeStructure": {
+          "categoryWeight": 0.2,
+          "analyzers": {
+            "sectionCompleteness": 0.35,
+            "contactDetails": 0.25,
+            "summaryEffectiveness": 0.2,
+            "lengthAndDensity": 0.1,
+            "sectionOrdering": 0.1
+          }
+        },
+        "atsCompatibility": {
+          "categoryWeight": 0.1,
+          "analyzers": {
+            "formatting": 0.4,
+            "bulletConsistency": 0.3,
+            "atsReadability": 0.3
+          }
+        },
+        "experienceRelevance": {
+          "categoryWeight": 0.1,
+          "analyzers": {
+            "roleDepth": 0.3,
+            "seniorityAlignment": 0.25,
+            "careerProgression": 0.2,
+            "skillRelevance": 0.15,
+            "skillGrouping": 0.1
+          }
+        },
+        "contentRedundancy": {
+          "categoryWeight": 0.1,
+          "analyzers": {
+            "repeatedPhrases": 0.25,
+            "duplicateBullets": 0.2,
+            "repetitionScore": 0.15,
+            "buzzwordsAndCliches": 0.25,
+            "toneAndProfessionalism": 0.15
+          }
+        }
+      }
+    },
+    "summary": {
+      "verdict": "Good",
+      "overallScore": 76,
+      "highlights": [
+        "Most essential sections are included",
+        "No grammar issues detected",
+        "Good use of quantifiable metrics"
+      ],
+      "improvements": [
+        "Add measurable results and achievements to bullets",
+        "Add quantifiable metrics to show impact",
+        "Replace weak action verbs with stronger alternatives",
+        "Shorten verbose bullet points"
+      ],
+      "categoryScores": {
+        "writingQuality": 88,
+        "bulletQuality": 44,
+        "resumeStructure": 91,
+        "atsCompatibility": 81,
+        "experienceRelevance": 97,
+        "contentRedundancy": 89
+      }
+    },
+    "score_cards": {
+      "writingQuality": {
+        "grammar": {
+          "id": "sc_grammar",
+          "type": "grammar",
+          "trackingKey": "ats_grammar",
+          "title": "Grammar & spelling issues",
+          "subtitle": "Fix grammatical errors to improve clarity and professionalism",
+          "section": "employment",
+          "description": "Your resume contains grammar and spelling mistakes that reduce professionalism and clarity.",
+          "whyItMatters": {
+            "title": "Why is grammar important?",
+            "points": [
+              {
+                "heading": "Professional image",
+                "text": "Grammar errors make resumes look careless."
+              },
+              {
+                "heading": "Recruiter trust",
+                "text": "Hiring managers associate grammar with attention to detail."
+              },
+              {
+                "heading": "ATS parsing",
+                "text": "Grammar mistakes can confuse ATS keyword extraction."
+              }
+            ]
+          },
+          "recommendedApproach": "Review each bullet for spelling and tense errors. Use past tense consistently for previous roles.",
+          "examples": [
+            {
+              "title": "Grammar correction",
+              "before": "• Has deliver multiple modules to production",
+              "after": "• Delivered multiple modules to production"
+            }
+          ],
+          "userIntentHint": "Quick fix — grammar corrections instantly improve credibility.",
+          "interactionHint": "Click highlighted text to correct grammar.",
+          "severity": "low",
+          "priority": 8,
+          "scoreImpact": 0,
+          "estimatedScoreGain": 0,
+          "effortLevel": "low",
+          "occurrenceCount": 0,
+          "affectedBulletsCount": 0,
+          "findings": []
+        },
+        "sentenceClarity": {
+          "id": "sc_sentence_clarity",
+          "type": "sentence_clarity",
+          "trackingKey": "ats_sentence_clarity",
+          "title": "Unclear or complex sentences",
+          "subtitle": "Make sentences easier to understand",
+          "section": "employment",
+          "description": "Some sentences are overly complex, making it harder to quickly understand your contributions.",
+          "whyItMatters": {
+            "title": "Why does clarity matter?",
+            "points": [
+              {
+                "heading": "Faster scanning",
+                "text": "Clear sentences help recruiters grasp impact quickly."
+              },
+              {
+                "heading": "Better ATS parsing",
+                "text": "Simple sentences are parsed more accurately."
+              }
+            ]
+          },
+          "recommendedApproach": "Simplify sentence structure and avoid unnecessary filler phrases.",
+          "examples": [
+            {
+              "title": "Sentence simplification",
+              "before": "• Utilized cutting-edge technologies in order to facilitate scalable backend systems",
+              "after": "• Built scalable backend systems using modern technologies"
+            }
+          ],
+          "userIntentHint": "Simplifying sentences improves readability instantly.",
+          "interactionHint": "Click sentences to view simplified versions.",
+          "severity": "low",
+          "priority": 10,
+          "scoreImpact": 0,
+          "estimatedScoreGain": 0,
+          "effortLevel": "medium",
+          "occurrenceCount": 0,
+          "affectedBulletsCount": 0,
+          "findings": []
+        },
+        "tenseConsistency": {
+          "id": "sc_tense_consistency",
+          "type": "tense_consistency",
+          "trackingKey": "ats_tense_consistency",
+          "title": "Inconsistent verb tense",
+          "subtitle": "Maintain consistent tense across roles",
+          "section": "employment",
+          "description": "Your resume mixes past and present tense inconsistently.",
+          "whyItMatters": {
+            "title": "Why tense consistency matters",
+            "points": [
+              {
+                "heading": "Flow",
+                "text": "Consistent tense improves reading flow."
+              },
+              {
+                "heading": "Professional polish",
+                "text": "Consistency signals attention to detail."
+              }
+            ]
+          },
+          "recommendedApproach": "Use past tense for completed roles and present tense only for current roles.",
+          "examples": [
+            {
+              "title": "Verb tense alignment",
+              "before": "• Develop REST APIs and handled deployments",
+              "after": "• Developed REST APIs and handled deployments"
+            }
+          ],
+          "userIntentHint": "Easy fix — align verb tense for polish.",
+          "interactionHint": "Click highlighted verbs to fix tense.",
+          "severity": "low",
+          "priority": 8,
+          "scoreImpact": -1,
+          "estimatedScoreGain": 1,
+          "effortLevel": "low",
+          "occurrenceCount": 1,
+          "affectedBulletsCount": 0,
+          "findings": []
+        },
+        "readability": {
+          "id": "sc_readability",
+          "type": "readability",
+          "trackingKey": "ats_readability",
+          "title": "Low readability",
+          "subtitle": "Improve sentence flow and simplicity",
+          "section": "employment",
+          "description": "Some resume sections are difficult to read due to long or complex sentences.",
+          "whyItMatters": {
+            "title": "Why readability matters",
+            "points": [
+              {
+                "heading": "Recruiter experience",
+                "text": "Readable resumes are easier to skim."
+              },
+              {
+                "heading": "ATS success",
+                "text": "Simple language improves keyword recognition."
+              }
+            ]
+          },
+          "recommendedApproach": "Shorten long sentences and remove unnecessary phrases.",
+          "examples": [
+            {
+              "title": "Improving readability",
+              "before": "• Responsible for end to end development, testing, deployment, monitoring, debugging and maintenance",
+              "after": "• Developed and maintained applications across the full lifecycle"
+            }
+          ],
+          "userIntentHint": "Readable resumes perform better with ATS and humans.",
+          "interactionHint": "Click long sentences to simplify.",
+          "severity": "high",
+          "priority": 5,
+          "scoreImpact": -10,
+          "estimatedScoreGain": 7,
+          "effortLevel": "medium",
+          "occurrenceCount": 5,
+          "affectedBulletsCount": 5,
+          "findings": [
+            {
+              "matchedWords": [],
+              "textSnippet": "Developed 3 distinct bots: HR Policy Bot: Assisted employees with HR policy-related queries. Product",
+              "suggestion": "Shorten to improve readability"
+            },
+            {
+              "matchedWords": [],
+              "textSnippet": "Added features like OCR for document data scanning, a human verification dashboard for verification ",
+              "suggestion": "Shorten to improve readability"
+            },
+            {
+              "matchedWords": [],
+              "textSnippet": "Customers with data in the CKYC repository were verified instantly, while those submitting manual en",
+              "suggestion": "Shorten to improve readability"
+            }
+          ]
+        }
+      },
+      "bulletQuality": {
+        "weakVerbs": {
+          "id": "sc_weak_verbs",
+          "type": "weak_verb",
+          "trackingKey": "ats_weak_verbs",
+          "title": "Weak action verbs used",
+          "subtitle": "Replace vague verbs with strong, outcome-driven language",
+          "section": "employment",
+          "description": "Your resume uses weak or generic action verbs that fail to communicate your contributions effectively.",
+          "whyItMatters": {
+            "title": "Why are weak action verbs a problem?",
+            "points": [
+              {
+                "heading": "Low impact",
+                "text": "Weak verbs like 'worked' or 'handled' do not show ownership."
+              },
+              {
+                "heading": "Poor differentiation",
+                "text": "Strong verbs help your resume stand out competitively."
+              },
+              {
+                "heading": "ATS & recruiter scanning",
+                "text": "Strong verbs signal seniority and capability."
+              },
+              {
+                "heading": "Missed opportunity",
+                "text": "Every bullet is valuable space for showcasing accomplishments."
+              }
+            ]
+          },
+          "recommendedApproach": "Start each bullet with a strong action verb followed by outcome and measurable result.",
+          "examples": [
+            {
+              "title": "Frontend development",
+              "before": "• Worked on frontend features for admin dashboard",
+              "after": "• Built and optimized frontend features for an admin dashboard used by 5,000+ users"
+            },
+            {
+              "title": "Backend responsibility",
+              "before": "• Responsible for backend API integrations",
+              "after": "• Developed and integrated REST APIs supporting 2M+ monthly requests"
+            }
+          ],
+          "userIntentHint": "Quick fix — replacing weak verbs is one of the fastest ways to improve your ATS score.",
+          "interactionHint": "Click on highlighted verbs to see suggestions.",
+          "severity": "medium",
+          "priority": 5,
+          "scoreImpact": -8,
+          "estimatedScoreGain": 6,
+          "effortLevel": "low",
+          "occurrenceCount": 4,
+          "affectedBulletsCount": 4,
+          "findings": [
+            {
+              "matchedWords": [
+                "Utilized"
+              ],
+              "textSnippet": " Utilized Signzy APIs to improve verification processes and retrieved data from the CKYC repository",
+              "suggestion": "Replace \"Utilized\" with a stronger action verb showing ownership",
+              "severity": "medium",
+              "contextJustified": false
+            },
+            {
+              "matchedWords": [
+                "were verified instantly,"
+              ],
+              "textSnippet": " Customers with data in the CKYC repository were verified instantly, while those submitting manual e",
+              "suggestion": "Start with a strong action verb instead of \"were verified instantly,\"",
+              "severity": "high",
+              "contextJustified": false
+            },
+            {
+              "matchedWords": [
+                "was"
+              ],
+              "textSnippet": " Please note that MITSGLOBAL was the hiring company, while HDFCERGO was the client throughout the en",
+              "suggestion": "Start with a strong action verb instead of \"was\"",
+              "severity": "high",
+              "contextJustified": false
+            },
+            {
+              "matchedWords": [
+                "was"
+              ],
+              "textSnippet": " Please note that MITSGLOBAL was the hiring company, while HDFCERGO was the client throughout the en",
+              "suggestion": "Start with a strong action verb instead of \"was\"",
+              "severity": "high",
+              "contextJustified": false
+            }
+          ]
+        },
+        "impactScore": {
+          "id": "sc_impact",
+          "type": "impact",
+          "trackingKey": "ats_impact",
+          "title": "Low-impact bullet points",
+          "subtitle": "Show achievements instead of responsibilities",
+          "section": "employment",
+          "description": "Many bullets describe duties rather than outcomes or achievements.",
+          "whyItMatters": {
+            "title": "Why impact matters",
+            "points": [
+              {
+                "heading": "Hiring decisions",
+                "text": "Recruiters hire based on results, not tasks."
+              },
+              {
+                "heading": "Seniority signal",
+                "text": "Impactful bullets signal ownership."
+              }
+            ]
+          },
+          "recommendedApproach": "Rewrite bullets to show measurable outcomes.",
+          "examples": [
+            {
+              "title": "Adding impact",
+              "before": "• Responsible for developing APIs",
+              "after": "• Developed APIs that reduced response time by 35%"
+            }
+          ],
+          "userIntentHint": "High priority — improving impact boosts score significantly.",
+          "interactionHint": "Click bullets to add achievements.",
+          "severity": "high",
+          "priority": 3,
+          "scoreImpact": -15,
+          "estimatedScoreGain": 11,
+          "effortLevel": "high",
+          "occurrenceCount": 41,
+          "affectedBulletsCount": 41,
+          "findings": [
+            {
+              "matchedWords": [],
+              "textSnippet": " PR O J E C T : G E N E R A T I V E A I B O T S",
+              "suggestion": "Add measurable outcome or achievement to show impact"
+            },
+            {
+              "matchedWords": [],
+              "textSnippet": " Developed 3 distinct bots: HR Policy Bot: Assisted employees with HR policy-related queries",
+              "suggestion": "Add measurable outcome or achievement to show impact"
+            },
+            {
+              "matchedWords": [],
+              "textSnippet": "Bot: Provided detailed information on company products",
+              "suggestion": "Add measurable outcome or achievement to show impact"
+            },
+            {
+              "matchedWords": [],
+              "textSnippet": " Competitor Analysis Bot: Enabled managers to analyze",
+              "suggestion": "Add measurable outcome or achievement to show impact"
+            },
+            {
+              "matchedWords": [],
+              "textSnippet": "competitor data, focusing on rivals like Tata AIG and Bajaj Allianz",
+              "suggestion": "Add measurable outcome or achievement to show impact"
+            }
+          ]
+        },
+        "conciseness": {
+          "id": "sc_conciseness",
+          "type": "conciseness",
+          "trackingKey": "ats_conciseness",
+          "title": "Bullets are too long or verbose",
+          "subtitle": "Make bullet points concise",
+          "section": "employment",
+          "description": "Some bullet points are too long or include unnecessary filler.",
+          "whyItMatters": {
+            "title": "Why conciseness matters",
+            "points": [
+              {
+                "heading": "Skimmability",
+                "text": "Concise bullets are easier to scan."
+              }
+            ]
+          },
+          "recommendedApproach": "Remove filler words and keep bullets under two lines.",
+          "examples": [
+            {
+              "title": "Reducing verbosity",
+              "before": "• Worked extensively on various different frontend features across multiple dashboards",
+              "after": "• Built frontend features across multiple dashboards"
+            }
+          ],
+          "userIntentHint": "Quick win — concise bullets improve clarity.",
+          "interactionHint": "Click bullets to shorten.",
+          "severity": "medium",
+          "priority": 8,
+          "scoreImpact": -4,
+          "estimatedScoreGain": 3,
+          "effortLevel": "medium",
+          "occurrenceCount": 3,
+          "affectedBulletsCount": 3,
+          "findings": [
+            {
+              "matchedWords": [],
+              "textSnippet": "Developed 3 distinct bots: HR Policy Bot: Assisted employees with HR policy-related queries. Product",
+              "suggestion": "Too long (40 words). Keep bullets under 25 words."
+            },
+            {
+              "matchedWords": [],
+              "textSnippet": "Added features like OCR for document data scanning, a human verification dashboard for verification ",
+              "suggestion": "Too long (27 words). Keep bullets under 25 words."
+            },
+            {
+              "matchedWords": [],
+              "textSnippet": "Customers with data in the CKYC repository were verified instantly, while those submitting manual en",
+              "suggestion": "Too long (27 words). Keep bullets under 25 words."
+            }
+          ]
+        },
+        "metricsQuality": {
+          "id": "sc_metrics",
+          "type": "metrics",
+          "trackingKey": "ats_metrics",
+          "title": "Missing measurable results",
+          "subtitle": "Add numbers to prove impact",
+          "section": "employment",
+          "description": "Several bullets lack measurable results such as percentages or scale.",
+          "whyItMatters": {
+            "title": "Why metrics matter",
+            "points": [
+              {
+                "heading": "Credibility",
+                "text": "Numbers validate your claims."
+              },
+              {
+                "heading": "Differentiation",
+                "text": "Metrics separate strong candidates from average ones."
+              }
+            ]
+          },
+          "recommendedApproach": "Add numbers like % improvements, scale, or usage metrics.",
+          "examples": [
+            {
+              "title": "Adding metrics",
+              "before": "• Improved application performance",
+              "after": "• Improved application performance, reducing load time by 40%"
+            }
+          ],
+          "userIntentHint": "Adding metrics significantly improves ATS performance.",
+          "interactionHint": "Click bullets to add numbers.",
+          "severity": "high",
+          "priority": 4,
+          "scoreImpact": -12,
+          "estimatedScoreGain": 9,
+          "effortLevel": "medium",
+          "occurrenceCount": 25,
+          "affectedBulletsCount": 25,
+          "findings": [
+            {
+              "matchedWords": [],
+              "textSnippet": "PR O J E C T : G E N E R A T I V E A I B O T S",
+              "suggestion": "Add measurable result (%, count, or time saved)"
+            },
+            {
+              "matchedWords": [],
+              "textSnippet": "Developed 3 distinct bots: HR Policy Bot: Assisted employees with HR policy-related queries. Product",
+              "suggestion": "Add measurable result (%, count, or time saved)"
+            },
+            {
+              "matchedWords": [],
+              "textSnippet": "Prompt engineered and created the following APIs in the backend.",
+              "suggestion": "Add measurable result (%, count, or time saved)"
+            },
+            {
+              "matchedWords": [],
+              "textSnippet": "Bot Response API for conversational output.",
+              "suggestion": "Add measurable result (%, count, or time saved)"
+            },
+            {
+              "matchedWords": [],
+              "textSnippet": "Suggested Questions API for dynamic follow-up queries.",
+              "suggestion": "Add measurable result (%, count, or time saved)"
+            }
+          ]
+        }
+      },
+      "resumeStructure": {
+        "sectionCompleteness": {
+          "id": "sc_section_completeness",
+          "type": "section_completeness",
+          "trackingKey": "ats_section_completeness",
+          "title": "Missing or incomplete sections",
+          "subtitle": "Ensure all essential resume sections are present",
+          "section": "overall",
+          "description": "Some essential resume sections are missing or lack sufficient detail.",
+          "whyItMatters": {
+            "title": "Why section completeness matters",
+            "points": [
+              {
+                "heading": "ATS expectations",
+                "text": "ATS systems expect standard sections."
+              },
+              {
+                "heading": "Recruiter clarity",
+                "text": "Missing sections reduce context."
+              }
+            ]
+          },
+          "recommendedApproach": "Ensure sections like Summary, Skills, and Education are present.",
+          "examples": [
+            {
+              "title": "Adding missing summary",
+              "before": "Resume starts directly with Experience section",
+              "after": "Added Professional Summary highlighting skills and experience"
+            }
+          ],
+          "userIntentHint": "Completing sections strengthens resume structure.",
+          "interactionHint": "Add missing sections from the editor.",
+          "severity": "low",
+          "priority": 10,
+          "scoreImpact": 0,
+          "estimatedScoreGain": 0,
+          "effortLevel": "high",
+          "occurrenceCount": 0,
+          "affectedBulletsCount": 0,
+          "findings": []
+        },
+        "sectionOrdering": {
+          "id": "sc_section_ordering",
+          "type": "section_ordering",
+          "trackingKey": "ats_section_ordering",
+          "title": "Suboptimal section order",
+          "subtitle": "Reorder sections to highlight strengths",
+          "section": "overall",
+          "description": "Section order is not optimized for your experience level.",
+          "whyItMatters": {
+            "title": "Why section order matters",
+            "points": [
+              {
+                "heading": "First impression",
+                "text": "Top sections receive the most attention."
+              }
+            ]
+          },
+          "recommendedApproach": "Place Experience and Skills above Education for mid/senior roles.",
+          "examples": [
+            {
+              "title": "Reordering sections",
+              "before": "Education listed before Experience",
+              "after": "Experience placed above Education"
+            }
+          ],
+          "userIntentHint": "Simple reorder improves resume flow.",
+          "interactionHint": "Drag sections to reorder.",
+          "severity": "low",
+          "priority": 10,
+          "scoreImpact": 0,
+          "estimatedScoreGain": 0,
+          "effortLevel": "medium",
+          "occurrenceCount": 0,
+          "affectedBulletsCount": 0,
+          "findings": []
+        },
+        "summaryEffectiveness": {
+          "id": "sc_summary",
+          "type": "summary_effectiveness",
+          "trackingKey": "ats_summary",
+          "title": "Weak professional summary",
+          "subtitle": "Clarify your value proposition",
+          "section": "summary",
+          "description": "The summary is too generic and lacks clear positioning.",
+          "whyItMatters": {
+            "title": "Why the summary matters",
+            "points": [
+              {
+                "heading": "Hook",
+                "text": "The summary sets the tone for the resume."
+              }
+            ]
+          },
+          "recommendedApproach": "Clearly state role, years of experience, and key achievements.",
+          "examples": [
+            {
+              "title": "Improving summary",
+              "before": "Software developer with experience in many technologies",
+              "after": "Full Stack Developer with 4+ years of experience building scalable web apps"
+            }
+          ],
+          "userIntentHint": "Improving summary increases recruiter engagement.",
+          "interactionHint": "Edit summary to clarify value.",
+          "severity": "low",
+          "priority": 9,
+          "scoreImpact": -3,
+          "estimatedScoreGain": 2,
+          "effortLevel": "medium",
+          "occurrenceCount": 1,
+          "affectedBulletsCount": 0,
+          "findings": [
+            {
+              "matchedWords": [],
+              "textSnippet": "Full Stack Developer with over of experience specializing in React, Next.js, Nod",
+              "suggestion": "Include years of experience in your summary"
+            }
+          ]
+        },
+        "contactDetails": {
+          "id": "sc_contact_details",
+          "type": "contact_details",
+          "trackingKey": "ats_contact_details",
+          "title": "Missing or incomplete contact details",
+          "subtitle": "Ensure recruiters can reach you easily",
+          "section": "header",
+          "description": "Some essential contact details are missing or unprofessional.",
+          "whyItMatters": {
+            "title": "Why contact details matter",
+            "points": [
+              {
+                "heading": "Reachability",
+                "text": "Recruiters cannot contact you otherwise."
+              }
+            ]
+          },
+          "recommendedApproach": "Add a professional email, phone number, and LinkedIn URL.",
+          "examples": [
+            {
+              "title": "Completing contact info",
+              "before": "Only phone number listed",
+              "after": "Email, phone number, and LinkedIn added"
+            }
+          ],
+          "userIntentHint": "Critical fix — recruiters must be able to contact you.",
+          "interactionHint": "Update contact details in header.",
+          "severity": "low",
+          "priority": 6,
+          "scoreImpact": -5,
+          "estimatedScoreGain": 4,
+          "effortLevel": "low",
+          "occurrenceCount": 1,
+          "affectedBulletsCount": 0,
+          "findings": [
+            {
+              "matchedWords": [],
+              "textSnippet": "LinkedIn profile not found",
+              "suggestion": "Add your LinkedIn profile URL"
+            }
+          ]
+        },
+        "lengthAndDensity": {
+          "id": "sc_length_density",
+          "type": "length_density",
+          "trackingKey": "ats_length_density",
+          "title": "Resume length or density issues",
+          "subtitle": "Optimize resume length",
+          "section": "overall",
+          "description": "Resume length is not ideal for your experience level.",
+          "whyItMatters": {
+            "title": "Why length matters",
+            "points": [
+              {
+                "heading": "Attention span",
+                "text": "Overlong resumes reduce engagement."
+              }
+            ]
+          },
+          "recommendedApproach": "Limit resume to 1–2 pages based on experience.",
+          "examples": [
+            {
+              "title": "Reducing resume length",
+              "before": "3-page resume with repetitive bullets",
+              "after": "Condensed to 2 pages with focused achievements"
+            }
+          ],
+          "userIntentHint": "Optimizing length improves readability.",
+          "interactionHint": "Trim or expand sections as needed.",
+          "severity": "low",
+          "priority": 9,
+          "scoreImpact": -2,
+          "estimatedScoreGain": 1,
+          "effortLevel": "medium",
+          "occurrenceCount": 2,
+          "affectedBulletsCount": 0,
+          "findings": [
+            {
+              "matchedWords": [],
+              "textSnippet": "Average 8 bullets per role",
+              "suggestion": "Reduce bullets to focus on key achievements (aim for 3-5 per role)"
+            },
+            {
+              "matchedWords": [],
+              "textSnippet": "31 total bullets",
+              "suggestion": "Resume may be too long. Focus on most impactful achievements."
+            }
+          ]
+        }
+      },
+      "atsCompatibility": {
+        "formatting": {
+          "id": "sc_formatting",
+          "type": "formatting",
+          "trackingKey": "ats_formatting",
+          "title": "ATS-unfriendly formatting",
+          "subtitle": "Avoid layouts that ATS cannot parse",
+          "section": "overall",
+          "description": "The resume uses formatting elements that ATS systems may not parse correctly.",
+          "whyItMatters": {
+            "title": "Why ATS formatting matters",
+            "points": [
+              {
+                "heading": "Parsing accuracy",
+                "text": "Complex layouts confuse ATS systems."
+              }
+            ]
+          },
+          "recommendedApproach": "Use a single-column layout with standard headings.",
+          "examples": [
+            {
+              "title": "Fixing ATS formatting",
+              "before": "Two-column layout with icons",
+              "after": "Single-column ATS-friendly layout"
+            }
+          ],
+          "userIntentHint": "Fix formatting to improve ATS parsing.",
+          "interactionHint": "Switch to ATS-safe template.",
+          "severity": "low",
+          "priority": 8,
+          "scoreImpact": -4,
+          "estimatedScoreGain": 3,
+          "effortLevel": "medium",
+          "occurrenceCount": 2,
+          "affectedBulletsCount": 0,
+          "findings": [
+            {
+              "matchedWords": [
+                "O J E C T",
+                "G E N E R A T I V E A I B O T S"
+              ],
+              "textSnippet": "O J E C T",
+              "suggestion": "Remove extra spacing between letters (ATS cannot parse)"
+            },
+            {
+              "matchedWords": [
+                "▪"
+              ],
+              "textSnippet": "Non-standard bullet characters detected",
+              "suggestion": "Use simple bullet points (• or -) for ATS compatibility"
+            }
+          ]
+        },
+        "bulletConsistency": {
+          "id": "sc_bullet_consistency",
+          "type": "bullet_consistency",
+          "trackingKey": "ats_bullet_consistency",
+          "title": "Inconsistent bullet formatting",
+          "subtitle": "Keep bullets consistent",
+          "section": "employment",
+          "description": "Bullet styles vary across sections.",
+          "whyItMatters": {
+            "title": "Why bullet consistency matters",
+            "points": [
+              {
+                "heading": "Visual clarity",
+                "text": "Consistency improves readability."
+              }
+            ]
+          },
+          "recommendedApproach": "Use the same bullet symbol throughout.",
+          "examples": [
+            {
+              "title": "Standardizing bullets",
+              "before": "Mixed dashes and dots",
+              "after": "Uniform dot bullets"
+            }
+          ],
+          "userIntentHint": "Easy fix — unify bullet formatting.",
+          "interactionHint": "Normalize bullet styles.",
+          "severity": "low",
+          "priority": 8,
+          "scoreImpact": -1,
+          "estimatedScoreGain": 1,
+          "effortLevel": "low",
+          "occurrenceCount": 1,
+          "affectedBulletsCount": 0,
+          "findings": [
+            {
+              "matchedWords": [
+                "•",
+                "▪"
+              ],
+              "textSnippet": "Multiple bullet styles detected: •, ▪",
+              "suggestion": "Use consistent bullet formatting throughout"
+            }
+          ]
+        },
+        "atsReadability": {
+          "id": "sc_ats_readability",
+          "type": "ats_readability",
+          "trackingKey": "ats_ats_readability",
+          "title": "Low ATS readability",
+          "subtitle": "Improve ATS text extraction",
+          "section": "overall",
+          "description": "Some text may not be easily readable by ATS systems.",
+          "whyItMatters": {
+            "title": "Why ATS readability matters",
+            "points": [
+              {
+                "heading": "Keyword matching",
+                "text": "Unreadable text reduces keyword detection."
+              }
+            ]
+          },
+          "recommendedApproach": "Use standard fonts and selectable text.",
+          "examples": [
+            {
+              "title": "Improving ATS readability",
+              "before": "Text embedded inside images",
+              "after": "Plain selectable text"
+            }
+          ],
+          "userIntentHint": "Improving ATS readability increases shortlist chances.",
+          "interactionHint": "Switch to ATS-optimized layout.",
+          "severity": "low",
+          "priority": 10,
+          "scoreImpact": 0,
+          "estimatedScoreGain": 0,
+          "effortLevel": "medium",
+          "occurrenceCount": 0,
+          "affectedBulletsCount": 0,
+          "findings": []
+        }
+      },
+      "experienceRelevance": {
+        "roleDepth": {
+          "id": "sc_role_depth",
+          "type": "role_depth",
+          "trackingKey": "ats_role_depth",
+          "title": "Shallow role descriptions",
+          "subtitle": "Provide more depth in your experience",
+          "section": "employment",
+          "description": "Some roles lack sufficient detail about responsibilities and impact.",
+          "whyItMatters": {
+            "title": "Why role depth matters",
+            "points": [
+              {
+                "heading": "Experience clarity",
+                "text": "Depth helps recruiters assess fit."
+              }
+            ]
+          },
+          "recommendedApproach": "Expand bullets to show scope and responsibilities.",
+          "examples": [
+            {
+              "title": "Adding role depth",
+              "before": "• Developed web applications",
+              "after": "• Developed and deployed 5+ web applications serving 10,000+ daily users"
+            }
+          ],
+          "userIntentHint": "Adding depth improves role evaluation.",
+          "interactionHint": "Expand role descriptions.",
+          "severity": "low",
+          "priority": 10,
+          "scoreImpact": 0,
+          "estimatedScoreGain": 0,
+          "effortLevel": "high",
+          "occurrenceCount": 0,
+          "affectedBulletsCount": 0,
+          "findings": []
+        },
+        "seniorityAlignment": {
+          "id": "sc_seniority_alignment",
+          "type": "seniority_alignment",
+          "trackingKey": "ats_seniority",
+          "title": "Seniority mismatch",
+          "subtitle": "Align resume with your experience level",
+          "section": "employment",
+          "description": "Your resume content does not fully reflect your experience level.",
+          "whyItMatters": {
+            "title": "Why seniority alignment matters",
+            "points": [
+              {
+                "heading": "Role fit",
+                "text": "Mismatch can hurt shortlisting."
+              }
+            ]
+          },
+          "recommendedApproach": "Adjust language and scope to match seniority.",
+          "examples": [
+            {
+              "title": "Mid-level framing",
+              "before": "• Assisted in development of REST APIs",
+              "after": "• Led development and optimization of REST APIs handling 5M+ requests monthly"
+            }
+          ],
+          "userIntentHint": "Aligning seniority improves role matching.",
+          "interactionHint": "Update bullets to reflect experience.",
+          "severity": "low",
+          "priority": 9,
+          "scoreImpact": -2,
+          "estimatedScoreGain": 1,
+          "effortLevel": "medium",
+          "occurrenceCount": 1,
+          "affectedBulletsCount": 1,
+          "findings": [
+            {
+              "matchedWords": [
+                "assisted"
+              ],
+              "textSnippet": "Using \"assisted\" — suggests junior level",
+              "suggestion": "Replace \"assisted\" with ownership language like Led, Designed, or Built"
+            }
+          ]
+        },
+        "careerProgression": {
+          "id": "sc_career_progression",
+          "type": "career_progression",
+          "trackingKey": "ats_progression",
+          "title": "Unclear career progression",
+          "subtitle": "Show growth over time",
+          "section": "employment",
+          "description": "Your resume does not clearly show progression or growth.",
+          "whyItMatters": {
+            "title": "Why progression matters",
+            "points": [
+              {
+                "heading": "Growth signal",
+                "text": "Progression indicates learning and promotion."
+              }
+            ]
+          },
+          "recommendedApproach": "Highlight increased responsibilities over time.",
+          "examples": [
+            {
+              "title": "Showing progression",
+              "before": "Junior Developer → Senior Developer (no impact change shown)",
+              "after": "Progressed from Junior to Senior Developer — expanded team leadership scope"
+            }
+          ],
+          "userIntentHint": "Showing growth strengthens seniority perception.",
+          "interactionHint": "Emphasize progression.",
+          "severity": "low",
+          "priority": 10,
+          "scoreImpact": 0,
+          "estimatedScoreGain": 0,
+          "effortLevel": "high",
+          "occurrenceCount": 0,
+          "affectedBulletsCount": 0,
+          "findings": []
+        },
+        "skillRelevance": {
+          "id": "sc_skill_relevance",
+          "type": "skill_relevance",
+          "trackingKey": "ats_skill_relevance",
+          "title": "Skills not relevant to role",
+          "subtitle": "Focus on role-relevant skills",
+          "section": "skills",
+          "description": "Some listed skills are not relevant to your target roles.",
+          "whyItMatters": {
+            "title": "Why skill relevance matters",
+            "points": [
+              {
+                "heading": "ATS matching",
+                "text": "Relevant skills improve keyword matching."
+              }
+            ]
+          },
+          "recommendedApproach": "Remove unrelated skills and focus on core competencies.",
+          "examples": [
+            {
+              "title": "Focusing skills",
+              "before": "Skills: Python, Java, Photography, French, Cooking",
+              "after": "Skills: Python, Java, React, Node.js, AWS, PostgreSQL"
+            }
+          ],
+          "userIntentHint": "Removing irrelevant skills improves ATS fit.",
+          "interactionHint": "Edit skills list.",
+          "severity": "low",
+          "priority": 10,
+          "scoreImpact": 0,
+          "estimatedScoreGain": 0,
+          "effortLevel": "medium",
+          "occurrenceCount": 0,
+          "affectedBulletsCount": 0,
+          "findings": []
+        },
+        "skillGrouping": {
+          "id": "sc_skill_grouping",
+          "type": "skill_grouping",
+          "trackingKey": "ats_skill_grouping",
+          "title": "Poor skill organization",
+          "subtitle": "Group skills into clear categories",
+          "section": "skills",
+          "description": "Skills are not grouped logically, reducing clarity.",
+          "whyItMatters": {
+            "title": "Why skill grouping matters",
+            "points": [
+              {
+                "heading": "Clarity",
+                "text": "Grouped skills are easier to scan."
+              }
+            ]
+          },
+          "recommendedApproach": "Group skills by domain such as Frontend, Backend, Tools.",
+          "examples": [
+            {
+              "title": "Organizing skills",
+              "before": "Skills: React, Python, Node.js, JavaScript, Django, AWS",
+              "after": "Frontend: React, JavaScript | Backend: Python, Node.js, Django | Cloud: AWS"
+            }
+          ],
+          "userIntentHint": "Quick fix — grouping skills improves clarity.",
+          "interactionHint": "Organize skills into categories.",
+          "severity": "low",
+          "priority": 8,
+          "scoreImpact": 0,
+          "estimatedScoreGain": 0,
+          "effortLevel": "low",
+          "occurrenceCount": 0,
+          "affectedBulletsCount": 0,
+          "findings": []
+        }
+      },
+      "contentRedundancy": {
+        "repeatedPhrases": {
+          "id": "sc_repeated_phrases",
+          "type": "repetition",
+          "trackingKey": "ats_repetition",
+          "title": "Repeated phrases detected",
+          "subtitle": "Avoid repeating the same language",
+          "section": "employment",
+          "description": "Some phrases are repeated across multiple bullets.",
+          "whyItMatters": {
+            "title": "Why repetition matters",
+            "points": [
+              {
+                "heading": "Perceived depth",
+                "text": "Repetition makes experience look shallow."
+              }
+            ]
+          },
+          "recommendedApproach": "Vary language and focus on unique contributions.",
+          "examples": [
+            {
+              "title": "Varying language",
+              "before": "• Developed features | • Developed APIs | • Developed dashboards",
+              "after": "• Architected features | • Built scalable APIs | • Designed analytics dashboards"
+            }
+          ],
+          "userIntentHint": "Reducing repetition improves perceived experience.",
+          "interactionHint": "Rewrite repeated bullets.",
+          "severity": "low",
+          "priority": 8,
+          "scoreImpact": -4,
+          "estimatedScoreGain": 3,
+          "effortLevel": "medium",
+          "occurrenceCount": 2,
+          "affectedBulletsCount": 7,
+          "findings": [
+            {
+              "matchedWords": [
+                "technologies:"
+              ],
+              "textSnippet": "\"technologies:\" appears 4 times as a starting verb. Vary your language.",
+              "suggestion": "Vary starting verb — \"technologies:\" used 4 times"
+            },
+            {
+              "matchedWords": [
+                "developed"
+              ],
+              "textSnippet": "\"developed\" appears 3 times as a starting verb. Vary your language.",
+              "suggestion": "Vary starting verb — \"developed\" used 3 times"
+            }
+          ]
+        },
+        "duplicateBullets": {
+          "id": "sc_duplicate_bullets",
+          "type": "duplicate_bullets",
+          "trackingKey": "ats_duplicate_bullets",
+          "title": "Duplicate bullet points",
+          "subtitle": "Remove redundant bullets",
+          "section": "employment",
+          "description": "Some bullet points convey nearly identical information.",
+          "whyItMatters": {
+            "title": "Why duplicates hurt",
+            "points": [
+              {
+                "heading": "Wasted space",
+                "text": "Duplicate bullets waste valuable resume space."
+              }
+            ]
+          },
+          "recommendedApproach": "Merge or remove redundant bullets.",
+          "examples": [
+            {
+              "title": "Removing duplicates",
+              "before": "• Fixed critical bugs | • Resolved bugs in production",
+              "after": "• Fixed 15+ critical bugs in production systems, improving uptime by 2%"
+            }
+          ],
+          "userIntentHint": "Removing duplicates strengthens resume focus.",
+          "interactionHint": "Delete or merge bullets.",
+          "severity": "low",
+          "priority": 9,
+          "scoreImpact": -2,
+          "estimatedScoreGain": 1,
+          "effortLevel": "medium",
+          "occurrenceCount": 1,
+          "affectedBulletsCount": 1,
+          "findings": [
+            {
+              "matchedWords": [],
+              "textSnippet": "Technologies: MERN stack (MongoDB, Express.js, React.js, Node.js).",
+              "suggestion": "This bullet is similar to another. Consider merging or removing."
+            }
+          ]
+        },
+        "repetitionScore": {
+          "id": "sc_repetition_score",
+          "type": "repetition_score",
+          "trackingKey": "ats_repetition_score",
+          "title": "Overall content repetition",
+          "subtitle": "Reduce repetitive language",
+          "section": "overall",
+          "description": "Overall content repetition reduces resume effectiveness.",
+          "whyItMatters": {
+            "title": "Why repetition score matters",
+            "points": [
+              {
+                "heading": "Perception",
+                "text": "Unique content signals depth."
+              }
+            ]
+          },
+          "recommendedApproach": "Ensure each bullet adds new information.",
+          "examples": [
+            {
+              "title": "Diversifying content",
+              "before": "Multiple bullets starting with 'Responsible for'",
+              "after": "Use varied structures: Built, Designed, Led, Optimized, etc."
+            }
+          ],
+          "userIntentHint": "Reducing repetition improves clarity.",
+          "interactionHint": "Review repeated content.",
+          "severity": "low",
+          "priority": 10,
+          "scoreImpact": -1,
+          "estimatedScoreGain": 1,
+          "effortLevel": "medium",
+          "occurrenceCount": 1,
+          "affectedBulletsCount": 0,
+          "findings": [
+            {
+              "matchedWords": [
+                "express.js, react.js, node.js)."
+              ],
+              "textSnippet": "\"express.js, react.js, node.js).\" used 3 times",
+              "suggestion": "Vary your phrasing"
+            },
+            {
+              "matchedWords": [
+                "data ckyc repository"
+              ],
+              "textSnippet": "\"data ckyc repository\" used 2 times",
+              "suggestion": "Vary your phrasing"
+            },
+            {
+              "matchedWords": [
+                "technologies: mern stack"
+              ],
+              "textSnippet": "\"technologies: mern stack\" used 2 times",
+              "suggestion": "Vary your phrasing"
+            }
+          ]
+        },
+        "buzzwordsAndCliches": {
+          "id": "sc_buzzwords",
+          "type": "buzzwords",
+          "trackingKey": "ats_buzzwords",
+          "title": "Buzzwords & clichés detected",
+          "subtitle": "Replace vague buzzwords with evidence",
+          "section": "employment",
+          "description": "Your resume uses overused buzzwords that add little value.",
+          "whyItMatters": {
+            "title": "Why buzzwords hurt resumes",
+            "points": [
+              {
+                "heading": "Lack of evidence",
+                "text": "Buzzwords lack proof."
+              },
+              {
+                "heading": "Recruiter fatigue",
+                "text": "Overused terms are ignored."
+              }
+            ]
+          },
+          "recommendedApproach": "Replace buzzwords with concrete achievements.",
+          "examples": [
+            {
+              "title": "Replacing buzzwords",
+              "before": "• Team player who is passionate about innovation",
+              "after": "• Collaborated with 5-person team to ship 3 features quarterly, driving 25% user growth"
+            }
+          ],
+          "userIntentHint": "Replacing buzzwords improves credibility.",
+          "interactionHint": "Click buzzwords to rewrite.",
+          "severity": "low",
+          "priority": 10,
+          "scoreImpact": -1,
+          "estimatedScoreGain": 1,
+          "effortLevel": "medium",
+          "occurrenceCount": 1,
+          "affectedBulletsCount": 1,
+          "findings": [
+            {
+              "matchedWords": [
+                "dynamic"
+              ],
+              "textSnippet": "▪ Suggested Questions API for dynamic follow-up queries",
+              "suggestion": "Replace \"dynamic\" with specific, measurable achievements"
+            }
+          ]
+        },
+        "toneAndProfessionalism": {
+          "id": "sc_tone",
+          "type": "tone",
+          "trackingKey": "ats_tone",
+          "title": "Inconsistent tone or professionalism",
+          "subtitle": "Maintain a professional and confident tone",
+          "section": "overall",
+          "description": "Some language appears too casual or inconsistent.",
+          "whyItMatters": {
+            "title": "Why tone matters",
+            "points": [
+              {
+                "heading": "Professional image",
+                "text": "Tone affects perception."
+              }
+            ]
+          },
+          "recommendedApproach": "Use confident, professional language.",
+          "examples": [
+            {
+              "title": "Professional tone",
+              "before": "• Helped fix some issues in the app",
+              "after": "• Resolved critical issues, improving user satisfaction by 15%"
+            }
+          ],
+          "userIntentHint": "Professional tone improves credibility.",
+          "interactionHint": "Review tone and rewrite casual phrasing.",
+          "severity": "low",
+          "priority": 10,
+          "scoreImpact": 0,
+          "estimatedScoreGain": 0,
+          "effortLevel": "medium",
+          "occurrenceCount": 0,
+          "affectedBulletsCount": 0,
+          "findings": []
+        }
+      }
+    },
+    "metadata": {
+      "wordCount": 535,
+      "bulletCount": 31,
+      "weakVerbCount": 4,
+      "grammarErrorCount": 0,
+      "impactBulletCount": 3,
+      "metricsFoundCount": 6,
+      "sectionCount": 6,
+      "sectionsDetected": [
+        "summary",
+        "employment",
+        "education",
+        "skills",
+        "courses",
+        "languages"
+      ],
+      "missingRecommendedSections": [
+        "linkedin_url"
+      ],
+      "averageBulletLength": 17.3,
+      "parsedAt": "2026-03-15T11:00:39.626Z",
+      "analysisVersion": "2.2.0",
+      "nlpAnalysis": {
+        "totalTechnologies": 11,
+        "jobTitlesFound": 2,
+        "organizationsFound": 7,
+        "metricsExtracted": 3,
+        "contextJustifiedWeakVerbs": 0,
+        "passiveVoiceCount": 1,
+        "avgWordsPerSentence": 11
+      }
+    },
+    "nlpEntities": {
+      "technologies": {
+        "languages": [
+          "r",
+          "typescript"
+        ],
+        "frameworks": [
+          "react",
+          "next.js",
+          "node.js",
+          "express"
+        ],
+        "databases": [
+          "mongodb",
+          "postgresql",
+          "mysql"
+        ],
+        "cloud": [
+          "aws",
+          "azure"
+        ],
+        "devops": [],
+        "tools": []
+      },
+      "jobTitles": [
+        "Developer",
+        "developer"
+      ],
+      "organizations": [
+        "E N E",
+        "Tata AIG",
+        "Google",
+        "AI",
+        "CKYC",
+        "I N G",
+        "Ant Design,"
+      ],
+      "metricsFound": [
+        "30%",
+        "55%",
+        "80%"
+      ]
+    }
+  }
+}
